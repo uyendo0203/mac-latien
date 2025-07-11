@@ -1,0 +1,109 @@
+@use "../base/mixin" as *;
+
+.contact--form {
+  @apply max-w-[64%] md:max-w-[60%];
+  @apply mr-auto md:mr-0 ml-auto md:ml-[23.5%];
+  @apply mt-[6.2rem] md:mt-[5.3rem];
+
+  form {
+    @apply flex flex-wrap;
+    @apply gap-[0.5rem] md:gap-[0.7rem];
+    @apply max-w-[90%] md:max-w-[48.2rem];
+    @apply mx-auto mb-[1.5rem];
+
+    .form-item {
+      @apply w-full md:w-[calc((100%/2)-0.5rem)];
+
+      &:last-child {
+        @apply w-full;
+        @apply flex justify-center md:justify-end items-center;
+        @apply mt-[0.5rem] md:mt-0;
+      }
+    }
+
+    .submit {
+      @apply border-none  font-regular;
+      @apply text-[1.3rem] md:text-[1.67rem];
+      @apply py-[0.2rem] md:py-0 min-h-0 min-w-0;
+      @apply px-[1.4rem] md:px-[1rem];
+      @apply border-solid border-[0.07rem] border-[#ffffff4a];
+      @apply rounded-[15px] md:rounded-[2rem];
+      @include bg-gradient-green;
+    }
+
+    @mixin fontsizeInputPlaceHolder {
+      @apply text-[1rem] md:text-[1rem] text-[#2A841A];
+    }
+
+    input,
+    select,
+    textarea {
+      @apply rounded-[0.7rem] md:rounded-[2rem];
+      @apply h-[2rem] md:h-[2rem];
+      @apply w-full bg-white px-[1rem] 4k:px-[1.5rem] py-[0.33rem];
+      @apply outline-none shadow-none font-medium;
+      @include fontsizeInputPlaceHolder;
+
+      @mixin phd {
+        @apply  font-semibold;
+      }
+
+      &::-webkit-input-placeholder {
+        @include phd;
+        @include fontsizeInputPlaceHolder;
+      }
+      &::-moz-placeholder {
+        @include phd;
+        @include fontsizeInputPlaceHolder;
+      }
+      &:-ms-input-placeholder {
+        @include phd;
+        @include fontsizeInputPlaceHolder;
+      }
+      &:-moz-placeholder {
+        @include phd;
+        @include fontsizeInputPlaceHolder;
+      }
+    }
+
+    input {
+      @apply leading-[1.2];
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+
+    textarea {
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-repeat: no-repeat;
+      background-position-x: 95%;
+      background-position-y: 50%;
+      background-size: 0.67rem;
+      @apply bg-[length:3rem] md:bg-[length:1rem];
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+
+  .error {
+    @apply text-white italic text-[80%];
+  }
+}
+
+.contact--note {
+  @apply text-white text-right  font-medium leading-[1.2];
+  @apply pr-[1.33rem] text-[0.93rem];
+  @apply hidden md:block;
+}

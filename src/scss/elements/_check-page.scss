@@ -1,0 +1,28 @@
+/* Hero Section Layout */
+.hero-section {
+  @apply relative w-full h-screen overflow-hidden;
+}
+
+.hero-background {
+  @apply absolute inset-0 bg-cover bg-center;
+}
+
+.hero-content {
+  @apply relative z-10 p-4 md:p-16 text-white text-center;
+}
+
+/* Timeline Container */
+.timeline {
+  @apply flex flex-col md:flex-row justify-center items-center gap-6 mt-6;
+}
+
+/* Mỗi item */
+.timeline-item {
+  @apply bg-[gray] text-black p-4 rounded-lg cursor-pointer
+           hover:bg-[gray] transition-colors duration-200;
+}
+
+/* Khi item được chọn */
+.timeline-item.selected {
+  @apply bg-[orange] text-white font-bold;
+}
