@@ -1,0 +1,21 @@
+// @use "./homes/hero.scss" as *;
+// @use "./homes/gioithieu.scss" as *;
+// @use "./homes/giaithuong.scss" as *;
+// @use "./homes/huongdan.scss" as *;
+// @use "./homes/thele.scss" as *;
+// @use "./homes/contact.scss" as *;
+// @use "./homes/mini-game.scss" as *;
+// @use "./homes/livestream.scss" as *;
+// @use "./homes/winner-list.scss" as *;
+// @use "./homes/top-agents.scss" as *;
+// @use "./homes/hanhtrinh.scss" as *;
+// @use "./homes/thuvien-traogiai.scss" as *;
+// @use "./homes/faq.scss" as *;
+// @use "./homes/tintuc-thuvien.scss" as *;
+
+
+.homepage {
+  img {
+    @apply w-full;
+  }
+}
