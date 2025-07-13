@@ -2239,12 +2239,35 @@ header .hambergur span{
   bottom: -11%;
   left: 0;
 }
+@media (max-width: 1024px) {
+  .center {
+    height: 130%;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    width: auto !important;
+    left: -50%;
+    bottom: 0;
+    margin-top: -30%;
+  }
+}
+@media (max-width: 767px) {
+  .center {
+    left: -85%;
+  }
+}
 
 .bird {
   z-index: 7;
   opacity: 1;
   max-width: 40rem;
   top: 10%;
+}
+@media (max-width: 1024px) {
+  .bird {
+    top: 0;
+    left: -20%;
+  }
 }
 
 .text-lost {
@@ -2258,6 +2281,18 @@ header .hambergur span{
   will-change: transform, opacity;
   mix-blend-mode: screen;
   pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .text-lost {
+    max-width: 100%;
+  }
+  .tree {
+    height: 100% !important;
+    max-width: -webkit-max-content !important;
+    max-width: -moz-max-content !important;
+    max-width: max-content !important;
+    width: auto !important;
+  }
 }
 
 .tree-1 {
@@ -2300,6 +2335,11 @@ header .hambergur span{
   top: 18%;
   mix-blend-mode: screen;
   pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .text-lasting {
+    max-width: 85%;
+  }
 }
 
 .timer {
