@@ -16,16 +16,33 @@
 .text-lasting {
   position: absolute;
 }
+
 .center {
   bottom: -11%;
   left: 0;
+  @media (max-width: 1024px) {
+    height: 130%;
+    max-width: max-content;
+    width: auto !important;
+    left: -50%;
+    bottom: 0;
+    margin-top: -30%;
+  }
+   @media (max-width: 767px) {
+    left: -85%;
+  }
 }
 .bird {
   z-index: 7;
   opacity: 1;
   max-width: 40rem;
   top: 10%;
+  @media (max-width: 1024px) {
+    top: 0;
+    left: -20%;
+  }
 }
+
 .text-lost {
   z-index: 7;
   opacity: 0;
@@ -36,9 +53,17 @@
   will-change: transform, opacity;
   mix-blend-mode: screen;
   pointer-events: none;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 }
 .tree {
   // opacity: 0;
+  @media (max-width: 1024px) {
+    height: 100% !important;
+    max-width: max-content !important;
+    width: auto !important;
+  }
 }
 
 .tree-1 {
@@ -76,6 +101,9 @@
   top: 18%;
   mix-blend-mode: screen;
   pointer-events: none;
+  @media (max-width: 1024px) {
+    max-width: 85%;
+  }
 }
 
 .timer {
