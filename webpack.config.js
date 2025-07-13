@@ -33,7 +33,7 @@ module.exports = {
   entry: {
     app: path.resolve(environment.paths.source, 'scss', 'app.scss'),
     home: path.resolve(environment.paths.source, 'js', 'home.js'),
-    loadingAnimation: path.resolve(environment.paths.source, 'js', 'loading-animation.js'),
+    loading: path.resolve(environment.paths.source, 'js', 'loading.js'),
     common: path.resolve(environment.paths.source, 'js', 'common.js'),
     react: path.resolve(environment.paths.source, 'js', 'react-mount.js'), // Thêm dòng này
   },
@@ -165,7 +165,7 @@ module.exports = {
           toType: 'dir',
         },
         {
-          from: path.resolve(environment.paths.source, 'js/loading-animation.js'),
+          from: path.resolve(environment.paths.source, 'js/loading.js'),
           to: path.resolve(environment.paths.output, 'js/'),
           toType: 'dir',
         },

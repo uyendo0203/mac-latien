@@ -2241,22 +2241,21 @@ header .hambergur span{
 }
 @media (max-width: 1024px) {
   .center {
-    height: 130%;
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
+    height: 100%;
+    position: relative;
+    width: 100% !important;
+  }
+  .center img {
     width: auto !important;
-    left: -50%;
-    bottom: 0;
-    margin-top: -30%;
+    max-width: none;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(1.3);
+            transform: translateX(-50%) scale(1.3);
   }
 }
-@media (max-width: 767px) {
-  .center {
-    left: -85%;
-  }
-}
-
 .bird {
   z-index: 7;
   opacity: 1;
@@ -2266,6 +2265,12 @@ header .hambergur span{
 @media (max-width: 1024px) {
   .bird {
     top: 0;
+    left: 0;
+    max-width: 65rem;
+  }
+}
+@media (max-width: 767px) {
+  .bird {
     left: -20%;
   }
 }
@@ -2301,12 +2306,27 @@ header .hambergur span{
   height: 100%;
   top: 0px;
 }
+@media (max-width: 1024px) {
+  .tree-1{
+    left: -70%;
+  }
+}
 
 .tree-2 {
   z-index: 5;
   top: 0;
   max-width: 100%;
   height: 100%;
+}
+@media (max-width: 1024px) {
+  .tree-2{
+    right: -35%;
+  }
+}
+@media (max-width: 767px) {
+  .tree-2{
+    right: -60%;
+  }
 }
 
 .tree-3 {
@@ -2339,6 +2359,7 @@ header .hambergur span{
 @media (max-width: 1024px) {
   .text-lasting {
     max-width: 85%;
+    top: 12%;
   }
 }
 
@@ -2370,6 +2391,11 @@ header .hambergur span{
   max-width: 60%;
   bottom: -28%;
   left: -14%;
+}
+@media (max-width: 1024px) {
+  .cloud-1-clone {
+    bottom: -10%;
+  }
 }
 
 .homepage img{
@@ -3071,6 +3097,9 @@ video {
 .left-\[-100\%\]{
   left: -100%;
 }
+.left-\[-70\%\]{
+  left: -70%;
+}
 .left-\[2\.8rem\]{
   left: 2.8rem;
 }
@@ -3083,8 +3112,14 @@ video {
 .right-0{
   right: 0px;
 }
+.right-\[-35\%\]{
+  right: -35%;
+}
 .right-\[-3rem\]{
   right: -3rem;
+}
+.right-\[-60\%\]{
+  right: -60%;
 }
 .right-\[1\.5rem\]{
   right: 1.5rem;

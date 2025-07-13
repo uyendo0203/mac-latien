@@ -171,5 +171,4 @@ const LoadingAnimationTime = () => {
 
 $(document).ready(() => {
     LoadingAnimation()
-    // LoadingAnimationTime();
 });
