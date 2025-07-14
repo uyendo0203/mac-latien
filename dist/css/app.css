@@ -2228,7 +2228,6 @@ header .hambergur span{
 .tree-2,
 .tree-3,
 .tree-4,
-.center,
 .bird,
 .text-lost,
 .text-lasting {
@@ -2236,9 +2235,8 @@ header .hambergur span{
 }
 
 .center {
-  bottom: -11%;
-  left: 0;
   width: 100%;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .center {
