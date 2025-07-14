@@ -24,7 +24,7 @@ const LoadingAnimation = () => {
     });
 
     tl.set('.center', {
-        y: 0,
+        y: '-35%',
     });
 
 
@@ -114,19 +114,10 @@ const LoadingAnimation = () => {
         ease: 'power3.inOut',
     });
 
-    gsap.to('.cloud-1', {
-        y: '110%',
-        duration: 1.5,
-        ease: 'linear',
-        // delay:1
-    }, 7.5);
-
     /*  STEP 5: center bật lên tại 5.3s */
     tl.to('.center', {
         y: 0,
-        top: 0,
-        opacity: 1,
-        duration: 0.7,
+        duration: 1.2,
         ease: 'linear'
     }, 5);
 
