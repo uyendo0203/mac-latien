@@ -2244,7 +2244,7 @@ header .hambergur span{
 }
 @media (max-width: 1024px) {
   .center {
-    height: 110%;
+    height: 130%;
     position: relative;
     width: 100% !important;
     display: -webkit-box;
@@ -2260,10 +2260,16 @@ header .hambergur span{
 }
 
 .center-img {
-  width: auto !important;
-  max-width: -webkit-max-content !important;
-  max-width: -moz-max-content !important;
-  max-width: max-content !important;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .center-img {
+    width: auto !important;
+    max-width: -webkit-max-content !important;
+    max-width: -moz-max-content !important;
+    max-width: max-content !important;
+    height: 130%;
+  }
 }
 
 .bird {
