@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>La Tien Villa</title>
+        <meta name="author" content="La Tien Villa">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+        <meta name="description" content="Đất Tiên Vịnh Ngọc">
+        <meta itemprop="description" content="Đất Tiên Vịnh Ngọc">
+        <meta itemprop="image" content="{đường dẫn hình share}">
+    
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://latienvilla.vn/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="La Tien Villa">
+        <meta property="og:description" content="Đất Tiên Vịnh Ngọc">
+        <meta property="og:image" content="{đường dẫn hình share}">
+    
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:description" content="Đất Tiên Vịnh Ngọc">
+        <meta name="twitter:image" content="./images/screenshot.png">
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+        />
+
+        <link rel="stylesheet" href="./libs/aos/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+        />
+
+    <script defer src="app.js"></script><script defer src="home.js"></script><script defer src="loading.js"></script><script defer src="common.js"></script><script defer src="react.js"></script><link href="css/app.css" rel="stylesheet"></head>
+
+    <body>
+
+        <div class="loading show">
+    <div class="spinner"></div>
+</div>
+ <div id="toast-simple" class="toast" role="alert">
+    <svg
+    class="fly"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 18 20"
+    >
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+        />
+    </svg>
+    <div class="text">Message sent successfully.</div>
+    <div class="icon rotate-[45deg] " data-dismiss-target="#toast-success" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg
+            class="close "
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            ></path>
+        </svg>
+    </div>
+</div>  <!-- Popup Modal -->
+<div id="noti" class="noti hidden">
+  <div class="noti-content">
+    <h2 class="noti-title">Success!</h2>
+    <p class="noti-message">Your form has been submitted successfully.</p>
+    <div class="noti-action">
+      <button class="close-noti">Close</button>
+    </div>
+  </div>
+</div>
+     <header>
+
+    <!-- Menu -->
+    <div class="menu">
+        <div class="menu__actions">
+            <button class="btn-x-close" aria-label="Đóng"></button>
+        </div>
+
+        <ul class="menu__list">
+            <li class="menu__item menu_click" link="trangchu">
+                <a class="menu__link" href="/">Trang chủ</a>
+            </li>
+            <li class="menu__item menu_click" link="gioithieu">
+                <a class="menu__link" href="/">Giới thiệu</a>
+            </li>
+            <li class="menu__item menu_click" link="giaithuong">
+                <a class="menu__link" href="/">Giải thưởng</a>
+            </li>
+            <li class="menu__item menu_click" link="thele">
+                <a class="menu__link" href="/">Thể lệ</a>
+            </li>
+            <li class="menu__item menu_click" link="huongdan">
+                <a class="menu__link" href="/">Hướng dẫn tham gia</a>
+            </li>
+            <li class="menu__item menu_click" link="livestream">
+                <a class="menu__link" href="/">Livestream</a>
+            </li>
+            <li class="menu__item menu_click" link="winners">
+                <a class="menu__link" href="/">Bảng vàng</a>
+            </li>
+            <li class="menu__item menu_click" link="thuvientraogiai">
+                <a class="menu__link" href="/">Thư viện trao giải</a>
+            </li>
+            <li class="menu__item menu_click" link="topagents">
+                <a class="menu__link" href="/">Top đại lý</a>
+            </li>
+            <li class="menu__item menu_click" link="faqs">
+                <a class="menu__link" href="/">Hỏi đáp</a>
+            </li>
+            <li class="menu__item menu_click" link="tintucthuvien">
+                <a class="menu__link" href="/">Tin tức và thư viện</a>
+            </li>
+            <li class="menu__item menu_click" link="contact">
+                <a class="menu__link" href="/">Liên hệ</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<main class="homepage">
+    
+    <div class="loading-image">
+    <img class="bird" src="./images/loading/bird.gif" alt="bird" />
+    <img
+        class="text-lost"
+        src="./images/loading/lost-in-nature.png"
+        alt="lost-in-nature"
+    />
+    <img class="tree tree-1" src="./images/loading/tree-1.png" alt="tree-1" />
+    <img class="tree tree-2" src="./images/loading/tree-2.png" alt="tree-1" />
+    <img class="tree tree-3" src="./images/loading/tree-3.png" alt="tree-1" />
+    <img class="tree tree-4" src="./images/loading/tree-4.png" alt="tree-1" />
+    <img class="cloud-1" src="./images/loading/cloud-1.png" alt="cloud-1" />
+    <img
+        class="cloud-1-clone"
+        src="./images/loading/cloud-1.png"
+        alt="cloud-1"
+    />
+    <div class="center">
+        <img class="" src="./images/loading/center.png" alt="center" />
+    </div>
+    <img
+        class="text-lasting"
+        src="./images/loading/lasting-memory.png"
+        alt="lasting-memory"
+    />
+</div>
+
+
+   
+</main>
+
+
+    </body>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+    <script src="./libs/aos/aos.js"></script>
+    <script src="./libs/slick/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/common.js"></script>
+     <script src="js/home.js"></script>
+</html>
