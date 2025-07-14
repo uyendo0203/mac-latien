@@ -27,35 +27,6 @@ const LoadingAnimation = () => {
         y: 0,
     });
 
-    // Cloud-1 không bị ảnh hưởng bởi delay
-    gsap.set('.cloud-1', {
-        y: 0,
-        x: 0,
-        opacity: 1
-    });
-
-    gsap.to('.cloud-1', {
-        y: '-10%',
-        x: '20%',
-        duration: 10,
-        ease: 'power3.inOut',
-    });
-
-    gsap.to('.cloud-1', {
-        opacity: 0,
-        duration: 3,
-        ease: 'power2.inOut',
-        delay: 5 // bắt đầu mờ dần từ giây thứ 5 kể từ lúc web load
-    });
-    gsap.set('.cloud-1-clone', {
-        opacity: 0
-    })
-    gsap.to('.cloud-1-clone', {
-        opacity: 1,
-        duration: 3,
-        ease: 'power2.Out',
-        delay: 9 // bắt đầu mờ dần từ giây thứ 5 kể từ lúc web load
-    });
 
     // STEP 1: Tree & bird di chuyển từ giây 2 → 5
     const startFromTimeBird = 3; // Bắt đầu từ giây 3
@@ -110,6 +81,10 @@ const LoadingAnimation = () => {
         transformOrigin: 'center center'
     }, 3);
 
+    gsap.to(['.la-bay'], {
+        opacity: 0,
+    }, 6);
+
     // STEP 4: Tree & bird fade out tại 7s
     const configForTreeBirdOut = {
         opacity: 0,
@@ -126,16 +101,36 @@ const LoadingAnimation = () => {
         ...configForTreeBirdOut
     }, 7);
 
-    // STEP 5: center bật lên tại 5.3s
+
+    // Cloud-1 không bị ảnh hưởng bởi delay
+    gsap.set('.cloud-1', {
+        y: 0,
+        x: '8%',
+    });
+
+    gsap.to('.cloud-1', {
+        x: '-20%',
+        duration: 11,
+        ease: 'power3.inOut',
+    });
+
+    gsap.to('.cloud-1', {
+        y: '110%',
+        duration: 1.5,
+        ease: 'linear',
+        // delay:1
+    }, 7.5);
+
+    /*  STEP 5: center bật lên tại 5.3s */
     tl.to('.center', {
         y: 0,
         top: 0,
         opacity: 1,
-        duration: 1.3,
+        duration: 0.7,
         ease: 'linear'
     }, 5);
 
-    // STEP 6: logo-lasting xuất hiện tại 6.5s
+    /* STEP 6: logo-lasting xuất hiện tại 6.5s */
     tl.to('.text-lasting', {
         opacity: 1,
         duration: 1.2,
@@ -169,6 +164,54 @@ const LoadingAnimationTime = () => {
 };
 
 
+const audioPlay = () => {
+    const $audio = $('.audio-media')[0];
+
+    // Ban đầu muted để tránh browser chặn autoplay
+    $audio.muted = true;
+    let isMuted = true;
+
+    // Trạng thái ban đầu: nhạc tắt → hiện icon pause
+    $('.audio-play').hide();
+    $('.audio-pause').show();
+
+    // ✅ Bất kỳ click nào trên trang → nếu đang mute thì bật nhạc
+    $(document).on('click', function () {
+        if (isMuted) {
+            $audio.muted = false;
+            $audio.play();
+            isMuted = false;
+
+            // Nhạc đang phát → hiện icon play
+            $('.audio-play').show();
+            $('.audio-pause').hide();
+        }
+    });
+
+    // ✅ Click icon để bật/tắt nhạc
+    $('.audio-btn').on('click', function (e) {
+        e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
+
+        isMuted = !isMuted;
+        $audio.muted = isMuted;
+
+        if (isMuted) {
+            // Nhạc tắt → hiện icon pause
+            $('.audio-play').hide();
+            $('.audio-pause').show();
+        } else {
+            // Nhạc phát → hiện icon play
+            $('.audio-play').show();
+            $('.audio-pause').hide();
+            $audio.play();
+        }
+    });
+};
+
+
+
+
 $(document).ready(() => {
+    audioPlay()
     LoadingAnimation()
 });
