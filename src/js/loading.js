@@ -28,9 +28,15 @@ const LoadingAnimation = () => {
         scale: 1
     });
 
-    tl.set('.center', {
-        yPercent: window.innerWidth < 1024 ? -35 : -55
-    });
+    if (window.innerWidth < 1024) {
+        tl.set('.center', {
+            y: '-35%'
+        });
+    } else {
+        tl.set('.center', {
+            y: '-31%'
+        });
+    }
 
 
     // STEP 1: Tree & bird di chuyển từ giây 2 → 5
@@ -126,7 +132,7 @@ const LoadingAnimation = () => {
     } else if (window.innerWidth < 1024) {
         yVal = '-33%';
     } else {
-        yVal = '-14%';
+        yVal = 0;
     }
 
     tl.to('.center', {
