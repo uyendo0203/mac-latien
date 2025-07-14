@@ -23,7 +23,7 @@
   will-change: transform;
   transform: translateZ(0);
   @media (max-width: 1024px) {
-    height: 110%;
+    height: 130%;
     position: relative;
     width: 100% !important;
     display: flex;
@@ -32,8 +32,13 @@
   }
 }
 .center-img {
-  width: auto !important;
-  max-width: max-content !important;
+  height: 100%;
+  @media (max-width: 1024px) {
+    width: auto !important;
+    max-width: max-content !important;
+    height: 130%;
+  }
+  
 }
 
 .bird {

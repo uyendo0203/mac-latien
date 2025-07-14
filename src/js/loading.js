@@ -122,11 +122,11 @@ const LoadingAnimation = () => {
     let yVal = 0;
 
     if (window.innerWidth < 800) {
-        yVal = -8;
+        yVal = '-16%';
     } else if (window.innerWidth < 1024) {
-        yVal = -33;
+        yVal = '-33%';
     } else {
-        yVal = -14;
+        yVal = '-14%';
     }
 
     tl.to('.center', {
