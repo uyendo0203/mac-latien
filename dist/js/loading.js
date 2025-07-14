@@ -3,6 +3,11 @@ const LoadingAnimation = () => {
         delay: 2 // Thêm độ trễ 5 giây trước khi bắt đầu animation
     });
 
+    gsap.to(['.la-bay'], {
+        opacity: 0,
+        ease: 'power3.inOut',
+    }, 6);
+
     const configForTreeBird = {
         opacity: 1,
         x: 0,
@@ -24,7 +29,7 @@ const LoadingAnimation = () => {
     });
 
     tl.set('.center', {
-        y: '-35%',
+        yPercent: window.innerWidth < 1024 ? -35 : -55
     });
 
 
@@ -81,9 +86,7 @@ const LoadingAnimation = () => {
         transformOrigin: 'center center'
     }, 3);
 
-    gsap.to(['.la-bay'], {
-        opacity: 0,
-    }, 6);
+
 
     // STEP 4: Tree & bird fade out tại 7s
     const configForTreeBirdOut = {
@@ -115,10 +118,22 @@ const LoadingAnimation = () => {
     });
 
     /*  STEP 5: center bật lên tại 5.3s */
+
+    let yVal = 0;
+
+    if (window.innerWidth < 800) {
+        yVal = -8;
+    } else if (window.innerWidth < 1024) {
+        yVal = -33;
+    } else {
+        yVal = -14;
+    }
+
     tl.to('.center', {
-        y: 0,
-        duration: 1.2,
-        ease: 'linear'
+        y: yVal,
+        yPercent: 0,
+        duration: 1.5,
+        ease: 'power2.out'
     }, 5);
 
     /* STEP 6: logo-lasting xuất hiện tại 6.5s */
