@@ -52,13 +52,13 @@ const setInitialStates = () => {
     });
 
     let centerY = 0;
-    if (window.innerWidth < 800) {
-        centerY = '-16%';
-    } else if (window.innerWidth < 1024) {
-        centerY = '-35%';
-    } else {
-        centerY = '-31%';
-    }
+    // if (window.innerWidth < 800) {
+    //     centerY = '-16%';
+    // } else if (window.innerWidth < 1367) {
+    //     centerY = '11%';
+    // } else {
+    //     centerY = 0;
+    // }
 
     gsap.set('.center', { y: centerY });
 
@@ -139,17 +139,17 @@ const LoadingAnimation = () => {
 
     gsap.to('.cloud-1', {
         x: '-20%',
-        duration: 11,
-        ease: 'power3.inOut',
+        duration: 6.5,
+        ease: 'linear',
     });
 
     let centerYAfter = 0;
     if (window.innerWidth < 800) {
-        centerYAfter = '-16%';
-    } else if (window.innerWidth < 1024) {
-        centerYAfter = '-33%';
+        centerYAfter = '25%';
+    } else if (window.innerWidth < 1367) {
+        centerYAfter = '11%';
     } else {
-        centerYAfter = 0;
+        centerYAfter = '34%';
     }
 
     tl.to('.center', {

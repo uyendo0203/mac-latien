@@ -2,9 +2,9 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  img {
-    // transition: all 0.5s ease-in-out;
-  }
+  display: flex;
+  align-items: flex-end;
+
 }
 .tree-1,
 .tree-2,
@@ -24,7 +24,6 @@
   position: relative;
   will-change: transform;
   transform: translateZ(0);
-  // background-image: './images/loading/center.png';
   @media (max-width: 1024px) {
     height: 130%;
     position: relative;
@@ -40,8 +39,9 @@
     width: auto !important;
     max-width: max-content !important;
     height: 130%;
+    bottom: 0;
+    position: absolute;
   }
-  
 }
 
 .bird {
@@ -127,8 +127,11 @@
   mix-blend-mode: screen;
   pointer-events: none;
   @media (max-width: 1024px) {
-    max-width: 85%;
+    max-width: 65%;
     top: 12%;
+  }
+  @media (max-width: 600px) {
+    max-width: 85%;
   }
 }
 
@@ -165,13 +168,13 @@
 
 .la-bay {
   @apply absolute w-full h-full z-[6] top-0;
- @media (max-width: 1024px) {
-    @apply h-auto
+  @media (max-width: 1024px) {
+    @apply h-auto;
   }
 }
-.la-bay-1{
+.la-bay-1 {
   @media (max-width: 1024px) {
-    @apply top-[50%] left-[-32%]
+    @apply top-[50%] left-[-32%];
   }
 }
 
