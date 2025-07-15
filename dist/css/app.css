@@ -2223,7 +2223,14 @@ header .hambergur span{
   position: fixed;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
+
 .tree-1,
 .tree-2,
 .tree-3,
@@ -2271,6 +2278,8 @@ header .hambergur span{
     max-width: -moz-max-content !important;
     max-width: max-content !important;
     height: 130%;
+    bottom: 0;
+    position: absolute;
   }
 }
 
@@ -2376,8 +2385,13 @@ header .hambergur span{
 }
 @media (max-width: 1024px) {
   .text-lasting {
-    max-width: 85%;
+    max-width: 65%;
     top: 12%;
+  }
+}
+@media (max-width: 600px) {
+  .text-lasting {
+    max-width: 85%;
   }
 }
 
@@ -3347,9 +3361,6 @@ video {
 }
 .h-\[6px\]{
   height: 6px;
-}
-.h-auto{
-  height: auto;
 }
 .h-full{
   height: 100%;
