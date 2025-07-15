@@ -2232,6 +2232,9 @@ header .hambergur span{
 .text-lost,
 .text-lasting {
   position: absolute;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform, opacity;
 }
 
 .center {
@@ -2406,6 +2409,15 @@ header .hambergur span{
   z-index: 6;
   height: 100%;
   width: 100%;
+}
+@media (max-width: 1024px) {
+  .la-bay{
+    height: auto;
+  }
+  .la-bay-1{
+    top: 50%;
+    left: -32%;
+  }
 }
 
 .audio-btn {
@@ -3118,6 +3130,9 @@ video {
 .left-\[-100\%\]{
   left: -100%;
 }
+.left-\[-32\%\]{
+  left: -32%;
+}
 .left-\[-70\%\]{
   left: -70%;
 }
@@ -3332,6 +3347,9 @@ video {
 }
 .h-\[6px\]{
   height: 6px;
+}
+.h-auto{
+  height: auto;
 }
 .h-full{
   height: 100%;

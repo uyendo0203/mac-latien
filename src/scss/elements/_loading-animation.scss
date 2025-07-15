@@ -14,6 +14,8 @@
 .text-lost,
 .text-lasting {
   position: absolute;
+  transform: translateZ(0);
+  will-change: transform, opacity;
 }
 
 .center {
@@ -22,6 +24,7 @@
   position: relative;
   will-change: transform;
   transform: translateZ(0);
+  // background-image: './images/loading/center.png';
   @media (max-width: 1024px) {
     height: 130%;
     position: relative;
@@ -162,6 +165,14 @@
 
 .la-bay {
   @apply absolute w-full h-full z-[6] top-0;
+ @media (max-width: 1024px) {
+    @apply h-auto
+  }
+}
+.la-bay-1{
+  @media (max-width: 1024px) {
+    @apply top-[50%] left-[-32%]
+  }
 }
 
 .audio-btn {
