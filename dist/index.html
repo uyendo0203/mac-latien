@@ -3,24 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <title>La Tien Villa</title>
-        <meta name="author" content="La Tien Villa">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-    
-        <meta name="description" content="Đất Tiên Vịnh Ngọc">
-        <meta itemprop="description" content="Đất Tiên Vịnh Ngọc">
-        <meta itemprop="image" content="https://latienvilla.vn/images/screenshot.jpg">
-    
+        <meta name="author" content="La Tien Villa" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <meta name="description" content="Đất Tiên Vịnh Ngọc" />
+        <meta itemprop="description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            itemprop="image"
+            content="https://latienvilla.vn/images/screenshot.jpg"
+        />
+
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://latienvilla.vn/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="La Tien Villa">
-        <meta property="og:description" content="Đất Tiên Vịnh Ngọc">
-        <meta property="og:image" content="https://latienvilla.vn/images/screenshot.jpg">
-    
+        <meta property="og:url" content="https://latienvilla.vn/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="La Tien Villa" />
+        <meta property="og:description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            property="og:image"
+            content="https://latienvilla.vn/images/screenshot.jpg"
+        />
+
         <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:description" content="Đất Tiên Vịnh Ngọc">
-        <meta name="twitter:image" content="https://latienvilla.vn/images/screenshot.jpg">
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            name="twitter:image"
+            content="https://latienvilla.vn/images/screenshot.jpg"
+        />
 
         <link rel="icon" type="image/png" href="/images/favicon.png" />
 
@@ -41,14 +50,49 @@
             href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
         />
 
+        <script defer src="app.js"></script>
+        <script defer src="home.js"></script>
+        <script defer src="loading.js"></script>
+        <script defer src="common.js"></script>
+        <script defer src="react.js"></script>
+        <link href="css/app.css" rel="stylesheet" />
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-PJLCLPZX");
+        </script>
+        <!-- End Google Tag Manager -->
     <script defer src="app.js"></script><script defer src="home.js"></script><script defer src="loading.js"></script><script defer src="common.js"></script><script defer src="react.js"></script><link href="css/app.css" rel="stylesheet"></head>
 
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-PJLCLPZX"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
         <div class="loading show">
     <div class="spinner"></div>
 </div>
- <div id="toast-simple" class="toast" role="alert">
+ 
+        <div id="toast-simple" class="toast" role="alert">
     <svg
     class="fly"
         aria-hidden="true"
@@ -83,7 +127,9 @@
             ></path>
         </svg>
     </div>
-</div>  <!-- Popup Modal -->
+</div> 
+         
+        <!-- Popup Modal -->
 <div id="noti" class="noti hidden">
   <div class="noti-content">
     <h2 class="noti-title">Success!</h2>
@@ -93,7 +139,9 @@
     </div>
   </div>
 </div>
-     <header>
+ 
+         
+           <header>
 
     <!-- Menu -->
     <div class="menu">
@@ -159,11 +207,7 @@
         <img class="cloud-1" src="./images/loading/cloud-1.png" alt="cloud-1" />
         <img class="center-img" src="./images/loading/center.png" alt="center" />
     </div>
-    <img
-        class="text-lasting"
-        src="./images/loading/lasting-memory.png"
-        alt="lasting-memory"
-    />
+    
     <img
         class="la-bay la-bay-1"
         src="./images/loading/la-bay-1.gif"
@@ -174,6 +218,25 @@
         src="./images/loading/la-bay-2.gif"
         alt="la-bay-2"
     />
+
+    <div class="text-end">
+        <img
+            class="title-end"
+            src="./images/loading/logo-title-end.png"
+            alt="title-end"
+        />
+        <div class="des-end">
+            <p>Bạn có từng mơ <br/> Nơi đất Tiên giao hoà vịnh Ngọc</p>
+            <p class="my-3"> 
+                Những ngôi nhà thở nhịp thiên nhiên<br/>Nghe rừng thủ thỉ
+            </p>
+            <p>Nghe biển thầm thì<br/>Đủ sôi động để sống đời rực rỡ <br/>Đủ yên bình để sống trọn riêng tư</p>
+        </div>
+        <div class="slogan-end">
+            Nơi  tự do bền vững <br/>được xây bằng những ký ức khó phai
+        </div>
+    </div>
+
 </div>
 
 
@@ -209,7 +272,7 @@
    
 </main>
 
-
+ <script src="js/home.js"></script>
     </body>
     <script src="./libs/jquery-3.7.1.min.js"></script>
     <script src="./libs/aos/aos.js"></script>
@@ -218,5 +281,4 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/common.js"></script>
-     <script src="js/home.js"></script>
 </html>

@@ -1,13 +1,9 @@
 /*!**********************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/app.scss ***!
   \**********************************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
 /*!**************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/app.scss (1) ***!
-  \**************************************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/app.scss (2) ***!
   \**************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 html,
@@ -189,9 +185,15 @@ input {
           appearance: none;
 }
 
+@font-face {
+  font-family: "SVNSignatie";
+  src: url(../fonts/SVNSignatie.eot) format("woff2"), url(../fonts/SVNSignatie.woff) format("woff"), url(../fonts/SVNSignatie.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
 html,
 body{
-  font-family: Be Vietnam Pro, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   overflow-x: hidden;
@@ -2445,6 +2447,92 @@ header .hambergur span{
   cursor: pointer;
 }
 
+.text-end{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 100%;
+  max-width: 70%;
+  --tw-translate-x: -50%;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@media (max-width: 1024px) {
+  .text-end{
+    max-width: 100%;
+  }
+}
+
+.logo-end{
+  max-width: 25%;
+  margin-bottom: 7rem;
+  mix-blend-mode: screen;
+}
+
+.title-end {
+  mix-blend-mode: screen;
+  max-width: 40%;
+  margin-bottom: 3.5rem;
+}
+@media (max-width: 1366px) {
+  .title-end{
+    max-width: 41%;
+  }
+}
+@media (max-width: 600px) {
+  .title-end{
+    max-width: 72%;
+  }
+}
+
+.des-end{
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  font-size: 1.25rem;
+  margin-bottom: 10rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .des-end{
+    font-size: 17px;
+  }
+}
+.des-end p{
+  line-height: 1.2;
+}
+
+.slogan-end{
+  text-align: center;
+  font-family: SVNSignatie, sans-serif;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  font-size: 2.2rem;
+  text-shadow: 2px 4px 3px #000;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .slogan-end{
+    font-size: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .slogan-end{
+    font-size: 2rem;
+  }
+}
+
 .homepage img{
   width: 100%;
 }
@@ -3192,6 +3280,9 @@ video {
 .top-\[-3rem\]{
   top: -3rem;
 }
+.top-\[10\%\]{
+  top: 10%;
+}
 .top-\[10px\]{
   top: 10px;
 }
@@ -3262,6 +3353,10 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -3274,11 +3369,20 @@ video {
 .mb-\[1\.5rem\]{
   margin-bottom: 1.5rem;
 }
+.mb-\[10rem\]{
+  margin-bottom: 10rem;
+}
 .mb-\[1rem\]{
   margin-bottom: 1rem;
 }
+.mb-\[3\.5rem\]{
+  margin-bottom: 3.5rem;
+}
 .mb-\[3px\]{
   margin-bottom: 3px;
+}
+.mb-\[7rem\]{
+  margin-bottom: 7rem;
 }
 .ml-\[-0\.47rem\]{
   margin-left: -0.47rem;
@@ -3440,17 +3544,29 @@ video {
 .max-w-\[240px\]{
   max-width: 240px;
 }
+.max-w-\[25\%\]{
+  max-width: 25%;
+}
 .max-w-\[2rem\]{
   max-width: 2rem;
 }
 .max-w-\[3\.6rem\]{
   max-width: 3.6rem;
 }
+.max-w-\[40\%\]{
+  max-width: 40%;
+}
+.max-w-\[41\%\]{
+  max-width: 41%;
+}
 .max-w-\[64\%\]{
   max-width: 64%;
 }
 .max-w-\[70\%\]{
   max-width: 70%;
+}
+.max-w-\[72\%\]{
+  max-width: 72%;
 }
 .max-w-\[86\%\]{
   max-width: 86%;
@@ -3792,8 +3908,11 @@ video {
 .text-right{
   text-align: right;
 }
-.font-Be-Vietnam-Pro{
-  font-family: Be Vietnam Pro, sans-serif;
+.text-end{
+  text-align: end;
+}
+.font-svn-signatie{
+  font-family: SVNSignatie, sans-serif;
 }
 .text-\[0\.8rem\]{
   font-size: 0.8rem;
@@ -3803,6 +3922,9 @@ video {
 }
 .text-\[0px\]{
   font-size: 0px;
+}
+.text-\[1\.25rem\]{
+  font-size: 1.25rem;
 }
 .text-\[1\.2rem\]{
   font-size: 1.2rem;
@@ -3822,14 +3944,23 @@ video {
 .text-\[1\.8rem\]{
   font-size: 1.8rem;
 }
+.text-\[17px\]{
+  font-size: 17px;
+}
 .text-\[1rem\]{
   font-size: 1rem;
+}
+.text-\[2\.2rem\]{
+  font-size: 2.2rem;
 }
 .text-\[2\.3rem\]{
   font-size: 2.3rem;
 }
 .text-\[2rem\]{
   font-size: 2rem;
+}
+.text-\[30px\]{
+  font-size: 30px;
 }
 .text-\[3rem\]{
   font-size: 3rem;

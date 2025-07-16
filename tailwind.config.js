@@ -50,8 +50,8 @@ module.exports = {
       "yellow": "#F8ED21",
     },
     fontFamily: {
-      "Be-Vietnam-Pro": ["Be Vietnam Pro", "sans-serif"],
-      "Roboto": ["Roboto", "sans-serif"],
+      "svn-signatie": ["SVNSignatie", "sans-serif"],
+      "montserrat": ['Montserrat', 'sans-serif'],
     },
     fontWeight: {
       thin: '100',
