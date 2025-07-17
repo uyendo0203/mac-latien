@@ -150,7 +150,8 @@ const LoadingAnimation = () => {
     let centerYAfter = 0;
     if (window.innerWidth < 800) centerYAfter = '35%';
     else if (window.innerWidth < 1367) centerYAfter = '30%';
-    else centerYAfter = '34%';
+    else if (window.innerWidth < 2000) centerYAfter = '34%';
+    else centerYAfter = '27%';
 
     tl.to('.center', {
         y: centerYAfter,
