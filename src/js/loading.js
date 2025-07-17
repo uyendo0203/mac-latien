@@ -62,7 +62,7 @@ const setInitialStates = () => {
         x: '10%',
         force3D: true
     });
-    gsap.set('.text-end', {
+    gsap.set(['.text-end','.logo-end','.title-end'], {
         opacity: 0
     });
 
@@ -160,12 +160,13 @@ const LoadingAnimation = () => {
         force3D: true
     }, 5);
 
-    tl.to(['.text-end', '.text-lasting'], {
+    tl.to(['.text-end', '.text-lasting','.logo-end','.title-end'], {
         opacity: 1,
         duration: 1.2,
         ease: 'power3.inOut',
-        force3D: true
+        // force3D: true
     }, 6);
+
 };
 
 

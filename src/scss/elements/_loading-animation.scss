@@ -190,7 +190,7 @@
 
 .text-end {
   @apply flex items-center justify-center flex-col;
-  @apply absolute max-w-[70%] w-full left-[50%] translate-x-[-50%] top-[10%];
+  @apply absolute max-w-[70%] w-full left-[50%] translate-x-[-50%] top-[45%];
   @media (max-width: 1024px) {
     @apply max-w-full;
   }
@@ -199,15 +199,26 @@
   @apply max-w-[25%];
   @apply mb-[7rem];
   mix-blend-mode: screen;
+  @apply absolute left-[50%] translate-x-[-50%];
+  top: 5%;
+  max-width: 15%;
+
+@media (max-width: 1024px) {
+    @apply max-w-[220px];
+  }
+
 }
 .title-end {
   mix-blend-mode: screen;
+  @apply absolute left-[50%] translate-x-[-50%];
+  top: 32%;
+  max-width: 35%;
   @apply max-w-[40%];
   @apply mb-[3.5rem];
   @media (max-width: 1366px) {
     @apply max-w-[41%];
   }
-   @media (max-width: 600px) {
+  @media (max-width: 600px) {
     @apply max-w-[72%];
   }
 }
