@@ -20,7 +20,7 @@
 .center {
   width: 100%;
   // height: 100%;
-  position: relative;
+  position: absolute;
   will-change: transform;
   transform: translateZ(0);
   @media (max-width: 1024px) {
@@ -37,7 +37,7 @@
   @media (max-width: 1024px) {
     width: auto !important;
     max-width: max-content !important;
-    height: 130%;
+    height: 127%;
     bottom: 0;
     position: absolute;
   }
@@ -195,7 +195,7 @@
     @apply max-w-full;
   }
  @media (max-width: 600px) {
-    @apply top-[27%]
+    @apply top-[30%]
   }
  
 }
@@ -211,7 +211,7 @@
     @apply max-w-[220px];
   }
 
-   @media (max-width: 1600px) {
+   @media (max-width: 600px) {
     @apply max-w-[150px];
    }
 
@@ -227,7 +227,7 @@
     @apply max-w-[41%];
   }
   @media (max-width: 600px) {
-    @apply max-w-[72%] top-[20%];
+    @apply max-w-[72%] top-[22%];
   }
 }
 .des-end {
@@ -237,9 +237,12 @@
   @media screen and (min-width: 600px) and (max-width: 1023px) {
     @apply text-[17px];
   }
+  @media (max-width: 1366px) {
+    @apply text-[1.7rem];
+  }
   @media (max-width: 600px) {
     @apply mb-[4rem];
-
+    @apply text-[1.3rem];
   }
 
   p {

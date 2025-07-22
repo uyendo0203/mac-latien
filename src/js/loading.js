@@ -53,8 +53,14 @@ const setInitialStates = () => {
     else if (window.innerWidth < 1367) centerY = '11%';
     else centerY = 0;
 
+    // ✅ Scale center từ đầu nếu màn hình vuông hoặc gần vuông
+    const ratio = window.innerWidth / window.innerHeight;
+    let initialScale = 1;
+    if (ratio < 1.7 && window.innerWidth > 1999) initialScale = 1.25;
+
     gsap.set('.center', {
         y: centerY,
+        scale: initialScale,
         force3D: true
     });
     gsap.set('.cloud-1', {
@@ -66,7 +72,7 @@ const setInitialStates = () => {
         opacity: 0
     });
 
-    if (window.innerWidth < 1367 && window.innerWidth > 800) {
+    if (window.innerWidth > 1024 && window.innerWidth < 1367 ) {
         gsap.set('.center-img', {
             scale: 2,
             force3D: true
@@ -148,7 +154,7 @@ const LoadingAnimation = () => {
 
     // .center bật lên
     let centerYAfter = 0;
-    if (window.innerWidth < 800) centerYAfter = '35%';
+    if (window.innerWidth < 800) centerYAfter = '43%';
     else if (window.innerWidth < 1367) centerYAfter = '30%';
     else if (window.innerWidth < 2000) centerYAfter = '34%';
     else centerYAfter = '27%';
