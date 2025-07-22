@@ -2475,6 +2475,11 @@ header .hambergur span{
     max-width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .text-end{
+    top: 27%;
+  }
+}
 
 .logo-end{
   margin-bottom: 7rem;
@@ -2490,6 +2495,11 @@ header .hambergur span{
 @media (max-width: 1024px) {
   .logo-end{
     max-width: 220px;
+  }
+}
+@media (max-width: 1600px) {
+  .logo-end{
+    max-width: 150px;
   }
 }
 
@@ -2511,6 +2521,7 @@ header .hambergur span{
 }
 @media (max-width: 600px) {
   .title-end{
+    top: 20%;
     max-width: 72%;
   }
 }
@@ -2525,6 +2536,11 @@ header .hambergur span{
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   .des-end{
     font-size: 17px;
+  }
+}
+@media (max-width: 600px) {
+  .des-end{
+    margin-bottom: 4rem;
   }
 }
 .des-end p{
@@ -3309,6 +3325,12 @@ video {
 .top-\[2\.4rem\]{
   top: 2.4rem;
 }
+.top-\[20\%\]{
+  top: 20%;
+}
+.top-\[27\%\]{
+  top: 27%;
+}
 .top-\[2rem\]{
   top: 2rem;
 }
@@ -3397,6 +3419,9 @@ video {
 }
 .mb-\[3px\]{
   margin-bottom: 3px;
+}
+.mb-\[4rem\]{
+  margin-bottom: 4rem;
 }
 .mb-\[7rem\]{
   margin-bottom: 7rem;
@@ -3554,6 +3579,9 @@ video {
 }
 .max-w-\[11rem\]{
   max-width: 11rem;
+}
+.max-w-\[150px\]{
+  max-width: 150px;
 }
 .max-w-\[18\.6rem\]{
   max-width: 18.6rem;
