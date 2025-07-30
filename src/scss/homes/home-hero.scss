@@ -1,0 +1,39 @@
+@use "../base/mixin" as *;
+
+.hero {
+  img {
+    @apply w-full;
+  }
+  .heading {
+    @apply absolute;
+    @apply max-w-[30rem];
+    @apply top-[5.62rem] md:top-[3.67rem];
+    @apply left-[3.6rem] md:left-[33.67rem];
+  }
+  .sub-heading {
+    @apply flex items-center flex-col;
+    @apply absolute w-full;
+    @apply max-w-[21.7rem] md:max-w-[35.33rem];
+    @apply top-[47.8%] md:top-[40.8%];
+    @apply left-[7%] md:left-[34.7%];
+  }
+  .icon-scroll {
+    @apply hidden md:block;
+    @apply max-w-[1.33rem] mt-[1rem];
+    svg {
+      @apply w-full h-auto;
+      animation: bounceSvg 1.5s infinite ease;
+    }
+  }
+}
+
+/* Mũi tên nhảy lên xuống */
+@keyframes bounceSvg {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.8rem);
+  }
+}

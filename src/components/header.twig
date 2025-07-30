@@ -1,0 +1,32 @@
+<header>
+   
+    {% if show_logo_white == true %}
+         <a href="/" class="logo" data-aos="fade-right" data-aos-duration="1000">
+            <img src="./images/overview/logo-white.png" alt="Vlasta">
+        </a>
+    {% else %}
+       <a href="/" class="logo" data-aos="fade-right" data-aos-duration="1000">
+            <img src="./images/logo.png" alt="Vlasta">
+        </a>
+    {% endif %}
+
+    <!-- Menu -->
+    <div class="menu" data-aos="fade-left" data-aos-duration="1000">
+        <div class="menu-text-span">
+            <div class="text-menu">Menu</div>
+            <div class="hambergur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+       
+        <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link {{ page == 'home' ? 'active' : '' }}" href="/">Homepage</a></li>
+            <li class="menu__item"><a class="menu__link {{ page == 'overview' ? 'active' : '' }}" href="/">Giới thiệu tổng quan</a></li>
+            <li class="menu__item"><a class="menu__link {{ page == 'ultilities' ? 'active' : '' }}" href="/">Tiện ích</a></li>
+            <li class="menu__item"><a class="menu__link {{ page == 'products' ? 'active' : '' }}" href="/">Sản phẩm</a></li>
+            <li class="menu__item"><a class="menu__link {{ page == 'news' ? 'active' : '' }}" href="/">Tin tức và Sự kiện</a></li>
+        </ul>
+    </div>
+</header>

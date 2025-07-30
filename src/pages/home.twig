@@ -1,0 +1,51 @@
+{% set page_title = 'Home' %}
+{% extends "../components/base.twig" %}
+
+{% block content %}
+{% set show_logo_white = false %}
+{% set page = 'home' %}
+
+{% include "../components/header.twig" %}
+<main class="homepage">
+    <div class="section-top">
+        <section class="section12">
+            <div class="bg">
+                <img class="desktop" src="./images/bg-1.jpg" alt="bg-1">
+                <img class="mobile" src="./images/mb-bg-1.jpg" alt="bg-1">
+            </div>
+            <div class="section-top">
+                {% include "../components/homes/home-hero.twig" %}
+                <div class="highlights_container">
+                    {% include "../components/homes/home-highlights.twig" %}
+                </div>
+            </div>
+        </section>
+        <section class="section34">
+            <div class="bg">
+                <img class="desktop" src="./images/bg-2.jpg" alt="bg-2">
+                <img class="mobile" src="./images/mb-bg-2.jpg" alt="bg-2">
+            </div>
+            <div class="section-top">
+                {% include "../components/homes/home-video-tvc.twig" %}
+                {% include "../components/homes/home-events-tabs.twig" %}
+            </div>
+        </section>
+        <section class="section56">
+            <div class="bg">
+                <img class="desktop" src="./images/bg-3.jpg" alt="bg-3">
+                <img class="mobile" src="./images/mb-bg-3.jpg" alt="bg-3">
+            </div>
+            <div class="section-top">
+                {% include "../components/homes/home-reason.twig" %}
+                {% include "../components/homes/contact.twig" %}
+            </div>
+        </section>
+    </div>
+</main>
+
+{% endblock %}
+
+{% block jsPage %}
+    <script src="js/home.js"></script>
+{% endblock %}
+

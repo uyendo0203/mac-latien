@@ -1,0 +1,14 @@
+
+@use "./homes/home-hero.scss" as *;
+@use "./homes/home-highlights.scss" as *;
+@use "./homes/home-video-tvc.scss" as *;
+@use "./homes/home-tabs-events.scss" as *;
+@use "./homes/home-reason.scss" as *;
+
+.homepage {
+  .section12,
+  .section34,
+  .section56 {
+    @apply relative;
+  }
+}

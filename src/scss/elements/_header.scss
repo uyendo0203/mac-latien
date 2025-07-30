@@ -1,0 +1,152 @@
+@use "../base/mixin" as *;
+
+header {
+    @apply z-[4] static md:fixed w-full;
+    @apply font-quicksand font-semibold;
+
+    &.active {
+        @apply h-full md:h-auto fixed;
+        @apply z-[99];
+        .menu {
+            @apply h-full;
+        }
+        .menu-text-span {
+            @apply z-[1000];
+        }
+        .menu__list {
+            @apply visible z-[999] opacity-[1];
+            &::before {
+                @apply bg-[#000000bf];
+            }
+        }
+        .menu__item {
+            @apply translate-y-0 opacity-[1];
+        }
+        .text-menu {
+            @apply invisible;
+        }
+        .hambergur {
+            span:nth-child(1) {
+                @apply translate-y-[5px] sm:translate-y-[7px] rotate-[45deg];
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                @apply translate-y-[-4px] rotate-[-45deg];
+            }
+        }
+    }
+    .logo {
+        @apply absolute left-[4.73rem] top-[3rem];
+        @apply max-w-[8.67rem] w-full;
+        @apply hidden md:block;
+        img {
+            @apply w-full;
+        }
+    }
+
+    .menu-text-span {
+        @apply inline-flex flex-col items-center;
+        @apply cursor-pointer;
+        @apply fixed md:static;
+        @apply right-[20px] md:right-auto;
+        @apply top-[15px] md:top-auto;
+        @apply z-[3];
+    }
+
+    .text-menu {
+        @apply md:cursor-auto;
+        @apply font-robotoCondensed font-medium;
+        @apply text-[1.7rem] md:text-[1.07rem];
+    }
+
+    .hambergur {
+        @apply flex flex-col items-end gap-1;
+        span {
+            @apply block w-[38px] md:w-[2.67rem] h-[2px] md:h-[0.13rem];
+            @apply bg-white transition-all duration-300;
+            @apply bg-[url('../images/menu-toggle-line.png')];
+        }
+    }
+}
+
+.menu {
+    @apply z-[4] md:z-[1];
+    @apply text-white;
+    @apply text-right;
+    @apply w-full md:w-auto;
+    @apply h-0 md:h-auto;
+    @apply flex flex-col justify-center items-center md:items-end;
+    @apply md:gap-[1.5rem] md:top-[2.67rem];
+    @apply md:right-[1.93rem];
+    @apply md:absolute;
+    @apply md:px-0;
+    @include transition(0.4s);
+
+    &__list {
+        @include transition(0.3s);
+        @apply text-right;
+        @apply opacity-0 md:opacity-[1];
+        @apply invisible md:visible;
+        @apply right-0 md:right-0;
+        @apply top-0 md:top-0;
+        @apply flex flex-col justify-center md:justify-start;
+        @apply w-full h-full top-0;
+        @apply fixed md:static;
+
+        &::before {
+            @include before-after-content;
+            @apply w-full h-full;
+            @apply top-0 bottom-0;
+        }
+    }
+
+    &__item {
+        @apply list-none relative;
+        @apply md:pr-[1.2rem];
+        @apply py-[0.8rem] md:py-[0.07rem];
+        @apply text-[2rem] md:text-[1rem];
+        @apply text-center md:text-right;
+        @apply translate-y-[-40px] md:translate-y-0;
+        @apply opacity-0 md:opacity-[1];
+        @include transition(0.4s);
+
+        // &:nth-child(1) {
+        //     @include transition(120ms);
+        // }
+        // &:nth-child(2) {
+        //     @include transition(240ms);
+        // }
+        // &:nth-child(3) {
+        //     @include transition(360ms);
+        // }
+        // &:nth-child(4) {
+        //     @include transition(480ms);
+        // }
+        // &:nth-child(5) {
+        //     @include transition(600ms);
+        // }
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              @include transition(120ms * $i);
+            }
+          }
+
+        &::before {
+            @include before-after-content;
+            @apply w-[0.6rem] h-[0.6rem] right-0 top-[0.47rem];
+            @apply rounded-[50%] bg-white;
+            @apply hidden md:block;
+        }
+    }
+
+    &__link {
+        @apply text-white no-underline font-medium transition-all duration-300;
+        &:hover,
+        &.active {
+            @apply underline;
+        }
+    }
+}
