@@ -27,9 +27,12 @@
     </head>
 
     <body>
-        {# {% include "./loading.twig" %} #} {% include "./toast.twig" %} {%
-        include "./popup.twig" %} {% include "./noti.twig" %} {% include
-        "./social.twig" %} {% block content %}{% endblock %}
+        {# {% include "./loading.twig" %} #} 
+        {% include "./toast.twig" %} 
+        {% include "./popup.twig" %} 
+        {% include "./noti.twig" %} 
+        {# {% include "./social.twig" %}  #}
+        {% block content %}{% endblock %}
     </body>
     <script src="./libs/jquery-3.7.1.min.js"></script>
     <script src="./libs/aos/aos.js"></script>

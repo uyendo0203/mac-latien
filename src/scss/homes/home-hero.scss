@@ -1,21 +1,31 @@
 @use "../base/mixin" as *;
 
 .hero {
+  @apply text-center absolute text-white;
+  @apply flex flex-col items-center justify-center;
+  @apply max-w-[50%] left-[50%] translate-x-[-50%];
+  @apply top-[12%];
   img {
     @apply w-full;
   }
   .heading {
-    @apply absolute;
-    @apply max-w-[30rem];
-    @apply top-[5.62rem] md:top-[3.67rem];
-    @apply left-[3.6rem] md:left-[33.67rem];
+    @apply max-w-[12.1rem];
+    @apply mb-[6.1rem];
   }
   .sub-heading {
-    @apply flex items-center flex-col;
-    @apply absolute w-full;
-    @apply max-w-[21.7rem] md:max-w-[35.33rem];
-    @apply top-[47.8%] md:top-[40.8%];
-    @apply left-[7%] md:left-[34.7%];
+    @apply max-w-[21.7rem] md:max-w-[31rem];
+    @apply text-[1.4rem] md:text-[1.2rem];
+    @apply mb-[3.55rem];
+  }
+  .text-bottom{
+    @apply text-[1.2rem] md:text-[1.4rem];
+    @apply mb-[7.5rem];
+    p{
+      @apply leading-[1.1] mb-[0.4rem];
+    }
+  }
+  .text-noitudobenvung{
+    @apply max-w-[42rem];
   }
   .icon-scroll {
     @apply hidden md:block;

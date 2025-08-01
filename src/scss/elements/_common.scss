@@ -4,7 +4,7 @@ html,
 body {
   // @apply bg-[#3f92b8] md:bg-[transparent];
 
-  @apply font-regular text-[1rem];
+  @apply font-regular text-[1rem] font-playfairDisplay;
   @apply overflow-x-hidden;
   transition: all 0.3s ease;
 
@@ -196,7 +196,7 @@ button[disabled="disabled"] {
       @apply text-[1.7rem] md:text-[1.5rem];
       @apply leading-[1.05];
       @apply pb-[10px];
-      @apply text-vl-green font-beautique-light cursor-pointer;
+      @apply text-vl-green cursor-pointer;
       &:first-child {
         @apply text-right;
       }
@@ -207,14 +207,12 @@ button[disabled="disabled"] {
         }
       }
       &.active {
-        @apply relative font-beautique-medium;
+        @apply relative;
         &::before {
           @include before-after-content;
           @apply w-[200%] h-[5px] bottom-0 right-0;
           @apply bg-no-repeat;
           background-size: 100%;
-
-          @apply bg-[url('../images/section4-tab-line-active.png')];
         }
       }
     }
@@ -236,11 +234,9 @@ button[disabled="disabled"] {
   }
 
   .events__item:hover::before {
-    @apply bg-[url('../images/section4-item-bg.png')];
   }
 
   .events__item::after {
-    @apply bg-[url('../images/section4-event-name-line.png')];
   }
 }
 

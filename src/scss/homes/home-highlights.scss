@@ -110,7 +110,7 @@
   }
 
   .description {
-    @apply absolute text-[#2e4f00] font-robotoCondensed font-regular;
+    @apply absolute text-[#2e4f00] font-regular;
     @apply leading-[1.1];
     @apply max-w-[19rem] md:max-w-none;
     @apply w-[34rem] bottom-[-7.3rem] md:bottom-auto;

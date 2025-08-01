@@ -22,7 +22,7 @@
     }
 
     .submit {
-      @apply border-none font-quicksand font-regular;
+      @apply border-none font-regular;
       @apply text-[1.3rem] md:text-[1.67rem];
       @apply py-[0.2rem] md:py-0 min-h-0 min-w-0;
       @apply px-[1.4rem] md:px-[1rem];
@@ -45,7 +45,7 @@
       @include fontsizeInputPlaceHolder;
 
       @mixin phd {
-        @apply font-quicksand font-semibold;
+        @apply font-semibold;
       }
 
       &::-webkit-input-placeholder {
@@ -103,7 +103,7 @@
 }
 
 .contact--note {
-  @apply text-white text-right font-quicksand font-medium leading-[1.2];
+  @apply text-white text-right font-medium leading-[1.2];
   @apply pr-[1.33rem] text-[0.93rem];
   @apply hidden md:block;
 }

@@ -6,9 +6,7 @@
 @use "./homes/home-reason.scss" as *;
 
 .homepage {
-  .section12,
-  .section34,
-  .section56 {
+  .section{
     @apply relative;
   }
 }

@@ -36,7 +36,7 @@
     @apply max-w-[63%];
     @apply text-[0.8rem] md:text-[0.67rem];
     @apply leading-[1.15] mt-[0.13rem] pl-[0.87rem];
-    @apply font-robotoCondensed font-regular text-vl-green;
+    @apply font-regular text-vl-green;
   }
 
   &__list {
@@ -86,13 +86,12 @@
     }
   }
   &__item-title {
-    @apply block font-beautique-medium duration-300;
+    @apply block duration-300;
     @apply pl-[0.47rem] text-[1.67rem];
     letter-spacing: 1px;
   }
   &__item-time {
     @apply flex flex-col;
-    @apply font-robotoCondensed;
     @apply text-[0.8rem] md:text-[0.67rem];
     @apply text-vl-green;
   }
