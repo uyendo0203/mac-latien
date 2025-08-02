@@ -1,0 +1,38 @@
+.ngoinhabiettho {
+    position: absolute;
+    top: 43%;
+    left: 5.1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .home-heading {
+        max-width: 49rem;
+        margin-bottom: -3.3rem;
+    }
+    .home-sub-heading {
+        max-width: 53rem;
+        margin: 0;
+        margin-left: 0.55rem;
+    }
+}
+
+.hand {
+    @apply absolute;
+    width: 100%;
+    bottom: 0;
+    max-width: 54%;
+}
+.hand-left {
+    @apply left-0;
+    @apply max-w-[63%];
+}
+.hand-right {
+    @apply right-0;
+}
+.hand-wrap {
+    position: absolute;
+    min-height: 75rem;
+    top: 65%;
+    width: 100%;
+}

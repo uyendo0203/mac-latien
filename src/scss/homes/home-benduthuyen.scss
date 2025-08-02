@@ -1,0 +1,18 @@
+.benduthuyen {
+    position: absolute;
+    top: 26.2%;
+    left: 5.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .home-heading {
+        max-width: 44rem;
+        margin-bottom: -2.3rem;
+    }
+    .home-sub-heading {
+        max-width: 53rem;
+        margin: 0;
+        margin-left: 0.55rem;
+    }
+}

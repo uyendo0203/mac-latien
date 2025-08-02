@@ -1,0 +1,18 @@
+@use "../base/mixin" as *;
+
+.dothiquocte {
+    position: absolute;
+    top: 28.7%;
+    left: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    .home-heading {
+        max-width: 40.3rem;
+        margin-bottom: -0.5rem;
+    }
+    .home-sub-heading {
+        max-width: 84rem;
+        margin: 0;
+        margin-left: 1.3rem;
+    }
+}

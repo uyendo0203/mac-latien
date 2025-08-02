@@ -240,11 +240,7 @@ button[disabled="disabled"] {
   }
 }
 
-.thuyen {
-  @apply absolute;
-  @apply top-[18.9rem] right-[37.7rem];
-  @apply max-w-[11.6rem];
-}
+
 .nhay-du {
   @apply absolute w-full max-w-[11rem] md:max-w-[28%];
   @apply top-[43rem] md:top-[2rem];

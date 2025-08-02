@@ -103,6 +103,8 @@ const clickPhoneSocial = () => {
     
 
 
+
+
 // Dữ liệu mẫu để điền vào form
 const setDefaultData = () => {
     $(".fullname").val("xxx");
@@ -214,5 +216,11 @@ const playVideoWhenScrollTo = videoE => {
 $(window).on("scroll", () => {
     if ($("#video-tvc").length && player) {
         playVideoWhenScrollTo(player);
+    }
+
+    if ($(this).scrollTop() > 50) {
+        $('header').addClass('active');
+    } else {
+        $('header').removeClass('active');
     }
 });
