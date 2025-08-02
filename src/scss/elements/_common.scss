@@ -34,8 +34,8 @@ body {
   overflow-x: hidden;
 }
 
-main{
-  @apply overflow-hidden
+main {
+  @apply overflow-hidden;
 }
 
 ///mobile text body : 4rem
@@ -56,8 +56,16 @@ main{
 }
 .bg {
   @apply text-[0px];
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 0;
   img {
     @apply text-[0px];
+    margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 0;
   }
 }
 .btn {
@@ -240,7 +248,6 @@ button[disabled="disabled"] {
   }
 }
 
-
 .nhay-du {
   @apply absolute w-full max-w-[11rem] md:max-w-[28%];
   @apply top-[43rem] md:top-[2rem];
@@ -283,6 +290,6 @@ button[disabled="disabled"] {
   @apply mx-auto;
 }
 
-.fancybox__caption{
-  @apply hidden
+.fancybox__caption {
+  @apply hidden;
 }

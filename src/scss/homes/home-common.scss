@@ -1,34 +1,30 @@
+// ================== SECTION HEADING ==================
 .section-heading {
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    position: absolute;
-    left: 7.6rem;
-    top: -1.6rem;
-}
-.home-heading {
-    img {
-        mix-blend-mode: screen;
-    }
-}
-.home-sub-heading {
-    color: white;
-    font-size: 1.6rem;
-    letter-spacing: 0.11rem;
-    line-height: 1.4;
-    margin-left: -6rem;
-    transform: translateY(3.9rem);
-    @apply font-light;
+  @apply absolute ;
+  @apply flex items-end w-full;
+  @apply max-w-[90%] md:max-w-full;
+  
 }
 
-.cloud-1 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    max-width: 28%;
-    animation: runTopBottom1 12s linear infinite;
+.home-heading {
+  img {
+    mix-blend-mode: screen; // Không có trong Tailwind, để nguyên
+  }
 }
-@-webkit-keyframes runTopBottom1 {
+
+.home-sub-heading {
+  @apply text-white text-[1rem] md:text-[1.6rem] font-light ;
+  letter-spacing: 0.11rem;
+  line-height: 1.4;
+}
+
+// ================== CLOUD ANIMATIONS ==================
+.cloud-1 {
+  @apply absolute right-0 bottom-0 max-w-[28%];
+  animation: runTopBottom1 12s linear infinite;
+}
+
+@keyframes runTopBottom1 {
   0% {
     bottom: 0;
   }
@@ -39,14 +35,13 @@
     bottom: 0;
   }
 }
+
 .cloud-2 {
-    position: absolute;
-    bottom: 6%;
-    max-width: 39%;
-    animation: runTopBottom2 10s linear infinite;
-    
+  @apply absolute bottom-[6%] max-w-[45%];
+  animation: runTopBottom2 10s linear infinite;
 }
-@-webkit-keyframes runTopBottom2 {
+
+@keyframes runTopBottom2 {
   0% {
     bottom: 6%;
   }
@@ -57,14 +52,13 @@
     bottom: 6%;
   }
 }
+
 .cloud-3 {
-    position: absolute;
-    top: 16%;
-    max-width: 33%;
-animation: runTopBottom3 9s linear infinite;
-    
+  @apply absolute top-[16%] max-w-[33%];
+  animation: runTopBottom3 9s linear infinite;
 }
-@-webkit-keyframes runTopBottom3 {
+
+@keyframes runTopBottom3 {
   0% {
     top: 16%;
   }
@@ -76,8 +70,7 @@ animation: runTopBottom3 9s linear infinite;
   }
 }
 
+// ================== THUYỀN ==================
 .thuyen {
-    position: absolute;
-    max-width: 100%;
-    top: 9%;
+  @apply absolute top-[9%] max-w-full;
 }

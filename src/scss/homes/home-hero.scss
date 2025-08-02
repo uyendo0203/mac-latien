@@ -9,8 +9,8 @@
         @apply w-full;
     }
     .heading {
-        @apply max-w-[12.1rem];
-        @apply mb-[4.1rem];
+        @apply max-w-[9rem] md:max-w-[12.1rem];
+        @apply mb-[2rem] md:mb-[4.1rem];
     }
     .sub-heading {
         @apply max-w-[21.7rem] md:max-w-[31rem];
@@ -19,7 +19,7 @@
     }
     .text-bottom {
         @apply text-[1.2rem] md:text-[1.4rem];
-        @apply mb-[5.5rem];
+        @apply mb-[3rem] md:mb-[5.5rem];
         p {
             @apply leading-[1.1] mb-[0.4rem];
             @apply font-thin;

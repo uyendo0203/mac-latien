@@ -1,15 +1,14 @@
 @use "../base/mixin" as *;
 
 .video-tvc {
-  @apply md:max-w-[92%] w-full;
+  @apply max-w-[85%] md:max-w-[92%] w-full;
   @apply w-full z-[3];
   @apply overflow-hidden;
   @apply aspect-[754/427];
   @apply mx-auto;
-  @apply mt-[28%];
-  border-radius: 4rem;
+  @apply mt-[41%] md:mt-[28%];
+  @apply rounded-[1rem] md:rounded-[4rem];
   box-shadow: -20px 20px 25px rgb(47 51 51 / 42%);
-
   &--img {
   }
 
@@ -23,16 +22,26 @@
 }
 
 .video-tvc-wrapper {
-  position: absolute;
-  width: 100%;
+  @apply absolute w-full;
   .home-heading {
-    max-width: 41.2rem;
+    @apply max-w-[18rem] md:max-w-[41.2rem];
+    @apply translate-y-[1rem] md:translate-y-[3.9rem]
+  }
+  .home-sub-heading {
+    @apply md:-ml-[6rem] md:translate-y-[8rem];
   }
   .chimbocau {
-    position: absolute;
-    top: 19.3%;
-    left: -4%;
-    max-width: 19%;
-    width: 100%;
+    @apply absolute;
+    @apply top-[40.3%] md:top-[19.3%] left-[-4%];
+    @apply max-w-[19%] w-full;
+  }
+  .section-heading {
+    @apply flex-col md:flex-row;
+    @apply items-start md:items-end;
+    @apply left-[5%] md:left-[7.6rem];
+    @apply top-[-5%] md:top-[-5.6rem];
+    @media (max-width: 767px) {
+      @apply max-w-[70%];
+    }
   }
 }

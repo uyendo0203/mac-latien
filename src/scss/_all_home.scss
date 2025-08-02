@@ -8,7 +8,7 @@
 
 .homepage {
   .section {
-    @apply relative;
+    @apply relative overflow-hidden;
   }
   .section-23 {
     @apply absolute;

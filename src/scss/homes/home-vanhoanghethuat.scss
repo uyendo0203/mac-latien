@@ -1,26 +1,20 @@
 @use "../base/mixin" as *;
 
 .vanhoanghethuat {
-    position: absolute;
-    top: 54.9%;
-    right: 3.4%;
-    left: auto;
-    align-items: flex-end;
-    flex-direction: column;
+    @apply absolute top-[46%] md:top-[54.9%] right-[3.4%] left-auto flex flex-col items-end;
+    
     .home-heading {
-        max-width: 52.5rem;
-        margin-bottom: -4.3rem;
+        @apply max-w-[25rem] md:max-w-[52.5rem] md:mb-[-0.4rem];
     }
+    
     .home-sub-heading {
-        max-width: 69rem;
-        margin: 0;
-        text-align: right;
+        @apply max-w-[69rem] m-0 text-right;
+        @media (max-width: 767px) {
+            @apply max-w-[52%] text-[0.8rem];
+        }
     }
 }
 
 .conchim {
-   position: absolute;
-    bottom: 27%;
-    max-width: 40rem;
-    left: -9%;
+    @apply absolute bottom-[30%] max-w-[17rem] md:max-w-[33rem] left-0;
 }
