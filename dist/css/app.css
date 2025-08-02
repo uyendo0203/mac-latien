@@ -2264,7 +2264,7 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .video-tvc{
-    max-width: 92%;
+    max-width: 80%;
   }
 }
 
@@ -2272,7 +2272,7 @@ header.active .menu__link {
   z-index: 3;
   width: 100%;
   overflow: hidden;
-  aspect-ratio: 754/427;
+  aspect-ratio: 16/9;
   margin-left: auto;
   margin-right: auto;
   margin-top: 41%;
@@ -3511,8 +3511,8 @@ video {
 .hidden{
   display: none;
 }
-.aspect-\[754\/427\]{
-  aspect-ratio: 754/427;
+.aspect-\[16\/9\]{
+  aspect-ratio: 16/9;
 }
 .h-0{
   height: 0px;
@@ -4437,8 +4437,8 @@ video {
   .md\:max-w-\[63\%\]{
     max-width: 63%;
   }
-  .md\:max-w-\[92\%\]{
-    max-width: 92%;
+  .md\:max-w-\[80\%\]{
+    max-width: 80%;
   }
   .md\:translate-y-\[10rem\]{
     --tw-translate-y: 10rem;

@@ -117,6 +117,82 @@ const animateConChim = () => {
   });
 };
 
+const animateThuyen = () => {
+  gsap.set(".thuyen", {
+    top: "12%",
+    right: "-6%",
+    scaleX: 1,
+    position: "absolute"
+  });
+
+  const timeRun = 4;
+  let animationActive = false;
+
+  ScrollTrigger.create({
+    trigger: ".thuyen",
+    start: "top 50%",
+    onEnter: () => {
+      if (animationActive) return;
+      
+      const tl = gsap.timeline({
+        onComplete: () => {
+          // Bắt đầu random cycle
+          animationActive = true;
+          randomCycle();
+        }
+      });
+
+      // Animation chính
+      tl.to(".thuyen", {
+        top: "17%",
+        right: "21%",
+        duration: timeRun,
+        ease: "power1.out"
+      });
+    },
+
+    onLeaveBack: () => {
+      animationActive = false;
+      gsap.killTweensOf(".thuyen");
+      
+      gsap.to(".thuyen", {
+        top: "12%",
+        right: "-6%",
+        scaleX: 1,
+        rotation: 0,
+        y: 0,
+        x: 0,
+        duration: timeRun - 1,
+        ease: "power1.out"
+      });
+    }
+  });
+
+  // Random cycle function
+  const randomCycle = () => {
+    if (!animationActive) return;
+    
+    const randomY = gsap.utils.random(-15, 10);
+    const randomX = gsap.utils.random(-8, 8);
+    const randomRotation = gsap.utils.random(-3, 3);
+    const randomDuration = gsap.utils.random(2, 4);
+    const randomDelay = gsap.utils.random(0.5, 2);
+
+    gsap.to(".thuyen", {
+      y: randomY,
+      x: randomX,
+      rotation: randomRotation,
+      duration: randomDuration,
+      ease: "power2.inOut",
+      delay: randomDelay,
+      onComplete: () => {
+        // Restart với giá trị random mới
+        randomCycle();
+      }
+    });
+  };
+};
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -131,7 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Đợi một chút để đảm bảo DOM đã render hoàn toàn
 	setTimeout(() => {
 		animationHands();
-		animateConChim()
+		animateConChim();
+		animateThuyen();
 		ScrollTrigger.refresh();
 	}, 100);
 });

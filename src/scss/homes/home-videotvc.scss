@@ -1,10 +1,10 @@
 @use "../base/mixin" as *;
 
 .video-tvc {
-  @apply max-w-[85%] md:max-w-[92%] w-full;
+  @apply max-w-[85%] md:max-w-[80%] w-full;
   @apply w-full z-[3];
   @apply overflow-hidden;
-  @apply aspect-[754/427];
+  @apply aspect-[16/9];
   @apply mx-auto;
   @apply mt-[41%] md:mt-[28%];
   @apply rounded-[1rem] md:rounded-[4rem];
