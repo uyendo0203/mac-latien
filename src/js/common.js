@@ -138,6 +138,12 @@ $(document).ready(() => {
         }
     });
 
+    $(".hamburger").click(function () {
+		$(this).toggleClass("open");
+		$('.menu').toggleClass("open");
+	});
+
+
     // $("#noti").addClass("active");
     $(".close-noti").on("click", function () {
         $("#noti").removeClass("active");
@@ -218,7 +224,7 @@ $(window).on("scroll", () => {
         playVideoWhenScrollTo(player);
     }
 
-    if ($(this).scrollTop() > 50) {
+    if ($(window).width() > 767 && $(this).scrollTop() > 50) {
         $('header').addClass('active');
     } else {
         $('header').removeClass('active');

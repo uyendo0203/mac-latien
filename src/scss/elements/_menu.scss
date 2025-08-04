@@ -32,10 +32,10 @@
     }
 }
 
-.hambergur {
+.hamburger {
     @apply hidden -z-[1];
     
-    @media (max-width: 640px) {
+    @media (max-width: 767px) {
         @apply block z-[4];
         @apply w-[40px] fixed right-[15px] top-[15px] m-0 left-auto;
         @apply scale-[0.8];
@@ -68,7 +68,7 @@
 }
 
 .menu {
-    @media (max-width: 640px) {
+    @media (max-width: 767px) {
         @apply visible fixed flex-col w-full h-full top-0;
         
         ul {

@@ -72,5 +72,5 @@
 
 // ================== THUYỀN ==================
 .thuyen {
-  @apply absolute top-[13%] right-[-7%] max-w-[38rem] w-full;
+  @apply absolute top-[13%] right-[-7%] max-w-[30%] md:max-w-[38rem] w-full;
 }

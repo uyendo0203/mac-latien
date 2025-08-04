@@ -8,17 +8,10 @@
   form {
     @apply flex flex-wrap;
     @apply gap-[0.5rem] md:gap-[0.7rem];
-    @apply max-w-[90%] md:max-w-[48.2rem];
     @apply mx-auto mb-[1.5rem];
 
     .form-item {
-      @apply w-full md:w-[calc((100%/2)-0.5rem)];
-
-      &:last-child {
-        @apply w-full;
-        @apply flex justify-center md:justify-end items-center;
-        @apply mt-[0.5rem] md:mt-0;
-      }
+      @apply flex;
     }
 
     .submit {

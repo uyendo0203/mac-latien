@@ -20,7 +20,7 @@ header {
         }
     }
     &.active{
-        @apply md:mt-[1.3rem];
+        // @apply md:mt-[1.3rem];
         .menu__list{
             @apply text-[1.3rem]
         }

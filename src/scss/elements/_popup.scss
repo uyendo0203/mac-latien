@@ -9,12 +9,12 @@
 
     &.active {
         @apply z-[999] opacity-[1];
-        @apply bg-[#000000a3];
+        @apply bg-[#00000047];
     }
 
     &-wrap {
         @apply relative w-full;
-        @apply max-w-[86%] md:max-w-[55rem] max-h-full;
+        @apply max-w-[86%] md:max-w-[30rem] max-h-full;
     }
     &-content {
         @apply relative bg-[#027641d9] shadow;
@@ -23,6 +23,10 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 100% 100%;
+
+        @apply bg-[url('../images/popup-bg.png')] bg-no-repeat;
+        background-size: 100% 100%;
+
         @media (min-width: 2560px) {
             transform: scale(0.8);
         }
@@ -35,18 +39,17 @@
     }
     &-close {
         @apply text-[2rem] ms-auto;
-        @apply inline-flex justify-center items-center;
         @apply absolute;
-        @apply right-[-2rem] top-[-3rem];
+        @apply right-[2rem] top-[-1rem];
         @apply text-white flex flex-row;
-        svg {
-            @apply w-[2rem] h-[2rem] mr-[5px];
-        }
+        @apply h-[2.5rem];
+
     }
 
     .contact--form {
         @apply m-0 max-w-full;
         form {
+            // @apply flex flex-col;
             @apply max-w-full m-0;
         }
     }

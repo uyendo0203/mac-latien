@@ -64,46 +64,75 @@
     </div>
 </div> <div class="popup">
     <div class="popup-wrap">
-        <!-- Modal content -->
         <div class="popup-content">
-            <!-- Modal header -->
             <div class="popup-header">
                 <button
                     type="button"
                     class="popup-close"
                     data-modal-hide="default-modal"
                 >
-                    <svg
-                        fill="white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:cc="http://creativecommons.org/ns#"
-                        xmlns:dc="http://purl.org/dc/elements/1.1/"
-                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                        xmlns:svg="http://www.w3.org/2000/svg"
-                        width="800px"
-                        height="800px"
-                        viewBox="0 0 6.3499998 6.3499998"
-                        id="svg8"
-                        version="1.1"
-                    >
-                        <defs id="defs2" />
-                        <path
-                            d="m 0.76367336,0.52734375 a 0.26460978,0.26460978 0 0 0 -0.15625,0.45312501 L 5.369142,5.7441405 A 0.26516504,0.26516504 0 1 0 5.7441421,5.3691407 L 0.98047024,0.60742188 A 0.26460978,0.26460978 0 0 0 0.76367336,0.52734375 Z"
-                            id="path1855"
-                        />
-                        <path
-                            d="M 5.5507827,0.52734375 A 0.26460978,0.26460978 0 0 0 5.369142,0.60742188 L 0.60742336,5.3691407 A 0.26460978,0.26460978 0 1 0 0.98047024,5.7441405 L 5.7441421,0.98046876 A 0.26460978,0.26460978 0 0 0 5.5507827,0.52734375 Z"
-                            id="path1857"
-                        />
-                        <script xmlns="" />
-                    </svg>
-                    <span class="text">ĐÓNG</span>
+                   <img class=""
+                        src="./images/popup-close.png"
+                        alt="Bất động sản nghệ thuật văn hoá"
+                    />
                 </button>
             </div>
-            <!-- Modal body -->
-            
+            <div class="popup-body">
+                <div class="contact--form">
+    <form>
+        <div class="contact--note">
+            Vui lòng điền thông tin, đội ngũ tư vấn <br> sẽ liên hệ trong thời gian sớm nhất. 
         </div>
-         <div id="toast-simple" class="toast" role="alert">
+        <div class="form-item">
+            <label for="fullname" class="form-label">Họ và tên:</label>
+            <input
+                aria-hidden="false"
+                placeholder="Họ và tên"
+                name="fullname"
+                class="fullname"
+                type="text"
+            />
+        </div>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Email:</label>
+            <input
+                aria-hidden="false"
+                placeholder="Email"
+                name="email"
+                class="email"
+                type="email"
+            />
+        </div>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Số điện thoạ:</label>
+            <input
+                aria-hidden="false"
+                placeholder="Số điện thoại"
+                name="phone"
+                class="phone"
+                type="number"
+            />
+        </div>
+
+        <div class="form-item">
+            <label for="fullname" class="form-label">Yêu cầu tư vấn:</label>
+            <input
+                aria-hidden="false"
+                placeholder="Yêu cầu tư vấn:"
+                name="consultation"
+                class="consultation"
+                type="text"
+            />
+        </div>
+        <button class="submit btn" disabled="disabled" type="submit">
+            Gửi
+        </button>
+    </form>
+</div>
+            </div>
+        </div>
+         
+        <div id="toast-simple" class="toast" role="alert">
     <svg
     class="fly"
         aria-hidden="true"
@@ -155,10 +184,10 @@
     <a href="/" class="logo">
         <img src="./images/home/logo-white.png" alt="La Tiên Villa Logo" />
     </a>
-    <div class="hambergur">
+    <div class="hamburger">
         <span></span>
         <span></span>
-        <span></span>
+        <span></span> 
     </div>
     <div class="menu">
         <ul class="menu__list">
@@ -185,7 +214,7 @@
         <section class="section">
             <div class="bg">
                 <img class="desktop" src="./images/home/bg-1.jpg" alt="bg-1">
-                <img class="mobile" src="./images/home/bg-1.jpg" alt="bg-1">
+                <img class="mobile" src="./images/home/bg-1-mobile.jpg" alt="bg-1">
             </div>
             <div class="section-top">
                 <div class="hero">
@@ -227,7 +256,7 @@
         <section class="section">
             <div class="bg">
                 <img class="desktop" src="./images/home/bg-2.jpg" alt="bg-1">
-                <img class="mobile" src="./images/home/bg-2.jpg" alt="bg-1">
+                <img class="mobile" src="./images/home/bg-2-mobile.jpg" alt="bg-1">
             </div>
             <div class="section-23">
                 <img class="cloud-1" src="./images/home/sunsetcloud0.png" alt="sunsetcloud0.png">
@@ -294,13 +323,12 @@
     </h2>
 </div>
 <div class="hand-wrap">
-    <video autoplay loop muted playsinline class="hand hand-left" onloadeddata="console.log('Left video loaded')">
+    <video autoplay loop muted playsinline class="hand-item hand-left" onloadeddata="console.log('Left video loaded')">
         <source src="./images/home/tay-trai.webm" type="video/webm">
-        <!-- Fallback cho browser không hỗ trợ WebM -->
         <source src="./images/home/tay-trai.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <video autoplay loop muted playsinline class="hand-right hand" onloadeddata="console.log('Right video loaded')">
+    <video autoplay loop muted playsinline class="hand-right hand-item" onloadeddata="console.log('Right video loaded')">
         <source src="./images/home/tay-phai.webm" type="video/webm">
         <source src="./images/home/tay-phai.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -313,7 +341,7 @@
         <section class="section">
             <div class="bg">
                 <img class="desktop" src="./images/home/bg-3.jpg" alt="bg-1">
-                <img class="mobile" src="./images/home/bg-3.jpg" alt="bg-1">
+                <img class="mobile" src="./images/home/bg-3-mobile.jpg" alt="bg-1">
             </div>
             <div class="section-top">
                 <img class="cloud-2" src="./images/home/sunsetcloud1.png" alt="sunsetcloud0.png">
@@ -365,7 +393,7 @@ class="conchim"
          <section class="section">
             <div class="bg">
                 <img class="desktop" src="./images/home/bg-4.jpg" alt="bg-1">
-                <img class="mobile" src="./images/home/bg-4.jpg" alt="bg-1">
+                <img class="mobile" src="./images/home/bg-4-mobile.jpg" alt="bg-1">
             </div>
             <div class="section-top">
                 <img class="cloud-3" src="./images/home/sunsetcloud2.png" alt="sunsetcloud0.png">

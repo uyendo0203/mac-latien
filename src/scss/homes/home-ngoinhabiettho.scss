@@ -1,8 +1,12 @@
 .ngoinhabiettho {
-  @apply absolute top-[47%] md:top-[43%] left-[5.1%] w-full flex flex-col items-start;
+  @apply absolute top-[44%] md:top-[43%] left-[5.1%] w-full flex flex-col items-start;
+  @media (max-width: 767px) {
+     @apply max-w-[57%]
+    
+  }
 
   .home-heading {
-    @apply max-w-[24rem] md:max-w-[49rem] mb-[0.7rem];
+    @apply max-w-[82%] md:max-w-[49rem] mb-[0.7rem];
   }
 
   .home-sub-heading {
@@ -11,7 +15,7 @@
 }
 
 // ================== HAND ==================
-.hand {
+.hand-item {
   @apply absolute bottom-0 w-full max-w-[54%];
 }
 
@@ -25,6 +29,6 @@
 
 // ================== HAND WRAP ==================
 .hand-wrap {
-  @apply absolute top-[65%] w-full;
+  @apply absolute top-[69%] md:top-[65%] w-full;
   @apply min-h-[30rem] md:min-h-[75rem];
 }

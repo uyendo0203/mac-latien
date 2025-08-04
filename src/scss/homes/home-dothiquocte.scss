@@ -1,10 +1,12 @@
 @use "../base/mixin" as *;
 
 .dothiquocte {
-    @apply absolute top-[29%] md:top-[28.7%] left-[5%] flex flex-col items-start;
-    
+    @apply absolute top-[30%] md:top-[28.7%] left-[5%] flex flex-col items-start;
+    @media (max-width: 767px) {
+        @apply max-w-[59%];
+    }
     .home-heading {
-        @apply max-w-[22rem] md:max-w-[40.3rem] mb-[0.5rem] md:mb-[3.3rem];
+        @apply max-w-[75%] md:max-w-[40.3rem] mb-[0.5rem] md:mb-[3.3rem];
     }
     
     .home-sub-heading {

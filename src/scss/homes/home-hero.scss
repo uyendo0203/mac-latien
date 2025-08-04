@@ -3,14 +3,14 @@
 .hero {
     @apply text-center absolute text-white;
     @apply flex flex-col items-center justify-center;
-    @apply max-w-[50%] left-[50%] translate-x-[-50%];
+    @apply w-full max-w-[60%] md:max-w-[50%] left-[50%] translate-x-[-50%];
     @apply top-[12.1%];
     img {
         @apply w-full;
     }
     .heading {
         @apply max-w-[9rem] md:max-w-[12.1rem];
-        @apply mb-[2rem] md:mb-[6.1rem];
+        @apply mb-[3.5rem] md:mb-[6.1rem];
     }
     .sub-heading {
         @apply max-w-[21.7rem] md:max-w-[31rem];
@@ -19,7 +19,7 @@
     }
     .text-bottom {
         @apply text-[1.2rem] md:text-[1.4rem];
-        @apply mb-[3rem] md:mb-[7.3rem];
+        @apply mb-[5rem] md:mb-[7.3rem];
         p {
             @apply leading-[1.14] mb-[0.4rem];
             @apply font-thin;
