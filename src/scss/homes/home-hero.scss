@@ -4,25 +4,26 @@
     @apply text-center absolute text-white;
     @apply flex flex-col items-center justify-center;
     @apply max-w-[50%] left-[50%] translate-x-[-50%];
-    @apply top-[10.5%];
+    @apply top-[12.1%];
     img {
         @apply w-full;
     }
     .heading {
         @apply max-w-[9rem] md:max-w-[12.1rem];
-        @apply mb-[2rem] md:mb-[4.1rem];
+        @apply mb-[2rem] md:mb-[6.1rem];
     }
     .sub-heading {
         @apply max-w-[21.7rem] md:max-w-[31rem];
         @apply text-[1.4rem] md:text-[1.2rem];
-        @apply mb-[3.55rem];
+        @apply mb-[3.25rem];
     }
     .text-bottom {
         @apply text-[1.2rem] md:text-[1.4rem];
-        @apply mb-[3rem] md:mb-[5.5rem];
+        @apply mb-[3rem] md:mb-[7.3rem];
         p {
-            @apply leading-[1.1] mb-[0.4rem];
+            @apply leading-[1.14] mb-[0.4rem];
             @apply font-thin;
+            letter-spacing: 0.1rem
         }
     }
     .text-noitudobenvung {

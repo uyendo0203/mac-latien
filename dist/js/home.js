@@ -144,7 +144,7 @@ const animateThuyen = () => {
 
       // Animation chính
       tl.to(".thuyen", {
-        top: "17%",
+        top: "18%",
         right: "21%",
         duration: timeRun,
         ease: "power1.out"

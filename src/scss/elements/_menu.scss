@@ -7,7 +7,7 @@
         @apply gap-[2.67rem] md:gap-[3.8rem];
         @apply text-[1.7rem] md:text-[1.6rem];
         @apply font-medium;
-        @apply transition-all duration-300 ease-in-out;
+        transition: all 0.3s ease;
     }
     &__item {
     }
@@ -15,6 +15,7 @@
         @apply text-white font-light;
         @apply tracking-[0.4rem];
         @apply inline-flex flex-col items-center justify-between;
+        transition: all 0.3s ease;
         
         &.active {
             @apply font-bold;

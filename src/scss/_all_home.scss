@@ -9,6 +9,9 @@
 .homepage {
   .section {
     @apply relative overflow-hidden;
+    &:nth-child(2){
+      @apply overflow-visible
+    }
   }
   .section-23 {
     @apply absolute;

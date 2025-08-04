@@ -20,19 +20,19 @@
 
 // ================== CLOUD ANIMATIONS ==================
 .cloud-1 {
-  @apply absolute right-0 bottom-0 max-w-[28%];
-  animation: runTopBottom1 12s linear infinite;
+  @apply absolute right-0 bottom-0 max-w-[28%] z-[2];
+  animation: runTopBottom1 10s linear infinite;
 }
 
 @keyframes runTopBottom1 {
   0% {
-    bottom: 0;
+    bottom: -4%;
   }
   50% {
-    bottom: 2%;
+    bottom: -2%;
   }
   100% {
-    bottom: 0;
+    bottom: -4%;
   }
 }
 
@@ -72,5 +72,5 @@
 
 // ================== THUYỀN ==================
 .thuyen {
-  @apply absolute top-[3%] right-[-17%] max-w-full;
+  @apply absolute top-[13%] right-[-7%] max-w-[38rem] w-full;
 }
