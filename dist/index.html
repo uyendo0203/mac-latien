@@ -79,15 +79,14 @@
             </div>
             <div class="popup-body">
                 <div class="contact--form">
+    <div class="contact--note">
+        Vui lòng điền thông tin, đội ngũ tư vấn <br> sẽ liên hệ trong thời gian sớm nhất. 
+    </div>
     <form>
-        <div class="contact--note">
-            Vui lòng điền thông tin, đội ngũ tư vấn <br> sẽ liên hệ trong thời gian sớm nhất. 
-        </div>
         <div class="form-item">
             <label for="fullname" class="form-label">Họ và tên:</label>
             <input
                 aria-hidden="false"
-                placeholder="Họ và tên"
                 name="fullname"
                 class="fullname"
                 type="text"
@@ -97,17 +96,15 @@
             <label for="fullname" class="form-label">Email:</label>
             <input
                 aria-hidden="false"
-                placeholder="Email"
                 name="email"
                 class="email"
                 type="email"
             />
         </div>
         <div class="form-item">
-            <label for="fullname" class="form-label">Số điện thoạ:</label>
+            <label for="fullname" class="form-label">Số điện thoại:</label>
             <input
                 aria-hidden="false"
-                placeholder="Số điện thoại"
                 name="phone"
                 class="phone"
                 type="number"
@@ -118,7 +115,6 @@
             <label for="fullname" class="form-label">Yêu cầu tư vấn:</label>
             <input
                 aria-hidden="false"
-                placeholder="Yêu cầu tư vấn:"
                 name="consultation"
                 class="consultation"
                 type="text"
@@ -293,13 +289,15 @@
             allowfullscreen=""
             data-gtm-yt-inspected-10="true"
             class="aos-init aos-animate"
-            title='CaraWorld - Sự trỗi dậy diệu kỳ của "Viên kim cương 800 Cara"'
+            title='Đất tiên vịnh ngọc'
         ></iframe>
     </div>
-    
-    <video autoplay loop muted playsinline class="chimbocau" onloadeddata="console.log('Left video loaded')">
+    <video autoplay loop muted playsinline class="chimbocau hidden md:block" onloadeddata="console.log('Left video loaded')">
         <source src="./images/home/bocau.webm" type="video/webm">
     </video>
+    <figure class="chimbocau block md:hidden">
+        <img src="./images/home/bocau.png" alt="Đất tiên vịnh ngọc" />
+    </figure>
 </div>
                 <div
     class="section-heading ngoinhabiettho"
@@ -323,14 +321,33 @@
     </h2>
 </div>
 <div class="hand-wrap">
-    <video autoplay loop muted playsinline class="hand-item hand-left" onloadeddata="console.log('Left video loaded')">
-        <source src="./images/home/tay-trai.webm" type="video/webm">
-        <source src="./images/home/tay-trai.mp4" type="video/mp4">
+    <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="hand-item video-hand-left hidden md:block"
+        onloadeddata="console.log('Left video loaded')"
+    >
+        <source src="./images/home/tay-trai.webm" type="video/webm" />
         Your browser does not support the video tag.
     </video>
-    <video autoplay loop muted playsinline class="hand-right hand-item" onloadeddata="console.log('Right video loaded')">
-        <source src="./images/home/tay-phai.webm" type="video/webm">
-        <source src="./images/home/tay-phai.mp4" type="video/mp4">
+    <figure class="hand-item video-hand-left block md:hidden">
+        <img src="./images/home/tay-trai.png" type="video/png" />
+    </figure>
+    <figure class="hand-item video-hand-right block md:hidden">
+        <img src="./images/home/tay-phai.png" type="video/png" />
+    </figure>
+    <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="video-hand-right hand-item hidden md:block"
+        onloadeddata="console.log('Right video loaded')"
+    >
+        <source src="./images/home/tay-phai.webm" type="video/webm" />
+
         Your browser does not support the video tag.
     </video>
 </div>

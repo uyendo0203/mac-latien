@@ -90,8 +90,8 @@ const contactForm = () => {
 const clickPhoneSocial = () => {
     $(".social-phone .social-item").on("click", function (e) {
         e.stopPropagation();
-		$(this).closest('.social-phone').find('.number').toggleClass("active");
-	});
+        $(this).closest('.social-phone').find('.number').toggleClass("active");
+    });
 
     // Click outside to hide phone number
     $(document).on("click", function (e) {
@@ -100,7 +100,7 @@ const clickPhoneSocial = () => {
         }
     });
 }
-    
+
 
 
 
@@ -110,12 +110,12 @@ const setDefaultData = () => {
     $(".fullname").val("xxx");
     $(".email").val("xxxx@example.com");
     $(".phone").val("0123456789");
-    $("select[name='consultation']").val("3");
+    $(".consultation").val("01234567893");
 };
 
 $(document).ready(() => {
 
-    // setDefaultData(); // Thiết lập dữ liệu mẫu cho local
+    setDefaultData(); // Thiết lập dữ liệu mẫu cho local
 
     contactForm();
     lazyLoadImages();
@@ -139,9 +139,9 @@ $(document).ready(() => {
     });
 
     $(".hamburger").click(function () {
-		$(this).toggleClass("open");
-		$('.menu').toggleClass("open");
-	});
+        $(this).toggleClass("open");
+        $('.menu').toggleClass("open");
+    });
 
 
     // $("#noti").addClass("active");
@@ -154,11 +154,11 @@ $(document).ready(() => {
     });
 
     $(".register ").on("click", function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
         $(".popup").addClass("active");
     });
 
-    // $('.popup').addClass('active');
+    $('.popup').addClass('active');
     $('.popup-close').click(function () {
         $('.popup').removeClass('active');
     });
@@ -168,9 +168,45 @@ $(document).ready(() => {
             $('.popup').removeClass('active');
         }
     });
+
+
 });
 
-$(window).resize(() => {});
+// Simple video fallback
+document.addEventListener('DOMContentLoaded', () => {
+    // const videos = document.querySelectorAll('video');
+
+    // videos.forEach(video => {
+    //     video.addEventListener('error', () => {
+    //         const src = video.querySelector('source')?.src || video.src;
+    //         if (!src) return;
+
+    //         // Tạo đường dẫn image
+    //         const imagePath = src.replace(/\.(mp4|webm|ogg)$/i, '.png');
+
+    //         // Tạo img element
+    //         const img = document.createElement('img');
+    //         img.src = imagePath;
+    //         img.className = video.className;
+    //         img.alt = 'Video fallback';
+
+    //         // Thay thế video bằng image
+    //         video.parentNode.replaceChild(img, video);
+
+    //         console.log(`Replaced video with image: ${imagePath}`);
+    //     });
+
+    //     // Timeout fallback (nếu video không load trong 3s)
+    //     setTimeout(() => {
+    //         if (video.readyState === 0) {
+    //             video.dispatchEvent(new Event('error'));
+    //         }
+    //     }, 3000);
+    // });
+
+
+    
+});
 
 
 // ==============================
@@ -229,4 +265,81 @@ $(window).on("scroll", () => {
     } else {
         $('header').removeClass('active');
     }
+});
+
+// Adjust input height with error message
+const adjustInputHeightWithError = (inputElement, hasError = false) => {
+    const formItem = inputElement.closest('.form-item');
+
+    if (!formItem) return;
+
+    if (hasError) {
+        formItem.style.marginBottom = 'calc(0.8rem + var(--original-margin, 0.8rem))';
+    } else {
+        formItem.style.marginBottom = '';
+    }
+};
+
+// Sử dụng MutationObserver để detect error elements ngay lập tức
+const observeErrorChanges = () => {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'childList' || mutation.type === 'attributes') {
+                const target = mutation.target;
+
+                // Check nếu là form-item hoặc bên trong form-item
+                const formItem = target.closest('.form-item') ||
+                    (target.classList?.contains('form-item') ? target : null);
+
+                if (formItem) {
+                    const input = formItem.querySelector('input, textarea, select');
+                    const hasError = formItem.querySelector('.error-message, .error, [class*="error"]') ||
+                        formItem.classList.contains('error') ||
+                        formItem.classList.contains('has-error');
+
+                    if (input) {
+                        adjustInputHeightWithError(input, !!hasError);
+                    }
+                }
+            }
+        });
+    });
+
+    // Observe tất cả form-item
+    document.querySelectorAll('.form-item').forEach(formItem => {
+        observer.observe(formItem, {
+            childList: true,
+            attributes: true,
+            attributeFilter: ['class'],
+            subtree: true
+        });
+    });
+};
+
+// Event listeners cho input changes
+document.addEventListener('DOMContentLoaded', () => {
+    // Khởi tạo observer
+    observeErrorChanges();
+
+    // Backup với input events
+    const formInputs = document.querySelectorAll('.form-item input, .form-item textarea, .form-item select');
+
+    formInputs.forEach(input => {
+        ['input', 'change', 'blur', 'focus'].forEach(eventType => {
+            input.addEventListener(eventType, () => {
+                // Delay nhỏ để đợi error message được thêm vào
+                setTimeout(() => {
+                    const formItem = input.closest('.form-item');
+                    const hasError = formItem && (
+                        formItem.querySelector('.error-message, .error, [class*="error"]') ||
+                        formItem.classList.contains('error') ||
+                        formItem.classList.contains('has-error') ||
+                        input.classList.contains('error')
+                    );
+
+                    adjustInputHeightWithError(input, !!hasError);
+                }, 10); // 10ms delay
+            });
+        });
+    });
 });

@@ -22,7 +22,7 @@
   }
 
   &-message {
-    @apply mb-4 text-[gray];
+    @apply mb-4;
   }
 }
 
@@ -30,6 +30,8 @@
   @apply px-4 py-2 text-white rounded;
   @apply transition-all duration-300;
   @include bg-gradient-green;
+  @apply bg-[url('../images/popup-btn.png')] bg-no-repeat;
+  background-size: 100% 100%;
 }
 
 /* Keyframes cho hiệu ứng fadeIn và scaleIn */
