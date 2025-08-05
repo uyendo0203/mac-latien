@@ -10,7 +10,39 @@
   .section {
     @apply relative overflow-hidden;
     &:nth-child(2){
-      @apply overflow-visible
+      @apply overflow-visible z-[1]
+    }
+    
+    // Transform translateY cho từng section, bắt đầu từ section 2 với -1px
+    &:nth-child(2) {
+      transform: translateY(-1px);
+    }
+    &:nth-child(3) {
+      transform: translateY(-2px);
+    }
+    &:nth-child(4) {
+      transform: translateY(-3px);
+    }
+    &:nth-child(5) {
+      transform: translateY(-4px);
+    }
+    &:nth-child(6) {
+      transform: translateY(-5px);
+    }
+    &:nth-child(7) {
+      transform: translateY(-6px);
+    }
+    &:nth-child(8) {
+      transform: translateY(-7px);
+    }
+    &:nth-child(9) {
+      transform: translateY(-8px);
+    }
+    &:nth-child(10) {
+      transform: translateY(-9px);
+    }
+    &:nth-child(11) {
+      transform: translateY(-10px);
     }
   }
   .section-23 {

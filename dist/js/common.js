@@ -21,27 +21,38 @@ const lazyLoadImages = () => {
 const contactForm = () => {
     const validateForm = ($form) => {
         let isValid = true;
-        $form.find(".form-item input, .form-item select").each(function () {
+        // Validate tất cả input, nhưng chỉ bắt buộc điền những input có required
+        $form.find(".form-item input, .form-item select, .form-item textarea").each(function () {
             const $field = $(this);
             const value = $field.val().trim();
             const fieldType = $field.attr("type");
+            const isRequired = $field.attr("required") !== undefined;
             let errorMessage = "";
 
-            if (value === "" || value === "1") {
+            // Kiểm tra trống chỉ áp dụng cho required fields
+            if (isRequired && (value === "" || value === "1")) {
                 errorMessage = "Trường này không được để trống!";
                 isValid = false;
-            } else if (
-                fieldType === "email" &&
-                !/^\S+@\S+\.\S+$/.test(value)
-            ) {
-                errorMessage = "Email không hợp lệ!";
-                isValid = false;
-            } else if (
-                fieldType === "number" &&
-                !/^\d{10,}$/.test(value)
-            ) {
-                errorMessage = "Số điện thoại phải có ít nhất 10 chữ số!";
-                isValid = false;
+            } 
+            // Nếu không required nhưng có giá trị thì vẫn validate format
+            else if (!isRequired && value !== "" && value !== "1") {
+                if (fieldType === "email" && !/^\S+@\S+\.\S+$/.test(value)) {
+                    errorMessage = "Email không hợp lệ!";
+                    isValid = false;
+                } else if (fieldType === "number" && !/^\d{10,}$/.test(value)) {
+                    errorMessage = "Số điện thoại phải có ít nhất 10 chữ số!";
+                    isValid = false;
+                }
+            }
+            // Nếu required và có giá trị thì validate format
+            else if (isRequired && value !== "" && value !== "1") {
+                if (fieldType === "email" && !/^\S+@\S+\.\S+$/.test(value)) {
+                    errorMessage = "Email không hợp lệ!";
+                    isValid = false;
+                } else if (fieldType === "number" && !/^\d{10,}$/.test(value)) {
+                    errorMessage = "Số điện thoại phải có ít nhất 10 chữ số!";
+                    isValid = false;
+                }
             }
 
             $field.siblings(".error").remove();
@@ -58,8 +69,8 @@ const contactForm = () => {
     $("form:has(.form-item)").each(function () {
         const $form = $(this);
 
-        // Gắn sự kiện input/change cho từng form riêng
-        $form.find(".form-item input, .form-item select").on("input change", function () {
+        // Gắn sự kiện input/change cho tất cả input trong form
+        $form.find(".form-item input, .form-item select, .form-item textarea").on("input change", function () {
             validateForm($form);
         });
 
@@ -72,10 +83,10 @@ const contactForm = () => {
             }
         });
 
-        // Kiểm tra dữ liệu mặc định lúc load
+        // Kiểm tra dữ liệu mặc định lúc load (chỉ required fields mới ảnh hưởng đến submit button)
         const checkDefaultData = () => {
             let isFilled = true;
-            $form.find(".form-item input, .form-item select").each(function () {
+            $form.find(".form-item input[required], .form-item select[required], .form-item textarea[required]").each(function () {
                 const value = $(this).val().trim();
                 if (value === "" || value === "1") {
                     isFilled = false;
@@ -115,7 +126,7 @@ const setDefaultData = () => {
 
 $(document).ready(() => {
 
-    setDefaultData(); // Thiết lập dữ liệu mẫu cho local
+    // setDefaultData(); // Thiết lập dữ liệu mẫu cho local
 
     contactForm();
     lazyLoadImages();

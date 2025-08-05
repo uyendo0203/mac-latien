@@ -132,9 +132,9 @@ const animateConChim = () => {
             // 2. Sau khi bay xong -> flip mặt
             tl.to(".conchim", {
                 scaleX: -1,
-                duration: 0.3,
+                duration: 0.1,
                 ease: "power1.inOut"
-            }, "+=0.1");
+            }, "+=0.01");
         },
 
         onLeaveBack: () => {
@@ -158,14 +158,14 @@ const animateThuyen = () => {
     if (window.innerWidth < 767) {
         gsap.set(".thuyen", {
             top: "18%",
-            right: "-6%",
+            right: "4%",
             scaleX: 1,
             position: "absolute"
         });
     } else {
         gsap.set(".thuyen", {
-            top: "12%",
-            right: "-6%",
+            top: "14%",
+            right: "0",
             scaleX: 1,
             position: "absolute"
         });
@@ -221,8 +221,8 @@ const animateThuyen = () => {
                 });
             } else {
                 gsap.to(".thuyen", {
-                    top: "12%",
-                    right: "-6%",
+                    top: "16%",
+                    right: "7%",
                     scaleX: 1,
                     rotation: 0,
                     y: 0,
