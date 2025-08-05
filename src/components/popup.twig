@@ -1,0 +1,23 @@
+<div class="popup">
+    <div class="popup-wrap">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button
+                    type="button"
+                    class="popup-close"
+                    data-modal-hide="default-modal"
+                >
+                   <img class=""
+                        src="./images/popup-close.png"
+                        alt="Bất động sản nghệ thuật văn hoá"
+                    />
+                </button>
+            </div>
+            <div class="popup-body">
+                {% include "./contact.twig" %}
+            </div>
+        </div>
+        {# popup success #} 
+        {% include "../components/toast.twig" %}
+    </div>
+</div>

@@ -1,0 +1,115 @@
+.menu {
+    &__wrapper {
+        @apply flex items-center justify-between;
+    }
+    &__list {
+        @apply flex items-center justify-center;
+        @apply gap-[2.67rem] md:gap-[3.8rem];
+        @apply text-[1.7rem] md:text-[1.6rem];
+        @apply font-medium;
+        transition: all 0.3s ease;
+    }
+    &__item {
+    }
+    &__link {
+        @apply text-white font-light;
+        @apply tracking-[0.4rem];
+        @apply inline-flex flex-col items-center justify-between;
+        transition: all 0.3s ease;
+        
+        &.active {
+            @apply font-bold;
+        }
+        &.active,
+        &:hover {
+            @apply font-bold;
+        }
+        &::after {
+            content: attr(data-text);
+            content: attr(data-text) / "";
+            @apply h-0 invisible overflow-hidden select-none pointer-events-none font-bold;
+        }
+    }
+}
+
+.hamburger {
+    @apply hidden -z-[1];
+    
+    @media (max-width: 767px) {
+        @apply block z-[4];
+        @apply w-[40px] fixed right-[15px] top-[15px] m-0 left-auto;
+        @apply scale-[0.8];
+    }
+
+    span {
+        @apply bg-white block w-full h-[3px] mb-[5px];
+        @apply transition-all duration-200;
+    }
+    
+    &.open {
+        @apply z-[100];
+        
+        span {
+            &:first-child {
+                @apply rotate-[45deg] origin-[10px];
+            }
+            &:nth-child(2) {
+                @apply opacity-0;
+            }
+            &:nth-child(3) {
+                @apply rotate-[-45deg] origin-[8px];
+            }
+        }
+    }
+
+    &:hover {
+        @apply cursor-pointer;
+    }
+}
+
+.menu {
+    @media (max-width: 767px) {
+        @apply visible fixed flex-col w-full h-full top-0;
+        
+        ul {
+            @apply flex-col pt-[30%];
+        }
+        
+        li {
+            @apply transform translate-y-[-40px] opacity-0;
+            @apply transition-all duration-[400ms] ease-in-out;
+            
+            &:nth-child(1) {
+                @apply delay-[100ms];
+            }
+            &:nth-child(2) {
+                @apply delay-[200ms];
+            }
+            &:nth-child(4) {
+                @apply delay-[300ms];
+            }
+            &:nth-child(5) {
+                @apply delay-[400ms];
+            }
+            &:nth-child(3) {
+                @apply hidden fixed top-[8rem] left-[50%] -translate-x-[50%];
+                
+                .logo {
+                    @apply max-w-[38rem];
+                }
+            }
+        }
+        
+        a {
+            @apply text-[2rem] tracking-[0.2rem];
+        }
+
+        &.open {
+            @apply z-[99] opacity-100 visible bg-[#000000bf];
+            
+            li {
+                @apply transform translate-y-0 opacity-100;
+            }
+        }
+    }
+}
