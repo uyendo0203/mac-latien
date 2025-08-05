@@ -21,6 +21,8 @@ const lazyLoadImages = () => {
 const contactForm = () => {
     const validateForm = ($form) => {
         let isValid = true;
+        let hasRequiredFields = false;
+        
         // Validate tất cả input, nhưng chỉ bắt buộc điền những input có required
         $form.find(".form-item input, .form-item select, .form-item textarea").each(function () {
             const $field = $(this);
@@ -28,6 +30,11 @@ const contactForm = () => {
             const fieldType = $field.attr("type");
             const isRequired = $field.attr("required") !== undefined;
             let errorMessage = "";
+
+            // Đánh dấu có required fields
+            if (isRequired) {
+                hasRequiredFields = true;
+            }
 
             // Kiểm tra trống chỉ áp dụng cho required fields
             if (isRequired && (value === "" || value === "1")) {
@@ -61,6 +68,9 @@ const contactForm = () => {
             }
         });
 
+        // Logic validation:
+        // - Luôn kiểm tra format errors (isValid)  
+        // - Submit button chỉ disabled khi có lỗi validation
         $form.find(".submit").prop("disabled", !isValid);
         return isValid;
     };
@@ -77,10 +87,15 @@ const contactForm = () => {
         // Gắn sự kiện submit riêng cho từng form
         $form.on("submit", function (e) {
             e.preventDefault();
-            if (validateForm($form)) {
+            
+            // Luôn validate form trước khi submit
+            const isFormValid = validateForm($form);
+            
+            if (isFormValid) {
                 $("#noti").addClass("active");
                 // this.submit(); // Nếu bạn muốn gửi
             }
+            // Nếu form không hợp lệ, validateForm đã hiển thị error messages
         });
 
         // Kiểm tra dữ liệu mặc định lúc load (chỉ required fields mới ảnh hưởng đến submit button)
