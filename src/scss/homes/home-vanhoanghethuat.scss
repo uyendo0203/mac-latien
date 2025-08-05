@@ -3,14 +3,14 @@
 .vanhoanghethuat {
     @apply absolute top-[51%] md:top-[54.9%] right-[3.4%] left-auto flex flex-col items-end;
     @media (max-width: 767px) {
-        @apply max-w-[62%];
+        @apply max-w-[69%];
     }
     .home-heading {
         @apply max-w-[90%] md:max-w-[52.5rem] md:mb-[-0.4rem];
     }
     
     .home-sub-heading {
-        @apply max-w-[69rem] m-0 text-right;
+        @apply max-w-[49rem] m-0 text-right;
         @media (max-width: 767px) {
             @apply max-w-full;
             @apply max-w-[85%];

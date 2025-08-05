@@ -3,8 +3,8 @@
 .hero {
     @apply text-center absolute text-white;
     @apply flex flex-col items-center justify-center;
-    @apply w-full max-w-[60%] md:max-w-[50%] left-[50%] translate-x-[-50%];
-    @apply top-[12.1%];
+    @apply w-full max-w-[80%] md:max-w-[50%] left-[50%] translate-x-[-50%];
+    @apply top-[10.1%];
     img {
         @apply w-full;
     }
@@ -19,11 +19,12 @@
     }
     .text-bottom {
         @apply text-[1.2rem] md:text-[1.4rem];
-        @apply mb-[4rem] md:mb-[7.3rem];
+        @apply mb-[1.8rem] md:mb-[7.3rem];
+        @apply flex flex-col gap-[0.7rem];
         p {
             @apply leading-[1.14] mb-[0.4rem];
             @apply font-thin;
-            letter-spacing: 0.17rem
+            letter-spacing: 0.32rem
         }
     }
     .text-noitudobenvung {

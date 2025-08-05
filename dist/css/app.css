@@ -2060,24 +2060,24 @@ header.active .menu__link {
 @media (max-width: 767px) {
   @-webkit-keyframes runTopBottom1 {
     0% {
-      bottom: -7%;
-    }
-    50% {
       bottom: -5%;
     }
+    50% {
+      bottom: -4%;
+    }
     100% {
-      bottom: -7%;
+      bottom: -5%;
     }
   }
   @keyframes runTopBottom1 {
     0% {
-      bottom: -7%;
-    }
-    50% {
       bottom: -5%;
     }
+    50% {
+      bottom: -4%;
+    }
     100% {
-      bottom: -7%;
+      bottom: -5%;
     }
   }
 }
@@ -2176,7 +2176,7 @@ header.active .menu__link {
           justify-content: center;
   left: 50%;
   width: 100%;
-  max-width: 60%;
+  max-width: 80%;
   --tw-translate-x: -50%;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2189,7 +2189,7 @@ header.active .menu__link {
 }
 
 .hero{
-  top: 12.1%;
+  top: 10.1%;
 }
 .hero img{
   width: 100%;
@@ -2238,18 +2238,28 @@ header.active .menu__link {
   }
 }
 .hero .text-bottom{
-  margin-bottom: 4rem;
+  margin-bottom: 1.8rem;
 }
 @media (min-width: 768px){
   .hero .text-bottom{
     margin-bottom: 7.3rem;
   }
 }
+.hero .text-bottom{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.7rem;
+}
 .hero .text-bottom p{
   margin-bottom: 0.4rem;
   line-height: 1.14;
   font-weight: 100;
-  letter-spacing: 0.17rem;
+  letter-spacing: 0.32rem;
 }
 .hero .text-noitudobenvung{
   max-width: 42rem;
@@ -2337,7 +2347,7 @@ header.active .menu__link {
 @media (min-width: 768px){
   .benduthuyen .home-sub-heading{
     margin-left: 0.55rem;
-    max-width: 53rem;
+    max-width: 55rem;
   }
 }
 
@@ -2512,7 +2522,7 @@ header.active .menu__link {
 }
 .dothiquocte .home-sub-heading{
   margin: 0px;
-  max-width: 84rem;
+  max-width: 67rem;
 }
 @media (min-width: 768px){
   .dothiquocte .home-sub-heading{
@@ -2544,7 +2554,7 @@ header.active .menu__link {
 }
 @media (max-width: 767px) {
   .ngoinhabiettho{
-    max-width: 57%;
+    max-width: 69%;
   }
 }
 .ngoinhabiettho .home-heading{
@@ -2630,7 +2640,7 @@ header.active .menu__link {
 }
 @media (max-width: 767px) {
   .vanhoanghethuat{
-    max-width: 62%;
+    max-width: 69%;
   }
 }
 .vanhoanghethuat .home-heading{
@@ -2644,7 +2654,7 @@ header.active .menu__link {
 }
 .vanhoanghethuat .home-sub-heading{
   margin: 0px;
-  max-width: 69rem;
+  max-width: 49rem;
   text-align: right;
 }
 @media (max-width: 767px) {
@@ -3473,11 +3483,11 @@ video {
 .top-\[-2rem\]{
   top: -2rem;
 }
+.top-\[10\.1\%\]{
+  top: 10.1%;
+}
 .top-\[10px\]{
   top: 10px;
-}
-.top-\[12\.1\%\]{
-  top: 12.1%;
 }
 .top-\[13\%\]{
   top: 13%;
@@ -3577,6 +3587,9 @@ video {
 .mb-\[1\.5rem\]{
   margin-bottom: 1.5rem;
 }
+.mb-\[1\.8rem\]{
+  margin-bottom: 1.8rem;
+}
 .mb-\[1rem\]{
   margin-bottom: 1rem;
 }
@@ -3594,9 +3607,6 @@ video {
 }
 .mb-\[3rem\]{
   margin-bottom: 3rem;
-}
-.mb-\[4rem\]{
-  margin-bottom: 4rem;
 }
 .mb-\[5px\]{
   margin-bottom: 5px;
@@ -3809,14 +3819,14 @@ video {
 .max-w-\[45\%\]{
   max-width: 45%;
 }
+.max-w-\[49rem\]{
+  max-width: 49rem;
+}
 .max-w-\[53rem\]{
   max-width: 53rem;
 }
 .max-w-\[54\%\]{
   max-width: 54%;
-}
-.max-w-\[57\%\]{
-  max-width: 57%;
 }
 .max-w-\[59\%\]{
   max-width: 59%;
@@ -3824,14 +3834,14 @@ video {
 .max-w-\[60\%\]{
   max-width: 60%;
 }
-.max-w-\[62\%\]{
-  max-width: 62%;
-}
 .max-w-\[66\%\]{
   max-width: 66%;
 }
-.max-w-\[69rem\]{
-  max-width: 69rem;
+.max-w-\[67rem\]{
+  max-width: 67rem;
+}
+.max-w-\[69\%\]{
+  max-width: 69%;
 }
 .max-w-\[70\%\]{
   max-width: 70%;
@@ -3842,11 +3852,11 @@ video {
 .max-w-\[75\%\]{
   max-width: 75%;
 }
+.max-w-\[80\%\]{
+  max-width: 80%;
+}
 .max-w-\[82\%\]{
   max-width: 82%;
-}
-.max-w-\[84rem\]{
-  max-width: 84rem;
 }
 .max-w-\[85\%\]{
   max-width: 85%;
@@ -4277,9 +4287,6 @@ video {
 .font-bold{
   font-weight: 700;
 }
-.font-light{
-  font-weight: 300;
-}
 .font-medium{
   font-weight: 500;
 }
@@ -4623,8 +4630,8 @@ video {
   .md\:max-w-\[52\.5rem\]{
     max-width: 52.5rem;
   }
-  .md\:max-w-\[53rem\]{
-    max-width: 53rem;
+  .md\:max-w-\[55rem\]{
+    max-width: 55rem;
   }
   .md\:max-w-\[60\%\]{
     max-width: 60%;

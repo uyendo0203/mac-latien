@@ -92,7 +92,7 @@ const contactForm = () => {
             const isFormValid = validateForm($form);
             
             if (isFormValid) {
-                $("#noti").addClass("active");
+                // $("#noti").addClass("active");
                 // this.submit(); // Nếu bạn muốn gửi
             }
             // Nếu form không hợp lệ, validateForm đã hiển thị error messages
