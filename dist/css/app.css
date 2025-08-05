@@ -2575,7 +2575,9 @@ header .hambergur span{
 .homepage img{
   width: 100%;
 }
-
+.homepage .section-23{
+  overflow: hidden;
+}
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
