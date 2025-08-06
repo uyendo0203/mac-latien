@@ -60,6 +60,7 @@ module.exports = {
       // "quicksand": ["Quicksand", "sans-serif"],
       // "robotoCondensed": ["Roboto Condensed", "sans-serif"],
       "playfairDisplay": ['Playfair Display'],
+      "inter": ['Inter'],
       
     },
     fontWeight: {

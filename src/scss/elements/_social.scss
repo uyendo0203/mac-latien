@@ -5,7 +5,7 @@
   @apply right-[10px] md:right-[1.67rem];
   @apply top-[50%];
   @apply translate-y-[-50%];
-  @apply translate-x-[2rem];
+  // @apply translate-x-[2rem];
   @apply flex flex-col gap-4;
   .hover-shape{
     @apply relative
@@ -15,7 +15,7 @@
 .social-item {
   @apply w-[2.67rem] h-[2.67rem];
   @apply relative flex items-center justify-center;
-  @apply rounded-full transition-all duration-300 overflow-hidden;
+  // @apply rounded-full transition-all duration-300 overflow-hidden;
 
   &.social-360 {
     @apply rounded-none;
@@ -31,14 +31,21 @@
 
   &.register {
     @apply mt-[1rem];
-    @apply h-[2rem] w-[5.9rem];
+    @apply h-[15rem] w-[3rem];
     @apply text-[0.8rem];
     @apply ml-[-0.47rem];
-    @apply border-2 border-white  border-solid;
-    @apply font-semibold rounded-full text-white;
-    @apply flex items-center justify-center;
-    @apply uppercase tracking-wide transition-all duration-300;
-    @apply relative overflow-hidden rotate-[-90deg] origin-bottom;
+    // @apply border-2 border-white  border-solid;
+    // @apply font-semibold rounded-full text-white;
+    // @apply flex items-center justify-center;
+    // @apply uppercase tracking-wide transition-all duration-300;
+    @apply relative overflow-hidden rounded-[2rem] cursor-pointer;
+    // @apply rotate-[-90deg] origin-bottom;
+    @apply bg-[url("../images/register.png")] bg-center;
+    background-size: 100% 100%;
+
+    span{
+      @apply hidden
+    }
 
     &::after {
       @include before-after-content;

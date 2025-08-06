@@ -186,7 +186,7 @@ $(document).ready(() => {
         $(".popup").addClass("active");
     });
 
-    $('.popup').addClass('active');
+    // $('.popup').addClass('active');
     $('.popup-close').click(function () {
         $('.popup').removeClass('active');
     });

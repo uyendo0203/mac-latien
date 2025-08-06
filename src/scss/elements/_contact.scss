@@ -24,7 +24,7 @@
       @apply relative pl-[1.4rem] text-[#BC4724] italic;
       @apply text-[1.3rem] md:text-[1.2rem];
       &:before {
-        @apply content-[''] absolute top-[16%] left-0;
+        @apply content-[''] absolute top-[25%] md:top-[16%] left-0;
         @apply w-[1rem] h-[1rem];
         @apply bg-[url('../images/popup-icon.png')] bg-no-repeat bg-cover;
       }
