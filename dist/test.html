@@ -27,7 +27,11 @@
     <script defer src="app.js"></script><script defer src="bg-image.js"></script><link href="css/app.css" rel="stylesheet"><link href="css/bg-image.css" rel="stylesheet"></head>
 
     <body>
-         <div id="toast-simple" class="toast" role="alert">
+        <div class="loading show">
+    <div class="spinner"></div>
+</div>
+ 
+        <div id="toast-simple" class="toast" role="alert">
     <svg
     class="fly"
         aria-hidden="true"
@@ -62,7 +66,8 @@
             ></path>
         </svg>
     </div>
-</div> <div class="popup">
+</div> 
+        <div class="popup">
     <div class="popup-wrap">
         <div class="popup-content">
             <div class="popup-header">
@@ -168,7 +173,8 @@
     </div>
 </div>    </div>
 </div>
- <!-- Popup Modal -->
+ 
+        <!-- Popup Modal -->
 <div id="noti" class="noti hidden">
   <div class="noti-content">
     <h2 class="noti-title">Success!</h2>
@@ -178,7 +184,9 @@
     </div>
   </div>
 </div>
-  <main>
+ 
+         
+        <main>
     <div class="container">
         <div class="h-screen flex items-center justify-center">
            

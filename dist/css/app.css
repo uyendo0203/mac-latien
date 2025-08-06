@@ -385,7 +385,7 @@ main{
   border-style: solid;
   border-color: #80808057;
   --tw-border-opacity: 1;
-  border-top-color: rgb(21 89 0 / var(--tw-border-opacity, 1));
+  border-top-color: rgb(221 133 89 / var(--tw-border-opacity, 1));
 }
 @keyframes spin {
   0% {
@@ -4082,6 +4082,10 @@ video {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+.border-t-\[\#dd8559\]{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(221 133 89 / var(--tw-border-opacity, 1));
 }
 .bg-\[\#00000075\]{
   background-color: #00000075;

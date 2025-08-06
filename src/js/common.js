@@ -92,6 +92,8 @@ const contactForm = () => {
             const isFormValid = validateForm($form);
             
             if (isFormValid) {
+                $form.find(".submit").prop("disabled", true);
+                $('.loading').addClass('show');
                 // $("#noti").addClass("active");
                 // this.submit(); // Nếu bạn muốn gửi
             }

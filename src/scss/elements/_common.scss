@@ -101,8 +101,7 @@ main {
   }
   .spinner {
     @apply border-[4px] border-[#80808057] border-solid rounded-full w-[4rem] h-[4rem] animate-spin;
-    // border-top-color: #3b82f6; /* Màu vòng tròn */
-    @apply border-t-vl-green;
+    @apply border-t-[#dd8559];
   }
 
   @keyframes spin {
