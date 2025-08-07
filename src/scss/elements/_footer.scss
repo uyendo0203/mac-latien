@@ -9,12 +9,12 @@
     }
     &__wrap {
         @apply flex flex-col md:flex-row justify-center text-white font-inter;
-        padding: 10rem 10rem;
+            transform: scale(0.75);
+        padding: 7rem 10rem;
         @media (max-width: 767px) {
             padding: 0;
             padding-top: 2rem;
             padding-bottom: 4rem;
-            max-width: 85%;
             margin: 0 auto;
         }
     }
@@ -34,13 +34,13 @@
             margin-bottom: 3rem;
         }
         img {
-            @apply w-full;
+            @apply w-[80%];
         }
         &:before {
             @apply hidden md:block absolute h-full bg-white;
             top: -6%;
             right: 0px;
-            width: 6px;
+            width: 5px;
             height: 112%;
             content: "";
         }

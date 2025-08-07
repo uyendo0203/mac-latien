@@ -869,14 +869,15 @@ header.active .menu__link {
   }
 }
 .footer__wrap {
-  padding: 10rem 10rem;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  padding: 7rem 10rem;
 }
 @media (max-width: 767px) {
   .footer__wrap {
     padding: 0;
     padding-top: 2rem;
     padding-bottom: 4rem;
-    max-width: 85%;
     margin: 0 auto;
   }
 }
@@ -905,7 +906,7 @@ header.active .menu__link {
   }
 }
 .footer__left img{
-  width: 100%;
+  width: 80%;
 }
 .footer__left:before{
   position: absolute;
@@ -922,7 +923,7 @@ header.active .menu__link {
 .footer__left:before {
   top: -6%;
   right: 0px;
-  width: 6px;
+  width: 5px;
   height: 112%;
   content: "";
 }
@@ -3903,6 +3904,9 @@ video {
 }
 .w-\[62\%\]{
   width: 62%;
+}
+.w-\[80\%\]{
+  width: 80%;
 }
 .w-auto{
   width: auto;
