@@ -906,7 +906,7 @@ header.active .menu__link {
   }
 }
 .footer__left img{
-  width: 80%;
+  width: 50%;
 }
 .footer__left:before{
   position: absolute;
@@ -3915,11 +3915,11 @@ video {
 .w-\[4rem\]{
   width: 4rem;
 }
+.w-\[50\%\]{
+  width: 50%;
+}
 .w-\[62\%\]{
   width: 62%;
-}
-.w-\[80\%\]{
-  width: 80%;
 }
 .w-auto{
   width: auto;
