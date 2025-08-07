@@ -19,32 +19,32 @@
 
 // ================== CLOUD ANIMATIONS ==================
 .cloud-1 {
-  @apply absolute right-0 bottom-0 max-w-[28%] z-[2];
-  animation: runTopBottom1 10s linear infinite;
+  @apply absolute right-0 top-[-8%] max-w-[28%] z-[2];
+  animation: runTopBottom1 8s linear infinite;
 }
 
 @keyframes runTopBottom1 {
   0% {
-    bottom: -4%;
+    @apply top-[-9%]
   }
   50% {
-    bottom: -2%;
+    @apply top-[-8%]
   }
   100% {
-    bottom: -4%;
+    @apply top-[-9%]
   }
 }
 @media (max-width: 767px) {
   @keyframes runTopBottom1 {
     0% {
-      bottom: -5%;
-    }
-    50% {
-      bottom: -4%;
-    }
-    100% {
-      bottom: -5%;
-    }
+    @apply top-[-6%]
+  }
+  50% {
+    @apply top-[-5%]
+  }
+  100% {
+    @apply top-[-6%]
+  }
   }
 }
 

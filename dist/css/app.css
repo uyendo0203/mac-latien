@@ -2169,57 +2169,57 @@ header.active .menu__link {
 .cloud-1{
   position: absolute;
   right: 0px;
-  bottom: 0px;
+  top: -8%;
   z-index: 2;
   max-width: 28%;
-  -webkit-animation: runTopBottom1 10s linear infinite;
-          animation: runTopBottom1 10s linear infinite;
+  -webkit-animation: runTopBottom1 8s linear infinite;
+          animation: runTopBottom1 8s linear infinite;
 }
 
 @-webkit-keyframes runTopBottom1 {
-  0% {
-    bottom: -4%;
+  0%{
+    top: -9%;
   }
-  50% {
-    bottom: -2%;
+  50%{
+    top: -8%;
   }
-  100% {
-    bottom: -4%;
+  100%{
+    top: -9%;
   }
 }
 
 @keyframes runTopBottom1 {
-  0% {
-    bottom: -4%;
+  0%{
+    top: -9%;
   }
-  50% {
-    bottom: -2%;
+  50%{
+    top: -8%;
   }
-  100% {
-    bottom: -4%;
+  100%{
+    top: -9%;
   }
 }
 @media (max-width: 767px) {
   @-webkit-keyframes runTopBottom1 {
-    0% {
-      bottom: -5%;
+    0%{
+      top: -6%;
     }
-    50% {
-      bottom: -4%;
+    50%{
+      top: -5%;
     }
-    100% {
-      bottom: -5%;
+    100%{
+      top: -6%;
     }
   }
   @keyframes runTopBottom1 {
-    0% {
-      bottom: -5%;
+    0%{
+      top: -6%;
     }
-    50% {
-      bottom: -4%;
+    50%{
+      top: -5%;
     }
-    100% {
-      bottom: -5%;
+    100%{
+      top: -6%;
     }
   }
 }
@@ -2491,6 +2491,12 @@ header.active .menu__link {
     margin-left: 0.55rem;
     max-width: 55rem;
   }
+}
+
+.section-duthuyen{
+  position: relative;
+  z-index: 2;
+  overflow: visible !important;
 }
 
 .video-tvc{
@@ -2869,12 +2875,7 @@ header.active .menu__link {
   width: 100%;
   height: 100%;
   top: 0;
-  overflow-y: hidden;
-}
-@media (max-width: 767px) {
-  .homepage .section-23 {
-    overflow: hidden;
-  }
+  overflow: hidden;
 }
 
 *, ::before, ::after{
@@ -3625,6 +3626,18 @@ video {
 }
 .top-\[-2rem\]{
   top: -2rem;
+}
+.top-\[-5\%\]{
+  top: -5%;
+}
+.top-\[-6\%\]{
+  top: -6%;
+}
+.top-\[-8\%\]{
+  top: -8%;
+}
+.top-\[-9\%\]{
+  top: -9%;
 }
 .top-\[10\.1\%\]{
   top: 10.1%;
