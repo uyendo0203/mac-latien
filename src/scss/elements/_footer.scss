@@ -34,7 +34,7 @@
             margin-bottom: 3rem;
         }
         img {
-            @apply w-[50%];
+            @apply w-[80%] md:w-[50%];
         }
         &:before {
             @apply hidden md:block absolute h-full bg-white;
