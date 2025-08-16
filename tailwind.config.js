@@ -94,7 +94,10 @@ module.exports = {
     }) {
       addComponents({
         '.container': {
-          maxWidth: '100%',
+          // maxWidth: '80%',
+          '@screen md': {
+            maxWidth: '75%',
+          },
           '@screen lg': {
             maxWidth: 'calc(100% - 140px)'
           },

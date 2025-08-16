@@ -1,0 +1,114 @@
+@use "./news/news-slider.scss" as *;
+@use "./news/news-bantin.scss" as *;
+@use "./news/news-hero.scss" as *;
+@use "./news/news-baochi.scss" as *;
+@use "./news/news-donviphanphoi.scss" as *;
+@use "./news/news-noibat.scss" as *;
+@use "./news/news-phaply.scss" as *;
+@use "./news/news-tailieu.scss" as *;
+
+.news {
+    .section {
+        @apply relative;
+        .container {
+            @media(max-width: 500px) {
+                @apply max-w-[85%];
+            }
+        }
+    }
+    &__title {
+        @apply text-white text-center relative;
+        @apply pb-[2rem] md:pb-[3.8rem];
+        @apply text-[2.5rem] md:text-[4.4rem];
+        @apply mb-[4rem] md:mb-[13.6rem];
+        @apply leading-[1.455];
+        &:before {
+            @apply content-[''] absolute left-1/2 -translate-x-1/2 bottom-0;
+            @apply bg-[url("../images/news/heading-image-bg-line.png")] bg-no-repeat bg-center bg-contain w-[65%] h-[1rem];
+        }
+    }
+    &__heading {
+        @apply text-white text-center relative;
+        @apply pb-[1rem] mb-[4rem];
+        @apply relative z-[1] font-semibold;
+        @apply text-[3.5rem] md:text-[6rem] leading-[1.2];
+        .ontop {
+        }
+    }
+    &__slider {
+        .item {
+            @apply relative overflow-hidden rounded-[4rem];
+            &:before {
+                @apply z-[2];
+                @apply content-[''] absolute left-1/2 -translate-x-1/2 bottom-0;
+                @apply bg-[url("../images/news/image-item-shadow.png")] bg-no-repeat bg-center bg-[length:100%_100%] w-full h-[8rem];
+            }
+            img {
+                transition: all 0.3s ease-in-out;
+                @apply relative z-[1] cursor-pointer;
+            }
+            &:hover {
+                .link {
+                    @apply z-[4];
+                }
+                img {
+                    @apply scale-[1.1];
+                }
+            }
+        }
+        .link {
+            @apply absolute w-full h-full top-0 left-0 bottom-0 z-[1];
+        }
+        .title {
+            @apply text-white font-inter italic relative z-[3];
+            @apply absolute bottom-[7%] left-[9%];
+            @apply text-[1.5rem] leading-[1.2];
+        }
+        img {
+            @apply w-full h-auto;
+        }
+        .slick-slide {
+            margin: 0 16px; /* 10px spacing left-right */
+        }
+        .slick-list {
+            margin: 0 -16px; /* bù trừ để không bị lệch hai bên */
+            @apply pb-[3.7rem];
+        }
+        .slick-dots {
+            @apply bottom-0;
+            li {
+                @apply mx-[1.1rem];
+                &.slick-active {
+                    button {
+                        @apply opacity-[1];
+                    }
+                }
+                button {
+                    @apply w-[1.5rem] h-[1.5rem];
+                    @apply p-0 bg-[#D9D9D9] rounded-full opacity-[0.5];
+                    &::before {
+                        @apply hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+.section2 {
+    .cay-dua-phai {
+        @apply absolute right-[-37%] md:right-[-28%];
+        @apply top-[42%] md:top-[5%];
+        @apply max-w-[25rem] md:max-w-[58rem];
+
+    }
+}
+.section3 {
+    .thuyen {
+        @apply max-w-[32rem];
+    }
+}
+.section4 {
+    .cay-dua-trai {
+        @apply absolute left-[-60%] top-[14%];
+    }
+}

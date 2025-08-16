@@ -1,0 +1,38 @@
+.news-donviphanphoi {
+    @apply pt-[11.5rem];
+    .news__heading {
+        @apply mb-[3rem];
+    }
+}
+.donviphanphoi {
+    @apply max-w-[52%] w-full mx-auto mt-[4.2rem];
+    &__slide {
+        @apply flex flex-col font-inter;
+    }
+    &__group {
+        &:first-child {
+            @apply mb-[4rem];
+        }
+        &:nth-child(2) {
+            @apply mb-[2rem];
+        }
+    }
+    &__title {
+        letter-spacing: 0.4px;
+        @apply text-white text-center;
+        @apply text-[2.1rem] py-[0.67rem] px-[1rem];
+        @apply bg-[url("../images/news/dvpp-bg-title.png")] bg-no-repeat bg-center bg-[length:100%_100%];
+    }
+
+    &__images {
+        @apply flex items-center justify-center;
+        @apply gap-[5rem] py-[4rem];
+        img {
+            @apply max-h-[10rem];
+            width: auto !important;
+        }
+    }
+    &.news__slider .slick-list {
+        @apply pb-[4.5rem];
+    }
+}

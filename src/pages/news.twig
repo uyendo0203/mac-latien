@@ -1,16 +1,49 @@
-{% set page_title = 'News' %}
-{% extends "../components/base.twig" %}
-
-{% block content %}
+{% set page_title = 'News' %} {% extends "../components/base.twig" %} {% block
+content %}
 <main class="news">
-   <section class="section">
-      <div class="bg">
-         <img class="desktop" src="./images/home/bg-1.jpg" alt="bg-1">
-         <img class="mobile" src="./images/home/bg-1-mobile.jpg" alt="bg-1">
-      </div>
-      <div class="section-top">
-         {% include "../components/homes/home-hero.twig" %}
-      </div>
-   </section>
+    <section class="section section1">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-1.jpg" alt="bg-1" />
+            <img class="mobile" src="./images/news/bg-1.jpg" alt="bg-1" />
+        </div>
+        <div class="section-top">
+            {% include "../components/news/news-hero.twig" %}
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-2.jpg" alt="bg-2" />
+            <img class="mobile" src="./images/news/bg-2.jpg" alt="bg-2" />
+        </div>
+        <div class="section-top">
+            {% include "../components/news/news-bantin.twig" %}
+        </div>
+    </section>
+    <section class="section section3">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-3.jpg" alt="bg-3" />
+            <img class="mobile" src="./images/news/bg-3.jpg" alt="bg-3" />
+        </div>
+        <img class="thuyen" src="./images/home/thuyen.png" alt="thuyen">
+        <div class="section-top">
+            {% include "../components/news/news-baochi.twig" %}
+            {% include "../components/news/news-tailieu.twig" %}
+            {% include "../components/news/news-phaply.twig" %}
+        </div>
+    </section>
+    <section class="section section4">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-4.jpg" alt="bg-4" />
+            <img class="mobile" src="./images/news/bg-4.jpg" alt="bg-4" />
+        </div>
+        <div class="section-top">
+            {% include "../components/news/news-noibat.twig" %}
+            {% include "../components/news/news-donviphanphoi.twig" %}
+        </div>
+    </section>
 </main>
+{% endblock %}
+
+{% block jsPage %}
+    <script src="js/news.js"></script>
 {% endblock %}

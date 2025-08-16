@@ -32,9 +32,8 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
 module.exports = {
   entry: {
     app: path.resolve(environment.paths.source, 'scss', 'app.scss'),
-    // overview: path.resolve(environment.paths.source, 'scss', 'overview.scss'),
-    // news: path.resolve(environment.paths.source, 'scss', 'news.scss'),
-    "bg-image": path.resolve(environment.paths.source, 'scss', 'bg-image.scss')
+    "bg-image": path.resolve(environment.paths.source, 'scss', 'bg-image.scss'),
+    "news": path.resolve(environment.paths.source, 'scss', 'news.scss')
   },
   output: {
     path: path.resolve(__dirname, 'dist'), // Chỉ giữ dòng này
@@ -165,21 +164,11 @@ module.exports = {
           to: path.resolve(environment.paths.output, 'js/'),
           toType: 'dir',
         },
-        // {
-        //   from: path.resolve(environment.paths.source, 'js/overview.js'),
-        //   to: path.resolve(environment.paths.output, 'js/'),
-        //   toType: 'dir',
-        // },
-        // {
-        //   from: path.resolve(environment.paths.source, 'js/news.js'),
-        //   to: path.resolve(environment.paths.output, 'js/'),
-        //   toType: 'dir',
-        // },
-        // {
-        //   from: path.resolve(environment.paths.source, 'js/animate.js'),
-        //   to: path.resolve(environment.paths.output, 'js/'),
-        //   toType: 'dir',
-        // },
+        {
+          from: path.resolve(environment.paths.source, 'js/news.js'),
+          to: path.resolve(environment.paths.output, 'js/'),
+          toType: 'dir',
+        },
       ],
     }),
   ].concat(htmlPluginEntries),
