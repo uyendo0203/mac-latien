@@ -1,0 +1,16 @@
+{% set page_title = 'News' %}
+{% extends "../components/base.twig" %}
+
+{% block content %}
+<main class="news">
+   <section class="section">
+      <div class="bg">
+         <img class="desktop" src="./images/home/bg-1.jpg" alt="bg-1">
+         <img class="mobile" src="./images/home/bg-1-mobile.jpg" alt="bg-1">
+      </div>
+      <div class="section-top">
+         {% include "../components/homes/home-hero.twig" %}
+      </div>
+   </section>
+</main>
+{% endblock %}
