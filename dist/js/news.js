@@ -184,8 +184,31 @@ document.addEventListener("DOMContentLoaded", () => {
     waitForLibraries();
 });
 
+function activateNewsHeadingOnScroll() {
+    const headings = document.querySelectorAll('.news__heading');
+
+    function onScroll() {
+        const winH = window.innerHeight;
+        headings.forEach(heading => {
+            const section = heading.closest('section');
+            if (!section) return;
+            const rect = section.getBoundingClientRect();
+            // Nếu section top <= 20% viewport và bottom > 10% viewport thì active
+            if (rect.top <= winH * 0.2 && rect.bottom > winH * 0.1) {
+                heading.classList.add('active');
+            } else {
+                heading.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    onScroll();
+}
+
 $(document).ready(() => {
     console.log(11);
-    
     initNewsSliders();
+    activateNewsHeadingOnScroll();
 });

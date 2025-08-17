@@ -1,11 +1,11 @@
 // news-baochi styles
 .news-baochi{
-    @apply pt-[7.3rem];
+    @apply pt-[4rem] md:pt-[25.3rem];
     .news__heading{
-        @apply text-[4rem] md:text-[7rem] leading-[1.26];
-        @apply mb-[3rem];
+        @apply text-[4rem] md:text-[4rem] leading-[1.26];
+        @apply md:mb-[3rem];
         .smaller{
-            @apply text-[80%]
+            // @apply text-[80%]
         }
     }
 }

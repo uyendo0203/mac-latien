@@ -1,6 +1,6 @@
 .news-phaply{
-    @apply pt-[11.8rem];
+    @apply pt-[8rem] md:pt-[32rem];
     .news__heading {
-        @apply mb-[3rem];
+        @apply md:mb-[3rem];
     }
 }
