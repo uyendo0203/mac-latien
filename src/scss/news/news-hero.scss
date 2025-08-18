@@ -1,9 +1,6 @@
 .news-hero {
     @apply mt-0 md:mt-[7%];
-    .news__heading{
-        .ontop{
-            @apply z-[1] relative
-        }
+    .news__heading {
     }
     &__heading {
         @apply absolute w-full;
@@ -17,10 +14,35 @@
         @apply absolute w-full max-w-[38%] top-[2%] left-[-10%];
     }
     &__cloud-1 {
-        @apply absolute w-full max-w-[38%] top-[36%] left-[-10%];
+        @apply absolute w-full max-w-[38%] top-[19%] left-[-10%];
+        animation: runTopBottom1 8s linear infinite;
+    }
+
+    @keyframes runTopBottom1 {
+        0% {
+            @apply top-[19%];
+        }
+        50% {
+            @apply top-[20%];
+        }
+        100% {
+            @apply top-[19%];
+        }
     }
     &__cloud-2 {
-        @apply absolute w-full max-w-[38%] top-[36%] right-[-6%];
+        @apply absolute w-full max-w-[38%] top-[11%] right-[-13%];
+        animation: runTopBottom2 10s linear infinite;
     }
-   
+
+    @keyframes runTopBottom2 {
+        0% {
+            @apply top-[11%];
+        }
+        50% {
+            @apply top-[12%];
+        }
+        100% {
+            @apply top-[11%];
+        }
+    }
 }

@@ -1,12 +1,14 @@
 <div class="news-donviphanphoi">
-    <div class="news__heading">
-        Đơn vị phân phối
+    <div class="news__heading"  data-aos="fade-up" data-aos-duration="1000">
+        <div class="ontop">
+            Đơn vị phân phối
+        </div>
     </div>
-    <div class="news__slider donviphanphoi">
-    {% for item in 0..4%}
+    <div class="news__slider donviphanphoi"  data-aos="fade-up" data-aos-duration="1000">
+    {% for item in 0..2%}
         <div class="donviphanphoi__slide">
             <div class="donviphanphoi__group">
-                <h4 class="donviphanphoi__title">Liên minh Minh An Homes - Á Đông Land - Minh Tâm Land</h4>
+                <h4 class="donviphanphoi__title">Liên minh</h4>
                 <div class="donviphanphoi__images">
                     <img src="./images/news/dvpp-minhan.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
                     <img src="./images/news/dvpp-adongland.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
@@ -14,21 +16,27 @@
                 </div>
             </div>
             <div class="donviphanphoi__group">
-                <h4 class="donviphanphoi__title">Liên minh RJK - BamLand</h4>
+                <h4 class="donviphanphoi__title">Liên minh</h4>
                 <div class="donviphanphoi__images">
                     <img src="./images/news/dvpp-rk.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
                     <img src="./images/news/dvpp-bamland.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
                 </div>
             </div>
-            <div class="donviphanphoi__group">
-                <h4 class="donviphanphoi__title">Liên minh AZ Real -TechRealty</h4>
-                <div class="donviphanphoi__images">
-                    <img src="./images/news/dvpp-azreal.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
-                    <img src="./images/news/dvpp-techrealty.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
-                </div>
-            </div>
         </div>
     {% endfor %}
     </div>
-    <img class="cay-dua-trai" src="./images/news/cay-dua-trai.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+
+    <div class="agency" data-aos="fade-up" data-aos-duration="1000">
+        <h4 class="donviphanphoi__title">Liên minh</h4>
+            <div class="news__slider ">
+                 {% for item in 0..2%}
+                    <img src="./images/news/dvpp-1.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                    <img src="./images/news/dvpp-2.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                    <img src="./images/news/dvpp-3.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                    <img src="./images/news/dvpp-4.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                    <img src="./images/news/dvpp-5.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                    <img src="./images/news/dvpp-6.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                 {% endfor %}
+            </div>
+    </div>
 </div>
