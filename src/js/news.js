@@ -145,6 +145,61 @@ const animateThuyen = () => {
     };
 };
 
+function animationClouds() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        console.error('GSAP or ScrollTrigger not available');
+        return;
+    }
+
+    const cloud1 = document.querySelector('.news-hero__cloud-1');
+    const cloud2 = document.querySelector('.news-hero__cloud-2');
+    const heroSection = document.querySelector('.news-hero');
+
+    if (!cloud1 || !cloud2 || !heroSection) {
+        console.error('Cloud elements or hero section not found!');
+        return;
+    }
+
+    // Set initial position
+    gsap.set(cloud1, { x: "-20%", opacity: 0 });
+    gsap.set(cloud2, { x: "20%", opacity: 0 });
+
+    const timeRun = 1.5;
+    ScrollTrigger.create({
+        trigger: heroSection,
+        start: "top 80%",
+        end: "top 50%",
+        onEnter: () => {
+            gsap.to(cloud1, {
+                x: "-45%",
+                opacity: 1,
+                duration: timeRun,
+                ease: "power1.out"
+            });
+            gsap.to(cloud2, {
+                x: "45%",
+                opacity: 1,
+                duration: timeRun,
+                ease: "power1.out"
+            });
+        },
+        onLeaveBack: () => {
+            gsap.to(cloud1, {
+                x: "-5%",
+                opacity: 0,
+                duration: timeRun,
+                ease: "power1.out"
+            });
+            gsap.to(cloud2, {
+                x: "5%",
+                opacity: 0,
+                duration: timeRun,
+                ease: "power1.out"
+            });
+        }
+    });
+}
+
 const initGSAP = () => {
     if (typeof gsap === 'undefined') {
         console.error('GSAP not loaded!');
@@ -178,6 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 setTimeout(() => {
                     animateThuyen();
+                    animationClouds();
                     ScrollTrigger.refresh();
                     console.log('✅ All animations initialized');
                 }, 500);

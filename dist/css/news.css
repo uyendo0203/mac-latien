@@ -2131,33 +2131,28 @@ header.active .menu__link {
   gap: 0.5rem;
 }
 
-.news-hero{
-  margin-top: 0px;
-}
-
-@media (min-width: 768px){
-  .news-hero{
-    margin-top: 7%;
-  }
-}
 .news-hero__heading{
   position: absolute;
   width: 100%;
   max-width: 60%;
 }
+
 @media (min-width: 768px){
   .news-hero__heading{
     max-width: 56%;
   }
 }
+
 .news-hero__heading{
   top: 8%;
 }
+
 @media (min-width: 768px){
   .news-hero__heading{
     top: 12%;
   }
 }
+
 .news-hero__heading{
   left: 50%;
   --tw-translate-x: -50%;
@@ -2172,19 +2167,19 @@ header.active .menu__link {
 }
 .news-hero__conchim{
   position: absolute;
-  top: 2%;
+  top: -5%;
   left: -10%;
   width: 100%;
   max-width: 38%;
 }
+.news-hero__cloud{
+  top: 3%;
+}
 .news-hero__cloud-1{
   position: absolute;
-  top: 19%;
   left: -10%;
   width: 100%;
-  max-width: 38%;
-  -webkit-animation: runTopBottom1 8s linear infinite;
-          animation: runTopBottom1 8s linear infinite;
+  max-width: 75%;
 }
 @-webkit-keyframes runTopBottom1 {
   0%{
@@ -2210,12 +2205,9 @@ header.active .menu__link {
 }
 .news-hero__cloud-2{
   position: absolute;
-  top: 11%;
   right: -13%;
   width: 100%;
-  max-width: 38%;
-  -webkit-animation: runTopBottom2 10s linear infinite;
-          animation: runTopBottom2 10s linear infinite;
+  max-width: 75%;
 }
 @-webkit-keyframes runTopBottom2 {
   0%{
@@ -3716,9 +3708,6 @@ video {
 }
 .top-\[19\%\]{
   top: 19%;
-}
-.top-\[2\%\]{
-  top: 2%;
 }
 .top-\[20\%\]{
   top: 20%;
