@@ -4566,6 +4566,9 @@ video {
 .pt-\[30\%\]{
   padding-top: 30%;
 }
+.pt-\[35rem\]{
+  padding-top: 35rem;
+}
 .pt-\[4rem\]{
   padding-top: 4rem;
 }
@@ -5139,11 +5142,11 @@ video {
   .md\:pt-\[18rem\]{
     padding-top: 18rem;
   }
-  .md\:pt-\[25\.3rem\]{
-    padding-top: 25.3rem;
+  .md\:pt-\[30\.3rem\]{
+    padding-top: 30.3rem;
   }
-  .md\:pt-\[32rem\]{
-    padding-top: 32rem;
+  .md\:pt-\[38rem\]{
+    padding-top: 38rem;
   }
   .md\:text-\[1\.2rem\]{
     font-size: 1.2rem;
