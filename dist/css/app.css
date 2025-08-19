@@ -3640,8 +3640,8 @@ video {
 .right-0{
   right: 0px;
 }
-.right-\[-13\%\]{
-  right: -13%;
+.right-\[-20\%\]{
+  right: -20%;
 }
 .right-\[-37\%\]{
   right: -37%;
@@ -4915,11 +4915,17 @@ video {
   .md\:bottom-\[23\%\]{
     bottom: 23%;
   }
+  .md\:bottom-\[33\%\]{
+    bottom: 33%;
+  }
   .md\:left-\[-27\%\]{
     left: -27%;
   }
   .md\:left-\[7\.6rem\]{
     left: 7.6rem;
+  }
+  .md\:right-\[-22\%\]{
+    right: -22%;
   }
   .md\:right-\[-28\%\]{
     right: -28%;

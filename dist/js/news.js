@@ -24,14 +24,12 @@ function initNewsSliders() {
         dots: true,
         arrows: false,
         infinite: true,
-        responsive: [
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1
-                }
+        responsive: [{
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1
             }
-        ]
+        }]
     });
 }
 
@@ -76,7 +74,7 @@ const animateThuyen = () => {
 
             if (window.innerWidth < 767) {
                 tl.to(".thuyen", {
-                   right: "0",
+                    right: "0",
                     bottom: "10%",
                     duration: timeRun,
                     ease: "power1.out"
@@ -108,7 +106,7 @@ const animateThuyen = () => {
                 });
             } else {
                 gsap.to(".thuyen", {
-                   right: "-22%",
+                    right: "-22%",
                     bottom: "33%",
                     scaleX: 1,
                     rotation: 0,
@@ -161,8 +159,14 @@ function animationClouds() {
     }
 
     // Set initial position
-    gsap.set(cloud1, { x: "-20%", opacity: 0 });
-    gsap.set(cloud2, { x: "20%", opacity: 0 });
+    gsap.set(cloud1, {
+        x: "-20%",
+        opacity: 0
+    });
+    gsap.set(cloud2, {
+        x: "20%",
+        opacity: 0
+    });
 
     const timeRun = 1.5;
     ScrollTrigger.create({
@@ -171,13 +175,13 @@ function animationClouds() {
         end: "top 50%",
         onEnter: () => {
             gsap.to(cloud1, {
-                x: "-45%",
+                x: "-60%",
                 opacity: 1,
                 duration: timeRun,
                 ease: "power1.out"
             });
             gsap.to(cloud2, {
-                x: "45%",
+                x: "90%",
                 opacity: 1,
                 duration: timeRun,
                 ease: "power1.out"
@@ -205,7 +209,7 @@ const initGSAP = () => {
         console.error('GSAP not loaded!');
         return false;
     }
-    
+
     try {
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(Observer);
@@ -222,15 +226,15 @@ const initGSAP = () => {
 
 // ===== MAIN INITIALIZATION =====
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     // Chờ libraries load xong
     const waitForLibraries = () => {
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             console.log('✅ All libraries loaded, initializing...');
-            
+
             if (initGSAP()) {
                 console.log('✅ GSAP initialized successfully');
-                
+
                 setTimeout(() => {
                     animateThuyen();
                     animationClouds();
@@ -245,8 +249,9 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(waitForLibraries, 100);
         }
     };
-    
+
     waitForLibraries();
+
 });
 
 function activateNewsHeadingOnScroll() {
@@ -270,10 +275,57 @@ function activateNewsHeadingOnScroll() {
     window.addEventListener('scroll', onScroll);
     window.addEventListener('resize', onScroll);
     onScroll();
+}   
+
+function fadeUpOnScroll() {
+    const fadeUpItems = document.querySelectorAll('[data-ani="fade-up"]');
+
+    function checkFadeUp() {
+        const windowHeight = window.innerHeight;
+        const triggerPoint = windowHeight * 0.8; // 80% viewport
+
+        fadeUpItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < triggerPoint && rect.bottom > 0) {
+                item.classList.add('fadeup-active');
+            } else {
+                item.classList.remove('fadeup-active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkFadeUp);
+    window.addEventListener('resize', checkFadeUp);
+    checkFadeUp();
 }
 
+// Gọi hàm sau khi DOM ready
 $(document).ready(() => {
-    console.log(11);
     initNewsSliders();
     activateNewsHeadingOnScroll();
+    fadeUpOnScroll();
 });
+
+
+
+// window.addEventListener('load', function () {
+//     if (typeof AOS !== 'undefined') {
+//         AOS.init({
+//             once: true
+//         });
+
+//         // refresh lại sau khi slick/gsap setup xong
+//         setTimeout(() => {
+//             AOS.refresh();
+//             if (typeof ScrollTrigger !== 'undefined') {
+//                 ScrollTrigger.refresh();
+//             }
+//         }, 1500);
+//     }
+// });
+
+// $('.news__slider').on('setPosition', function(){
+//   if (typeof AOS !== 'undefined') {
+//     AOS.refresh();
+//   }
+// });

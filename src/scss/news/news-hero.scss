@@ -19,7 +19,11 @@
     
     }
     &__cloud-1 {
-        @apply absolute w-full max-w-[75%] left-[-10%];
+        @apply absolute w-full max-w-[75%];
+        // @apply translateX(-20%)
+        opacity: 0;
+    transform: translateX(-20%);
+    transition: none;
         // animation: runTopBottom1 8s linear infinite;
     }
 
@@ -35,7 +39,12 @@
         }
     }
     &__cloud-2 {
-        @apply absolute w-full max-w-[75%] right-[-13%];
+        @apply absolute w-full max-w-[75%];
+        // @apply translateX(20%)
+        opacity: 0;
+    transform: translateX(20%);
+    transition: none;
+
         // animation: runTopBottom2 10s linear infinite;
     }
 

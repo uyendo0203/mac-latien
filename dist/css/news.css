@@ -2177,9 +2177,13 @@ header.active .menu__link {
 }
 .news-hero__cloud-1{
   position: absolute;
-  left: -10%;
   width: 100%;
   max-width: 75%;
+  opacity: 0;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+  -webkit-transition: none;
+  transition: none;
 }
 @-webkit-keyframes runTopBottom1 {
   0%{
@@ -2205,9 +2209,13 @@ header.active .menu__link {
 }
 .news-hero__cloud-2{
   position: absolute;
-  right: -13%;
   width: 100%;
   max-width: 75%;
+  opacity: 0;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+  -webkit-transition: none;
+  transition: none;
 }
 @-webkit-keyframes runTopBottom2 {
   0%{
@@ -2870,7 +2878,15 @@ header.active .menu__link {
   position: absolute;
   top: auto;
   bottom: 20%;
-  right: -7%;
+  right: -20%;
+}
+@media (min-width: 768px){
+  .news .thuyen{
+    bottom: 33%;
+    right: -22%;
+  }
+}
+.news .thuyen{
   width: 100%;
   max-width: 30%;
 }
@@ -2878,6 +2894,20 @@ header.active .menu__link {
   .news .thuyen{
     max-width: 38rem;
   }
+}
+.news [data-ani=fade-up] {
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.news [data-ani=fade-up].fadeup-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 *, ::before, ::after{
@@ -3637,8 +3667,8 @@ video {
 .right-0{
   right: 0px;
 }
-.right-\[-13\%\]{
-  right: -13%;
+.right-\[-20\%\]{
+  right: -20%;
 }
 .right-\[-37\%\]{
   right: -37%;
@@ -4912,11 +4942,17 @@ video {
   .md\:bottom-\[23\%\]{
     bottom: 23%;
   }
+  .md\:bottom-\[33\%\]{
+    bottom: 33%;
+  }
   .md\:left-\[-27\%\]{
     left: -27%;
   }
   .md\:left-\[7\.6rem\]{
     left: 7.6rem;
+  }
+  .md\:right-\[-22\%\]{
+    right: -22%;
   }
   .md\:right-\[-28\%\]{
     right: -28%;
