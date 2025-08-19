@@ -282,14 +282,15 @@ function fadeUpOnScroll() {
 
     function checkFadeUp() {
         const windowHeight = window.innerHeight;
-        const triggerPoint = windowHeight * 0.8; // 80% viewport
+        const triggerPoint = windowHeight / 2; // Giữa màn hình
 
         fadeUpItems.forEach(item => {
+            // Nếu đã hiện rồi thì bỏ qua
+            if (item.classList.contains('fadeup-active')) return;
+
             const rect = item.getBoundingClientRect();
-            if (rect.top < triggerPoint && rect.bottom > 0) {
+            if (rect.top < triggerPoint && rect.bottom > triggerPoint) {
                 item.classList.add('fadeup-active');
-            } else {
-                item.classList.remove('fadeup-active');
             }
         });
     }

@@ -1,14 +1,14 @@
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.101.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/postcss-loader@7.3.4_postcss@8.5.6_webpack@5.101.0/node_modules/postcss-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@16.0.5_sass@1.90.0_webpack@5.101.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/news.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/news.scss ***!
+  \***********************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap);
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.101.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/postcss-loader@7.3.4_postcss@8.5.6_webpack@5.101.0/node_modules/postcss-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@16.0.5_sass@1.90.0_webpack@5.101.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/news.scss (1) ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/news.scss (1) ***!
+  \***************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.101.0/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/postcss-loader@7.3.4_postcss@8.5.6_webpack@5.101.0/node_modules/postcss-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@16.0.5_sass@1.90.0_webpack@5.101.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/news.scss (2) ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/news.scss (2) ***!
+  \***************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 html,
 body,
@@ -2897,17 +2897,29 @@ header.active .menu__link {
 }
 .news [data-ani=fade-up] {
   opacity: 0;
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
-  -webkit-transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translate3d(0, 100px, 0);
+          transform: translate3d(0, 100px, 0);
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 .news [data-ani=fade-up].fadeup-active {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: none;
+          transform: none;
+}
+@media (max-width: 768px) {
+  .news .footer{
+    bottom: 6rem;
+  }
+  .news .footer__wrap{
+    padding-top: 0px;
+  }
 }
 
 *, ::before, ::after{
@@ -3615,6 +3627,9 @@ video {
 }
 .bottom-\[6\%\]{
   bottom: 6%;
+}
+.bottom-\[6rem\]{
+  bottom: 6rem;
 }
 .bottom-\[7\%\]{
   bottom: 7%;
