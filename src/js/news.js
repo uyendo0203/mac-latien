@@ -318,7 +318,7 @@ function gsapNewsSectionAnimation() {
                 trigger: section,
                 start: "top 50%",
                 toggleActions: "play reverse play reverse", // cho phép lặp lại khi scroll lên/xuống
-                markers: true // giữ markers để debug
+                // markers: true // giữ markers để debug
                 // XÓA dòng once: true
             }
         });
