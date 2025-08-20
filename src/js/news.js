@@ -335,7 +335,7 @@ function gsapNewsSectionAnimation() {
         tl.fromTo(headingImg, 
             { opacity: 0, y: 60 }, 
             { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, 
-            "+=0.2"
+            "+=0.05"
         );
     });
 }
