@@ -312,17 +312,19 @@ function gsapNewsSectionAnimation() {
 
         if (!heading || !headingImg || !slider) return;
 
+        // Xác định start theo kích thước màn hình
+        const isMobile = window.innerWidth < 767;
+        const startValue = isMobile ? "top 80%" : "top 50%";
+
         // GSAP timeline cho từng section
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
-                start: "top 50%",
-                toggleActions: "play reverse play reverse", // cho phép lặp lại khi scroll lên/xuống
-                // markers: true // giữ markers để debug
-                // XÓA dòng once: true
+                start: startValue,
+                toggleActions: "play reverse play reverse",
+                // markers: true
             }
         });
-
         // 1. Fade up heading và slider cùng lúc (hiệu ứng rõ hơn)
         tl.fromTo([heading, slider], 
             { opacity: 0, y: 100 }, 

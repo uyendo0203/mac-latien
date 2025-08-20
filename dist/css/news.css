@@ -2766,7 +2766,7 @@ header.active .menu__link {
 }
 @media (min-width: 768px){
   .news .footer{
-    top: 60%;
+    top: 68%;
   }
 }
 .news .footer .footer__wrap{
@@ -4960,11 +4960,11 @@ video {
   .md\:top-\[55\%\]{
     top: 55%;
   }
-  .md\:top-\[60\%\]{
-    top: 60%;
-  }
   .md\:top-\[65\%\]{
     top: 65%;
+  }
+  .md\:top-\[68\%\]{
+    top: 68%;
   }
   .md\:mx-\[0\.4rem\]{
     margin-left: 0.4rem;
