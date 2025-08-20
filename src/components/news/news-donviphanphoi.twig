@@ -1,10 +1,8 @@
-<div class="news-donviphanphoi">
-    <div class="news__heading"  data-aos="fade-up" data-aos-duration="1000">
-        <div class="ontop">
-            Đơn vị phân phối
-        </div>
-    </div>
-    <div class="news__slider donviphanphoi"  data-aos="fade-up" data-aos-duration="1000">
+<div data-ani="news" class="news-donviphanphoi">
+    {% include './news-heading.twig' with {
+        heading_text: 'Đơn vị phân phối'
+    } %}
+    <div class="news__slider donviphanphoi">
     {% for item in 0..2%}
         <div class="donviphanphoi__slide">
             <div class="donviphanphoi__group">

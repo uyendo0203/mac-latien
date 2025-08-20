@@ -14,49 +14,17 @@
         @apply absolute w-full max-w-[38%] top-[-5%] left-[-10%];
     }
     &__cloud {
-        
         @apply top-[3%];
-    
+    }
+    &__cloud-building{
+        @apply absolute max-w-[35%] right-[-10%] top-[14%];
     }
     &__cloud-1 {
-        @apply absolute w-full max-w-[75%];
-        // @apply translateX(-20%)
-        opacity: 0;
-    transform: translateX(-20%);
-    transition: none;
-        // animation: runTopBottom1 8s linear infinite;
-    }
-
-    @keyframes runTopBottom1 {
-        0% {
-            @apply top-[19%];
-        }
-        50% {
-            @apply top-[20%];
-        }
-        100% {
-            @apply top-[19%];
-        }
+        @apply absolute w-full max-w-[75%] z-[2];
+        @apply opacity-[0] translate-x-[-20%] transform-none;
     }
     &__cloud-2 {
-        @apply absolute w-full max-w-[75%];
-        // @apply translateX(20%)
-        opacity: 0;
-    transform: translateX(20%);
-    transition: none;
-
-        // animation: runTopBottom2 10s linear infinite;
-    }
-
-    @keyframes runTopBottom2 {
-        0% {
-            @apply top-[11%];
-        }
-        50% {
-            @apply top-[12%];
-        }
-        100% {
-            @apply top-[11%];
-        }
+        @apply absolute w-full max-w-[75%] z-[2];
+        @apply opacity-[0] translate-x-[20%] transform-none;
     }
 }

@@ -1,5 +1,5 @@
 .news-donviphanphoi {
-    @apply pt-[14rem] md:pt-[15.6rem];
+    @apply pt-[12rem] md:pt-[35rem];
     @apply max-w-[95%] md:max-w-[75%] mx-auto;
     .news__heading {
         @apply mb-0 pb-[0.5rem];
@@ -21,6 +21,7 @@
 
     .donviphanphoi__title {
         letter-spacing: 0.4px;
+        @apply font-inter;
         @apply rounded-[2rem];
         @apply max-w-[18rem] md:max-w-[28rem] mx-auto w-full;
         @apply text-white text-center;

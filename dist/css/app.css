@@ -3577,8 +3577,8 @@ video {
 .bottom-\[-1\.5rem\]{
   bottom: -1.5rem;
 }
-.bottom-\[-37\%\]{
-  bottom: -37%;
+.bottom-\[0\]{
+  bottom: 0;
 }
 .bottom-\[20\%\]{
   bottom: 20%;
@@ -3643,6 +3643,9 @@ video {
 .right-0{
   right: 0px;
 }
+.right-\[-10\%\]{
+  right: -10%;
+}
 .right-\[-20\%\]{
   right: -20%;
 }
@@ -3670,8 +3673,8 @@ video {
 .top-0{
   top: 0px;
 }
-.top-\[-10\%\]{
-  top: -10%;
+.top-1\/2{
+  top: 50%;
 }
 .top-\[-20\%\]{
   top: -20%;
@@ -3697,26 +3700,17 @@ video {
 .top-\[10px\]{
   top: 10px;
 }
-.top-\[11\%\]{
-  top: 11%;
-}
-.top-\[12\%\]{
-  top: 12%;
-}
 .top-\[13\%\]{
   top: 13%;
+}
+.top-\[14\%\]{
+  top: 14%;
 }
 .top-\[15px\]{
   top: 15px;
 }
 .top-\[16\%\]{
   top: 16%;
-}
-.top-\[19\%\]{
-  top: 19%;
-}
-.top-\[20\%\]{
-  top: 20%;
 }
 .top-\[25\%\]{
   top: 25%;
@@ -3739,14 +3733,14 @@ video {
 .top-\[44\%\]{
   top: 44%;
 }
-.top-\[45\%\]{
-  top: 45%;
-}
 .top-\[50\%\]{
   top: 50%;
 }
 .top-\[51\%\]{
   top: 51%;
+}
+.top-\[68\%\]{
+  top: 68%;
 }
 .top-\[73\%\]{
   top: 73%;
@@ -4070,6 +4064,9 @@ video {
 .max-w-\[10px\]{
   max-width: 10px;
 }
+.max-w-\[10rem\]{
+  max-width: 10rem;
+}
 .max-w-\[11rem\]{
   max-width: 11rem;
 }
@@ -4108,6 +4105,9 @@ video {
 }
 .max-w-\[33\%\]{
   max-width: 33%;
+}
+.max-w-\[35\%\]{
+  max-width: 35%;
 }
 .max-w-\[38\%\]{
   max-width: 38%;
@@ -4211,6 +4211,11 @@ video {
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.translate-x-\[-20\%\]{
+  --tw-translate-x: -20%;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .translate-x-\[-50\%\]{
   --tw-translate-x: -50%;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4218,6 +4223,11 @@ video {
 }
 .translate-x-\[110\%\]{
   --tw-translate-x: 110%;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-\[20\%\]{
+  --tw-translate-x: 20%;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -4270,6 +4280,12 @@ video {
 .scale-\[1\.1\]{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-\[1\]{
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -4605,11 +4621,14 @@ video {
 .pt-\[10rem\]{
   padding-top: 10rem;
 }
-.pt-\[14rem\]{
-  padding-top: 14rem;
+.pt-\[12rem\]{
+  padding-top: 12rem;
 }
 .pt-\[1rem\]{
   padding-top: 1rem;
+}
+.pt-\[27rem\]{
+  padding-top: 27rem;
 }
 .pt-\[2rem\]{
   padding-top: 2rem;
@@ -4617,17 +4636,8 @@ video {
 .pt-\[30\%\]{
   padding-top: 30%;
 }
-.pt-\[4rem\]{
-  padding-top: 4rem;
-}
-.pt-\[5rem\]{
-  padding-top: 5rem;
-}
 .pt-\[6rem\]{
   padding-top: 6rem;
-}
-.pt-\[8rem\]{
-  padding-top: 8rem;
 }
 .text-center{
   text-align: center;
@@ -4909,14 +4919,11 @@ video {
   .md\:inset-0{
     inset: 0px;
   }
-  .md\:bottom-\[-7\%\]{
-    bottom: -7%;
+  .md\:bottom-\[12\%\]{
+    bottom: 12%;
   }
   .md\:bottom-\[2\.1\%\]{
     bottom: 2.1%;
-  }
-  .md\:bottom-\[23\%\]{
-    bottom: 23%;
   }
   .md\:bottom-\[33\%\]{
     bottom: 33%;
@@ -4969,14 +4976,14 @@ video {
   .md\:top-\[43\%\]{
     top: 43%;
   }
-  .md\:top-\[5\%\]{
-    top: 5%;
-  }
   .md\:top-\[54\.9\%\]{
     top: 54.9%;
   }
   .md\:top-\[55\%\]{
     top: 55%;
+  }
+  .md\:top-\[60\%\]{
+    top: 60%;
   }
   .md\:top-\[65\%\]{
     top: 65%;
@@ -5113,6 +5120,9 @@ video {
   .md\:max-w-\[150px\]{
     max-width: 150px;
   }
+  .md\:max-w-\[27rem\]{
+    max-width: 27rem;
+  }
   .md\:max-w-\[28\%\]{
     max-width: 28%;
   }
@@ -5243,20 +5253,20 @@ video {
   .md\:pb-\[3\.7rem\]{
     padding-bottom: 3.7rem;
   }
-  .md\:pt-\[15\.6rem\]{
-    padding-top: 15.6rem;
+  .md\:pt-\[17rem\]{
+    padding-top: 17rem;
   }
-  .md\:pt-\[18rem\]{
-    padding-top: 18rem;
+  .md\:pt-\[20rem\]{
+    padding-top: 20rem;
   }
-  .md\:pt-\[30\.3rem\]{
-    padding-top: 30.3rem;
+  .md\:pt-\[21rem\]{
+    padding-top: 21rem;
+  }
+  .md\:pt-\[25rem\]{
+    padding-top: 25rem;
   }
   .md\:pt-\[35rem\]{
     padding-top: 35rem;
-  }
-  .md\:pt-\[38rem\]{
-    padding-top: 38rem;
   }
   .md\:pt-\[3rem\]{
     padding-top: 3rem;

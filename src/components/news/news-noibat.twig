@@ -1,8 +1,6 @@
-<div class="news-noibat"  data-ani="fade-up">
-    <div class="news__heading">
-        <div class="ontop">
-            Nội dung nổi bật khác
-        </div>
-    </div>
+<div data-ani="news" class="news-noibat"  data-ani="fade-up">
+    {% include './news-heading.twig' with {
+        heading_text: 'Nội dung nổi bật khác'
+    } %}
     {% include "./news-slider.twig" %}  
 </div>

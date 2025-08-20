@@ -1,6 +1,6 @@
-<div class="news-baochi"  data-ani="fade-up">
-    <div class="news__heading">
-        <span class="ontop">Báo chí nói gì về <br>La Tiên Villa?</span>
-    </div>
+<div data-ani="news" class="news-baochi"  data-ani="fade-up">
+    {% include './news-heading.twig' with {
+        heading_text: 'Báo chí nói gì về <br>La Tiên Villa?'
+    } %}
     {% include "./news-slider.twig" %}  
 </div>

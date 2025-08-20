@@ -263,11 +263,13 @@ function activateNewsHeadingOnScroll() {
             const section = heading.closest('section');
             if (!section) return;
             const rect = section.getBoundingClientRect();
-            // Nếu section top <= 20% viewport và bottom > 10% viewport thì active
+            const before = heading.querySelector('.before-effect');
+            if (!before) return;
             if (rect.top <= winH * 0.2 && rect.bottom > winH * 0.1) {
-                heading.classList.add('active');
+                before.style.transition = "bottom 0.5s cubic-bezier(0.4,0,0.2,1)";
+                before.style.bottom = "0";
             } else {
-                heading.classList.remove('active');
+                before.style.bottom = "3rem"; // hoặc giá trị mặc định
             }
         });
     }
@@ -300,33 +302,51 @@ function fadeUpOnScroll() {
     checkFadeUp();
 }
 
-// Gọi hàm sau khi DOM ready
+function gsapNewsSectionAnimation() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    document.querySelectorAll('[data-ani="news"]').forEach(section => {
+        const heading = section.querySelector('.news__heading');
+        const headingImg = section.querySelector('.news__heading .heading-image');
+        const slider = section.querySelector('.news__slider');
+
+        if (!heading || !headingImg || !slider) return;
+
+        // GSAP timeline cho từng section
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top 50%",
+                toggleActions: "play reverse play reverse", // cho phép lặp lại khi scroll lên/xuống
+                markers: true // giữ markers để debug
+                // XÓA dòng once: true
+            }
+        });
+
+        // 1. Fade up heading và slider cùng lúc (hiệu ứng rõ hơn)
+        tl.fromTo([heading, slider], 
+            { opacity: 0, y: 100 }, 
+            { opacity: 1, y: 0, duration: 1, ease: "power2.out", stagger: 0 }, // chạy đồng thời
+        );
+
+        // 2. Show headingImg (fade up) sau 0.2s
+        tl.fromTo(headingImg, 
+            { opacity: 0, y: 60 }, 
+            { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, 
+            "+=0.2"
+        );
+    });
+}
+
+// Gọi hàm này sau khi DOM ready và GSAP đã sẵn sàng
+document.addEventListener("DOMContentLoaded", () => {
+    gsapNewsSectionAnimation();
+});
+
+// Gọi hàm fadeUpOnScroll sau khi DOM ready
 $(document).ready(() => {
     initNewsSliders();
     activateNewsHeadingOnScroll();
     fadeUpOnScroll();
 });
 
-
-
-// window.addEventListener('load', function () {
-//     if (typeof AOS !== 'undefined') {
-//         AOS.init({
-//             once: true
-//         });
-
-//         // refresh lại sau khi slick/gsap setup xong
-//         setTimeout(() => {
-//             AOS.refresh();
-//             if (typeof ScrollTrigger !== 'undefined') {
-//                 ScrollTrigger.refresh();
-//             }
-//         }, 1500);
-//     }
-// });
-
-// $('.news__slider').on('setPosition', function(){
-//   if (typeof AOS !== 'undefined') {
-//     AOS.refresh();
-//   }
-// });
