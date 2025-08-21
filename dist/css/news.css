@@ -2543,10 +2543,6 @@ header.active .menu__link {
   }
 }
 
-.news{
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 191 15 / var(--tw-bg-opacity, 1));
-}
 .news .section{
   position: relative;
 }

@@ -8,7 +8,6 @@
 @use "./news/news-tailieu.scss" as *;
 
 .news {
-    @apply bg-yellow;
     .section {
         @apply relative;
         .container {
