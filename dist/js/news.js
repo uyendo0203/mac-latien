@@ -8,13 +8,13 @@ function initNewsSliders() {
         infinite: true
     });
     $('.agency .news__slider').slick({
-        slidesToShow: 1,
+        // slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
         arrows: false,
         infinite: true,
-        // rows: 3,
-        // slidesPerRow: 3
+        rows: 3,
+        slidesPerRow: 3
     });
 
     // Bình thường: 3 item, scroll 1, dots, không arrow

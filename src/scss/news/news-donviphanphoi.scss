@@ -1,6 +1,6 @@
 .news-donviphanphoi {
     @apply pt-[8rem] md:pt-[35rem];
-    @apply max-w-full md:max-w-[70rem] mx-auto;
+    @apply max-w-full md:max-w-[80%] mx-auto;
     .news__heading {
         @apply mb-0 pb-[0.5rem];
     }
@@ -86,7 +86,7 @@
 }
 
 .agency {
-    @apply max-w-[70%] md:max-w-full mx-auto w-full;
+    @apply max-w-[90%] md:max-w-full mx-auto w-full;
     .slides {
        
     }
@@ -98,10 +98,10 @@
         @apply gap-[1rem] md:gap-[2rem];
     }
     .slide {
-        // @apply m-[0.2rem] md:mx-[1.5rem] md:my-[0.6rem];
-        // @apply w-auto #{!important};
+        @apply my-[1rem] mx-[2rem] md:mx-[3rem] md:my-[3.5rem];
+        @apply w-auto #{!important};
 
-        @apply my-[0.5rem] md:my-[1.5rem] mx-[1rem] md:mx-[3rem]
+        // @apply my-[0.5rem] md:my-[1.5rem] mx-[1rem] md:mx-[3rem]
     }
     .news__slider {
         @apply mt-[2rem];

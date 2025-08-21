@@ -2244,7 +2244,7 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .news-donviphanphoi{
-    max-width: 70rem;
+    max-width: 80%;
   }
 }
 .news-donviphanphoi .news__heading{
@@ -2447,7 +2447,7 @@ header.active .menu__link {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 70%;
+  max-width: 90%;
 }
 
 @media (min-width: 768px){
@@ -2475,18 +2475,21 @@ header.active .menu__link {
   }
 }
 .agency .slide{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 @media (min-width: 768px){
   .agency .slide{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
   }
+}
+.agency .slide{
+  width: auto !important;
 }
 .agency .news__slider{
   margin-top: 2rem;
@@ -3827,9 +3830,6 @@ video {
 .m-0{
   margin: 0px;
 }
-.m-\[0\.2rem\]{
-  margin: 0.2rem;
-}
 .mx-\[-16px\]{
   margin-left: -16px;
   margin-right: -16px;
@@ -3846,6 +3846,10 @@ video {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.mx-\[2rem\]{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -3857,6 +3861,10 @@ video {
 .my-\[0\.5rem\]{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+.my-\[1rem\]{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .mb-0{
   margin-bottom: 0px;
@@ -5034,21 +5042,17 @@ video {
     margin-left: 1.1rem;
     margin-right: 1.1rem;
   }
-  .md\:mx-\[1\.5rem\]{
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
   .md\:mx-\[3rem\]{
     margin-left: 3rem;
     margin-right: 3rem;
   }
-  .md\:my-\[0\.6rem\]{
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
-  }
   .md\:my-\[1\.5rem\]{
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+  .md\:my-\[3\.5rem\]{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
   }
   .md\:-ml-\[6rem\]{
     margin-left: -6rem;
@@ -5220,9 +5224,6 @@ video {
   }
   .md\:max-w-\[63\%\]{
     max-width: 63%;
-  }
-  .md\:max-w-\[70rem\]{
-    max-width: 70rem;
   }
   .md\:max-w-\[80\%\]{
     max-width: 80%;
