@@ -1,6 +1,6 @@
 .news-donviphanphoi {
-    @apply pt-[12rem] md:pt-[35rem];
-    @apply max-w-[95%] md:max-w-[75%] mx-auto;
+    @apply pt-[8rem] md:pt-[35rem];
+    @apply max-w-full md:max-w-[70rem] mx-auto;
     .news__heading {
         @apply mb-0 pb-[0.5rem];
     }
@@ -23,64 +23,94 @@
         letter-spacing: 0.4px;
         @apply font-inter;
         @apply rounded-[2rem];
-        @apply max-w-[18rem] md:max-w-[28rem] mx-auto w-full;
+        @apply max-w-[12rem] md:max-w-[28rem] mx-auto w-full;
         @apply text-white text-center;
-        @apply text-[1rem] md:text-[2.1rem] py-[0.67rem] px-[3rem];
+        @apply text-[1rem] md:text-[2.1rem] py-[0.4rem] md:py-[0.67rem] px-[3rem];
         @apply bg-[url("../images/news/dvpp-bg-title.png")] bg-no-repeat bg-center bg-[length:100%_100%];
     }
 
     .donviphanphoi__images {
         @apply flex items-center justify-center;
-        @apply gap-[2rem] md:gap-[5rem];
-        @apply pt-[2rem] md:pt-[3rem] pb-[1.7rem] md:pb-[2.7rem];
+        @apply gap-[1.3rem] md:gap-[5rem];
+        @apply pt-[2rem] md:pt-[3rem] pb-[1.7rem] md:pb-0;
     }
 
-    img {
-        @apply max-h-[5rem] md:max-h-[10rem];
-        width: auto !important;
-        @media(max-width: 768px) {
-            @apply max-w-[12rem];
+    .slick-slide img {
+        max-width: 300px;
+        max-height: 120px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        @media (max-width: 767px) {
+            max-width: 6rem;
+            max-height: 4rem;
         }
     }
 }
 .donviphanphoi {
-    @apply max-w-[52%] w-full mx-auto;
-    @apply mt-[3rem] md:mt-[4.2rem];
+    @apply mt-[6rem] md:mt-[9rem];
+    @apply mx-auto w-full;
+
+    &__wrap {
+        @apply flex justify-center;
+    }
+    &__side {
+        @apply w-1/2;
+        &:nth-child(1) {
+            @apply pr-[1rem] md:pr-[5rem];
+            border-right: 2px solid #fff;
+        }
+        &:nth-child(2) {
+            @apply pl-[1rem] md:pl-[5rem];
+        }
+    }
     &__slide {
         @apply flex flex-col font-inter;
     }
     &__group {
         @apply flex flex-col items-center;
         &:first-child {
-            @apply mb-[1rem] md:mb-[4rem];
+            @apply mb-[1rem] md:mb-[7rem];
         }
         &:nth-child(2) {
-            @apply mb-[2rem];
+            // @apply mb-[2rem];
+            .donviphanphoi__images{
+                @apply mb-0;
+            }
         }
+    }
+    .slick-dots {
+        @apply bottom-[-2rem] md:bottom-[-6rem] #{!important};
     }
 }
 
 .agency {
-    @apply mt-[7rem];
-    .donviphanphoi__images {
-        // @apply flex #{!important}
+    @apply max-w-[70%] md:max-w-full mx-auto w-full;
+    .slides {
+       
+    }
+    .slides-wrap{
+         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        @apply gap-[1rem] md:gap-[2rem];
+    }
+    .slide {
+        // @apply m-[0.2rem] md:mx-[1.5rem] md:my-[0.6rem];
+        // @apply w-auto #{!important};
+
+        @apply my-[0.5rem] md:my-[1.5rem] mx-[1rem] md:mx-[3rem]
     }
     .news__slider {
-        @apply mt-[4rem];
+        @apply mt-[2rem];
 
         .slick-slide {
-            @apply flex items-center flex-col;
+            @apply text-center;
             @apply gap-[2rem] md:gap-[4rem];
-            img{
-                @apply mx-[0.2rem] md:mx-[1rem]
-            }
-            div{
-                @media(max-width: 768px) {
-                    @apply gap-[2rem];
-                }
-            }
         }
-        .slick-list{
+        .slick-list {
             @apply pb-[3rem];
         }
     }

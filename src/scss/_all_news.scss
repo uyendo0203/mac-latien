@@ -135,18 +135,11 @@
     .thuyen {
         @apply max-w-[14rem] md:max-w-[32rem];
         @apply absolute top-auto;
-        @apply bottom-[20%] md:bottom-[33%] right-[-20%] md:right-[-22%];
+        @apply bottom-[6%] md:bottom-[18%] right-[-11%] md:right-[-5%];
         @apply max-w-[30%] md:max-w-[38rem] w-full;
     }
     .footer{
-        @media(max-width: 768px) {
-            @apply bottom-[6rem]
-        }
-    }
-    .footer__wrap{
-        @media(max-width: 768px) {
-            @apply pt-0;
-        }
+        @apply static pt-[3rem];;
     }
 }
 

@@ -13,8 +13,8 @@ function initNewsSliders() {
         dots: true,
         arrows: false,
         infinite: true,
-        rows: 2,
-        slidesPerRow: 3
+        // rows: 3,
+        // slidesPerRow: 3
     });
 
     // Bình thường: 3 item, scroll 1, dots, không arrow
@@ -42,15 +42,15 @@ const animateThuyen = () => {
 
     if (window.innerWidth < 767) {
         gsap.set(".thuyen", {
-            right: "-20%",
-            bottom: "20%",
+            right: "-11%",
+            bottom: "6%",
             scaleX: 1,
             position: "absolute"
         });
     } else {
         gsap.set(".thuyen", {
-            right: "-22%",
-            bottom: "33%",
+            right: "-5%",
+            bottom: "18%",
             scaleX: 1,
             position: "absolute"
         });
@@ -74,15 +74,15 @@ const animateThuyen = () => {
 
             if (window.innerWidth < 767) {
                 tl.to(".thuyen", {
-                    right: "0",
-                    bottom: "10%",
+                    right: "0%",
+                    bottom: "-1%",
                     duration: timeRun,
                     ease: "power1.out"
                 });
             } else {
                 tl.to(".thuyen", {
-                    bottom: "24%",
-                    right: "-2%",
+                    bottom: "11%",
+                    right: "6%",
                     duration: timeRun,
                     ease: "power1.out"
                 });
@@ -95,8 +95,8 @@ const animateThuyen = () => {
 
             if (window.innerWidth < 767) {
                 gsap.to(".thuyen", {
-                    right: "-10%",
-                    bottom: "20%",
+                    right: "-11%",
+                    bottom: "6%",
                     scaleX: 1,
                     rotation: 0,
                     y: 0,
@@ -106,8 +106,8 @@ const animateThuyen = () => {
                 });
             } else {
                 gsap.to(".thuyen", {
-                    right: "-22%",
-                    bottom: "33%",
+                    right: "-5%",
+                    bottom: "18%",
                     scaleX: 1,
                     rotation: 0,
                     y: 0,
