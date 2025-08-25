@@ -13,14 +13,12 @@ function initNewsSliders() {
         dots: true,
         arrows: false,
         infinite: false,
-        // rows: 3,
-        // slidesPerRow: 3
     });
 
     // Bình thường: 3 item, scroll 1, dots, không arrow
     $('.news__slider.normal').slick({
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         dots: true,
         arrows: false,
         infinite: true,
