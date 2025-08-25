@@ -6,10 +6,12 @@ header {
     @apply flex items-center justify-center;
     @apply gap-[3rem];
     @apply md:mt-[2.3rem];
+    @apply md:left-1/2 md:-translate-x-1/2;
+    @apply md:max-w-[73%] md:rounded-[10rem] mx-auto;
     transition: all 0.3s ease;
 
     .logo {
-        @apply max-w-[10.5rem] w-full;
+        @apply max-w-[9rem] w-full;
         @apply hidden md:block;
         transition: all 0.3s ease;
         &.active {
@@ -17,20 +19,24 @@ header {
         }
         img {
             @apply w-full;
+             transition: all 0.3s ease;
         }
     }
-    &.active{
-        // @apply md:mt-[1.3rem];
-        .menu__list{
-            @apply text-[1.3rem]
+    &.active {
+        @apply md:max-w-[60%] md:bg-[#2a6b92db] md:py-[0.2rem];
+        @apply md:mt-[1rem];
+        box-shadow: 2px 4px 10px #00000082;
+        .menu__list {
+            @apply text-[1.3rem] gap-[2rem]; 
         }
-        .logo{
+        .logo {
             @apply max-w-[8rem];
+            img{
+                @apply scale-[0.7]
+            }
         }
-        .menu__link{
-                letter-spacing: 0.2rem;
+        .menu__link {
+            letter-spacing: 0.2rem;
         }
     }
 }
-
-

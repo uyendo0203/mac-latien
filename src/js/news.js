@@ -20,7 +20,7 @@ function initNewsSliders() {
     // Bình thường: 3 item, scroll 1, dots, không arrow
     $('.news__slider.normal').slick({
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         dots: true,
         arrows: false,
         infinite: true,
@@ -340,15 +340,52 @@ function gsapNewsSectionAnimation() {
     });
 }
 
+
+
+function clipNewsSliderTopTo2Lines() {
+  document.querySelectorAll('.news__slider .top').forEach(el => {
+    const style = window.getComputedStyle(el);
+
+    // lấy line-height an toàn (nếu là "normal" thì fallback = 1.4 * font-size)
+    let lineHeight = parseFloat(style.lineHeight);
+    if (isNaN(lineHeight)) {
+      lineHeight = parseFloat(style.fontSize) * 1.4;
+    }
+
+    // chiều cao 2 dòng
+    const twoLineHeight = lineHeight * 2;
+
+    // set style cho element
+    el.style.display = "block";
+    el.style.overflow = "hidden";
+    el.style.whiteSpace = "normal";     // cho phép xuống dòng
+    el.style.wordBreak = "break-word";  // tránh chữ dài tràn khung
+    el.style.lineHeight = lineHeight + "px";
+    el.style.maxHeight = twoLineHeight + "px"; // đúng 2 dòng
+  });
+}
+
+
+
 // Gọi hàm này sau khi DOM ready và GSAP đã sẵn sàng
 document.addEventListener("DOMContentLoaded", () => {
     gsapNewsSectionAnimation();
+    clipNewsSliderTopTo2Lines()
 });
 
-// Gọi hàm fadeUpOnScroll sau khi DOM ready
+// Gọi hàm này sau khi slider render xong
 $(document).ready(() => {
     initNewsSliders();
     activateNewsHeadingOnScroll();
     fadeUpOnScroll();
+    clipNewsSliderTopTo2Lines();
+    $('.news__slider').on('setPosition', function(){
+        clipNewsSliderTopTo2Lines();
+    });
+});
+
+
+$(window).on('resize', function(){
+    clipNewsSliderTopTo2Lines();
 });
 

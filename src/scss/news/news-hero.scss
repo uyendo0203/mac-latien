@@ -1,17 +1,17 @@
 .news-hero {
-    // @apply mt-0 md:mt-[7%];
+    @apply pt-[2.5rem];
     .news__heading {
     }
     &__heading {
         @apply absolute w-full;
-        @apply max-w-[60%] md:max-w-[56%];
-        @apply top-[8%] md:top-[12%];
+        @apply max-w-[53%] md:max-w-[36.3%];
+        @apply top-[12%] md:top-[18.3%];
         @apply left-1/2 translate-x-[-50%];
         @apply text-white text-center;
         @apply pb-[3rem] text-[3rem] mb-[4rem];
     }
     &__conchim {
-        @apply absolute w-full max-w-[38%] top-[-5%] left-[-10%];
+        @apply absolute w-full max-w-[34%] top-[4%] left-[-8%];
     }
     &__cloud {
         @apply top-[3%];

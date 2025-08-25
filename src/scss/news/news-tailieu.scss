@@ -1,4 +1,6 @@
 .news-tailieu {
-    @apply pt-[7rem] md:pt-[21rem];
+    @apply pt-[6rem] md:pt-[10rem];
+    .news__heading{
+        @apply mb-0;
+    }
 }
-// news-tailieu styles
