@@ -842,15 +842,17 @@ header .logo img{
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
-    background-color: #2a6b92db;
+    background-color: #02406dde;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-top: 1rem;
   }
 }
 header.active {
-  -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5098039216);
-          box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5098039216);
+  -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3294117647);
+          box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3294117647);
 }
 header.active .menu__list{
   gap: 2rem;
@@ -5463,8 +5465,8 @@ video {
   .md\:rounded-\[4rem\]{
     border-radius: 4rem;
   }
-  .md\:bg-\[\#2a6b92db\]{
-    background-color: #2a6b92db;
+  .md\:bg-\[\#02406dde\]{
+    background-color: #02406dde;
   }
   .md\:bg-\[transparent\]{
     background-color: transparent;
