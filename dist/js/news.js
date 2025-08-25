@@ -14,18 +14,20 @@ function initNewsSliders() {
         arrows: false,
         infinite: false,
     });
-
+    console.log('init slider');
+    
     // Bình thường: 3 item, scroll 1, dots, không arrow
     $('.news__slider.normal').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         dots: true,
         arrows: false,
-        infinite: true,
+        infinite: false,
         responsive: [{
             breakpoint: 600,
             settings: {
-                slidesToShow: 1
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         }]
     });

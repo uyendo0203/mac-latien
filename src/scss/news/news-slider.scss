@@ -9,7 +9,8 @@
             height: inherit !important;
         }
         .item {
-            @apply aspect-[47/40];
+            @apply min-h-[150px] md:aspect-[47/40];
+            @apply relative overflow-hidden rounded-[2rem] md:rounded-[4rem];
             img{
                 width: 100%;
                 -o-object-fit: cover;

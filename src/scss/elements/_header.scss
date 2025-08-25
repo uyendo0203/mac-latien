@@ -23,7 +23,7 @@ header {
         }
     }
     &.active {
-        @apply md:max-w-[60%] md:bg-[#2a6b92db] md:py-[0.2rem];
+        @apply md:max-w-max md:bg-[#2a6b92db] md:py-[0.2rem];
         @apply md:mt-[1rem];
         box-shadow: 2px 4px 10px #00000082;
         .menu__list {
