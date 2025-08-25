@@ -5,22 +5,22 @@ function initNewsSliders() {
         slidesToScroll: 1,
         dots: true,
         arrows: false,
-        infinite: true
+        infinite: false
     });
     $('.agency .news__slider').slick({
-        // slidesToShow: 1,
+        slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
         arrows: false,
-        infinite: true,
-        rows: 3,
-        slidesPerRow: 3
+        infinite: false,
+        // rows: 3,
+        // slidesPerRow: 3
     });
 
     // Bình thường: 3 item, scroll 1, dots, không arrow
     $('.news__slider.normal').slick({
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         dots: true,
         arrows: false,
         infinite: true,

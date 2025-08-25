@@ -2169,6 +2169,24 @@ header.active .menu__link {
   gap: 0.5rem;
 }
 
+.news__slider.normal .slick-track {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.news__slider.normal .slick-slide {
+  height: inherit !important;
+}
+.news__slider.normal .item{
+  aspect-ratio: 47/40;
+}
+.news__slider.normal .item img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+}
+
 @media (min-width: 768px){
   .news-hero{
     padding-top: 9rem;
@@ -2438,9 +2456,6 @@ header.active .menu__link {
     padding-right: 5rem;
   }
 }
-.donviphanphoi__side:nth-child(1) {
-  border-right: 2px solid #fff;
-}
 .donviphanphoi__side:nth-child(2){
   padding-left: 1rem;
 }
@@ -2448,6 +2463,9 @@ header.active .menu__link {
   .donviphanphoi__side:nth-child(2){
     padding-left: 5rem;
   }
+}
+.donviphanphoi__side:nth-child(2) {
+  border-left: 2px solid #fff;
 }
 .donviphanphoi__slide{
   display: -webkit-box;
@@ -2476,7 +2494,7 @@ header.active .menu__link {
 }
 @media (min-width: 768px){
   .donviphanphoi__group:first-child{
-    margin-bottom: 8rem;
+    margin-bottom: 7rem;
   }
 }
 .donviphanphoi__group:nth-child(2) .donviphanphoi__images{
@@ -2500,56 +2518,14 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .agency{
-    max-width: 100%;
+    max-width: 60%;
   }
-}
-.agency .slides-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-}
-@media (min-width: 768px){
-  .agency .slides-wrap{
-    gap: 2rem;
-  }
-}
-.agency .slide{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-@media (min-width: 768px){
-  .agency .slide{
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
-  }
-}
-.agency .slide{
-  width: auto !important;
 }
 .agency .news__slider{
   margin-top: 0px;
 }
 .agency .news__slider .slick-slide{
   text-align: center;
-  gap: 2rem;
-}
-@media (min-width: 768px){
-  .agency .news__slider .slick-slide{
-    gap: 4rem;
-  }
 }
 .agency .news__slider .slick-list{
   padding-bottom: 3rem;
@@ -3018,6 +2994,84 @@ header.active .menu__link {
 .news .footer{
   position: static;
   padding-top: 3rem;
+}
+.news .agency .slide_wrap{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.news .agency .slide{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+@media (min-width: 768px){
+  .news .agency .slide{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+.news .agency .slide{
+  width: auto !important;
+}
+.news .agency .slide img{
+  max-width: 7rem;
+}
+@media (min-width: 768px){
+  .news .agency .slide img{
+    max-width: 10rem;
+  }
+}
+@media (min-width: 1024px){
+  @media (min-width: 768px){
+    .news .agency .slide img{
+      max-width: 12rem;
+    }
+  }
+}
+.news .agency .slide img{
+  max-height: 6rem;
+}
+@media (min-width: 768px){
+  .news .agency .slide img{
+    max-height: 7rem;
+  }
+}
+@media (min-width: 1024px){
+  .news .agency .slide img{
+    max-height: 8rem;
+  }
+}
+.news .agency .slide_wrap:nth-child(2) .slide{
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+.news .donviphanphoi__images img{
+  max-width: 7rem;
+}
+@media (min-width: 768px){
+  .news .donviphanphoi__images img{
+    max-width: 10rem;
+  }
+}
+.news .donviphanphoi__images img{
+  max-height: 4rem;
+}
+@media (min-width: 768px){
+  .news .donviphanphoi__images img{
+    max-height: 7rem;
+  }
 }
 
 *, ::before, ::after{
@@ -3929,17 +3983,17 @@ video {
   margin-left: 0.3rem;
   margin-right: 0.3rem;
 }
+.mx-\[1\.2rem\]{
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+.mx-\[1\.5rem\]{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 .mx-\[16px\]{
   margin-left: 16px;
   margin-right: 16px;
-}
-.mx-\[1rem\]{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.mx-\[2rem\]{
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 .mx-auto{
   margin-left: auto;
@@ -3952,10 +4006,6 @@ video {
 .my-\[0\.5rem\]{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-.my-\[1rem\]{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 .mb-0{
   margin-bottom: 0px;
@@ -4063,6 +4113,9 @@ video {
 .aspect-\[400\/340\]{
   aspect-ratio: 400/340;
 }
+.aspect-\[47\/40\]{
+  aspect-ratio: 47/40;
+}
 .h-0{
   height: 0px;
 }
@@ -4107,6 +4160,12 @@ video {
 }
 .h-screen{
   height: 100vh;
+}
+.max-h-\[4rem\]{
+  max-height: 4rem;
+}
+.max-h-\[6rem\]{
+  max-height: 6rem;
 }
 .min-h-0{
   min-height: 0px;
@@ -4281,6 +4340,9 @@ video {
 }
 .max-w-\[75\%\]{
   max-width: 75%;
+}
+.max-w-\[7rem\]{
+  max-width: 7rem;
 }
 .max-w-\[80\%\]{
   max-width: 80%;
@@ -5157,13 +5219,9 @@ video {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-  .md\:my-\[1\.5rem\]{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .md\:my-\[3\.5rem\]{
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
+  .md\:my-\[2\.5rem\]{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   .md\:-ml-\[6rem\]{
     margin-left: -6rem;
@@ -5195,8 +5253,8 @@ video {
   .md\:mb-\[7\.3rem\]{
     margin-bottom: 7.3rem;
   }
-  .md\:mb-\[8rem\]{
-    margin-bottom: 8rem;
+  .md\:mb-\[7rem\]{
+    margin-bottom: 7rem;
   }
   .md\:ml-\[0\.55rem\]{
     margin-left: 0.55rem;
@@ -5240,6 +5298,9 @@ video {
   .md\:h-\[1\.5rem\]{
     height: 1.5rem;
   }
+  .md\:max-h-\[7rem\]{
+    max-height: 7rem;
+  }
   .md\:min-h-\[4rem\]{
     min-height: 4rem;
   }
@@ -5266,6 +5327,9 @@ video {
   }
   .md\:max-w-\[1\.9rem\]{
     max-width: 1.9rem;
+  }
+  .md\:max-w-\[10rem\]{
+    max-width: 10rem;
   }
   .md\:max-w-\[12\.1rem\]{
     max-width: 12.1rem;
@@ -5369,9 +5433,6 @@ video {
   }
   .md\:gap-\[1\.3rem\]{
     gap: 1.3rem;
-  }
-  .md\:gap-\[2rem\]{
-    gap: 2rem;
   }
   .md\:gap-\[3rem\]{
     gap: 3rem;
@@ -5484,6 +5545,14 @@ video {
   }
 }
 @media (min-width: 1024px){
+  @media (min-width: 768px){
+    .lg\:md\:max-w-\[12rem\]{
+      max-width: 12rem;
+    }
+  }
+  .lg\:max-h-\[8rem\]{
+    max-height: 8rem;
+  }
   .lg\:min-h-\[3rem\]{
     min-height: 3rem;
   }
