@@ -2169,8 +2169,10 @@ header.active .menu__link {
   gap: 0.5rem;
 }
 
-.news-hero{
-  padding-top: 2.5rem;
+@media (min-width: 768px){
+  .news-hero{
+    padding-top: 9rem;
+  }
 }
 .news-hero__heading{
   position: absolute;
@@ -2249,7 +2251,7 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .news-baochi{
-    padding-top: 12.5rem;
+    padding-top: 10.3rem;
   }
 }
 .news-baochi .news__heading{
@@ -2272,7 +2274,7 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .news-donviphanphoi{
-    padding-top: 18rem;
+    padding-top: 8.2rem;
   }
 }
 
@@ -2559,7 +2561,7 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .news-noibat{
-    padding-top: 10rem;
+    padding-top: 9rem;
   }
 }
 .news-noibat .news__heading{
@@ -2572,7 +2574,7 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .news-phaply{
-    padding-top: 17rem;
+    padding-top: 9rem;
   }
 }
 .news-phaply .news__heading{
@@ -2585,13 +2587,16 @@ header.active .menu__link {
 
 @media (min-width: 768px){
   .news-tailieu{
-    padding-top: 10rem;
+    padding-top: 8rem;
   }
 }
 .news-tailieu .news__heading{
   margin-bottom: 0px;
 }
 
+.news{
+  overflow: hidden;
+}
 .news .section{
   position: relative;
 }
@@ -2621,7 +2626,7 @@ header.active .menu__link {
 }
 @media (min-width: 768px){
   .news__title{
-    bottom: 9.7rem;
+    bottom: 4rem;
   }
 }
 .news__title{
@@ -2748,6 +2753,7 @@ header.active .menu__link {
 @media (min-width: 768px){
   .news__slider.slick-slider{
     max-width: 90%;
+    padding-bottom: 2rem;
   }
 }
 .news__slider .item{
@@ -2918,6 +2924,11 @@ header.active .menu__link {
 .news .footer .footer__wrap{
   padding-bottom: 0px;
 }
+@media (min-width: 768px){
+  .news .footer .footer__wrap{
+    padding-top: 13rem;
+  }
+}
 .news .cay-dua-trai-1{
   width: 100%;
   max-width: 25rem;
@@ -2939,6 +2950,7 @@ header.active .menu__link {
 }
 .news .cay-dua-trai-1{
   left: -33%;
+  z-index: 1;
 }
 @media (min-width: 768px){
   .news .cay-dua-trai-1{
@@ -2956,7 +2968,8 @@ header.active .menu__link {
 }
 .news .cay-dua-phai{
   bottom: 0px;
-  max-width: 25rem;
+  z-index: 1;
+  max-width: 23rem;
 }
 @media (min-width: 768px){
   .news .cay-dua-phai{
@@ -2966,7 +2979,12 @@ header.active .menu__link {
 .news .cay-dua-trai{
   position: absolute;
   left: -60%;
-  top: 0px;
+  top: auto;
+  z-index: 1;
+}
+.news [data-ani=news] {
+  z-index: 2;
+  position: relative;
 }
 .news .thuyen{
   max-width: 14rem;
@@ -3861,6 +3879,9 @@ video {
 .top-\[8rem\]{
   top: 8rem;
 }
+.top-auto{
+  top: auto;
+}
 .-z-\[1\]{
   z-index: -1;
 }
@@ -4191,6 +4212,9 @@ video {
 }
 .max-w-\[21\.7rem\]{
   max-width: 21.7rem;
+}
+.max-w-\[23rem\]{
+  max-width: 23rem;
 }
 .max-w-\[240px\]{
   max-width: 240px;
@@ -4697,6 +4721,9 @@ video {
   padding-top: 6%;
   padding-bottom: 6%;
 }
+.pb-0{
+  padding-bottom: 0px;
+}
 .pb-\[0\.5rem\]{
   padding-bottom: 0.5rem;
 }
@@ -4735,9 +4762,6 @@ video {
 }
 .pt-\[1rem\]{
   padding-top: 1rem;
-}
-.pt-\[2\.5rem\]{
-  padding-top: 2.5rem;
 }
 .pt-\[2rem\]{
   padding-top: 2rem;
@@ -5055,8 +5079,8 @@ video {
   .md\:bottom-\[2\.1\%\]{
     bottom: 2.1%;
   }
-  .md\:bottom-\[9\.7rem\]{
-    bottom: 9.7rem;
+  .md\:bottom-\[4rem\]{
+    bottom: 4rem;
   }
   .md\:left-1\/2{
     left: 50%;
@@ -5398,6 +5422,9 @@ video {
   .md\:pb-\[2\.8rem\]{
     padding-bottom: 2.8rem;
   }
+  .md\:pb-\[2rem\]{
+    padding-bottom: 2rem;
+  }
   .md\:pb-\[3\.7rem\]{
     padding-bottom: 3.7rem;
   }
@@ -5407,20 +5434,23 @@ video {
   .md\:pr-\[5rem\]{
     padding-right: 5rem;
   }
-  .md\:pt-\[10rem\]{
-    padding-top: 10rem;
+  .md\:pt-\[10\.3rem\]{
+    padding-top: 10.3rem;
   }
-  .md\:pt-\[12\.5rem\]{
-    padding-top: 12.5rem;
-  }
-  .md\:pt-\[17rem\]{
-    padding-top: 17rem;
-  }
-  .md\:pt-\[18rem\]{
-    padding-top: 18rem;
+  .md\:pt-\[13rem\]{
+    padding-top: 13rem;
   }
   .md\:pt-\[3rem\]{
     padding-top: 3rem;
+  }
+  .md\:pt-\[8\.2rem\]{
+    padding-top: 8.2rem;
+  }
+  .md\:pt-\[8rem\]{
+    padding-top: 8rem;
+  }
+  .md\:pt-\[9rem\]{
+    padding-top: 9rem;
   }
   .md\:text-\[1\.2rem\]{
     font-size: 1.2rem;

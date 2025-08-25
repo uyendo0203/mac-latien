@@ -8,6 +8,7 @@
 @use "./news/news-tailieu.scss" as *;
 
 .news {
+    @apply overflow-hidden;
     .section {
         @apply relative;
         .container {
@@ -21,7 +22,7 @@
     }
     &__title {
         @apply text-white text-center absolute left-1/2 -translate-x-1/2;
-        @apply bottom-[9%] md:bottom-[9.7rem];
+        @apply bottom-[9%] md:bottom-[4rem];
         @apply pb-[2rem] md:pb-[2.8rem];
         @apply text-[1.7rem] md:text-[4.4rem];
         // @apply mb-[4rem] md:mb-[41rem];
@@ -50,11 +51,12 @@
     &__slider {
         &.slick-slider {
             @apply max-w-[70%] md:max-w-[90%] mx-auto;
+            @apply md:pb-[2rem];
         }
         .item {
             @apply relative overflow-hidden rounded-[2rem] md:rounded-[4rem];
             @apply aspect-[400/340];
-            
+
             img {
                 transition: all 0.3s ease-in-out;
                 @apply relative z-[1] cursor-pointer;
@@ -83,7 +85,7 @@
                 @apply content-[''] absolute left-1/2 -translate-x-1/2 bottom-0;
                 @apply bg-[url("../images/news/image-item-shadow.png")] bg-no-repeat bg-center bg-[length:100%_100%] w-full h-full;
             }
-            .top{
+            .top {
                 @apply text-[0.8rem] md:text-[1.5rem];
                 @apply z-[3] relative text-justify block;
             }
@@ -125,21 +127,25 @@
         @apply md:top-[55%] md:bottom-auto;
         @apply top-[62%] md:top-[61%];
         .footer__wrap {
-            @apply pb-0;
+            @apply pb-0 md:pt-[13rem];
         }
     }
     .cay-dua-trai-1 {
         @apply max-w-[25rem] md:max-w-[60rem] w-full;
         @apply absolute left-[0%] top-[-20%] md:top-[-13%];
-        @apply left-[-33%] md:left-[-27%];
+        @apply left-[-33%] md:left-[-27%] z-[1];
     }
     .cay-dua-phai {
         @apply absolute right-[-37%] md:right-[-28%];
         @apply bottom-0;
-        @apply max-w-[25rem] md:max-w-[58rem];
+        @apply max-w-[23rem] md:max-w-[58rem]  z-[1];
     }
     .cay-dua-trai {
-        @apply absolute left-[-60%] top-0;
+        @apply absolute left-[-60%] top-auto  z-[1];
+    }
+    [data-ani="news"] {
+        z-index: 2;
+        position: relative;
     }
     .thuyen {
         @apply max-w-[14rem] md:max-w-[29rem];
