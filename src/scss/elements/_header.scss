@@ -23,7 +23,7 @@ header {
         }
     }
     &.active {
-        @apply md:max-w-max md:bg-[#F79D67] md:py-[0.2rem] md:px-[1rem];
+        @apply md:max-w-max md:bg-[#f79d6780] md:py-[0.2rem] md:px-[1rem];
         @apply md:mt-[1rem] ; 
         box-shadow: 2px 4px 10px #00000054;
         border: 1px solid #ffffffcc;

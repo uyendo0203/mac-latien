@@ -842,8 +842,7 @@ header .logo img{
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
-    --tw-bg-opacity: 1;
-    background-color: rgb(247 157 103 / var(--tw-bg-opacity, 1));
+    background-color: #f79d6780;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     padding-left: 1rem;
@@ -5450,9 +5449,8 @@ video {
   .md\:rounded-\[4rem\]{
     border-radius: 4rem;
   }
-  .md\:bg-\[\#F79D67\]{
-    --tw-bg-opacity: 1;
-    background-color: rgb(247 157 103 / var(--tw-bg-opacity, 1));
+  .md\:bg-\[\#f79d6780\]{
+    background-color: #f79d6780;
   }
   .md\:bg-\[transparent\]{
     background-color: transparent;
