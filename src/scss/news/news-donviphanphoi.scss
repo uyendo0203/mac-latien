@@ -59,12 +59,12 @@
     &__side {
         @apply w-1/2;
         &:nth-child(1) {
-            @apply pr-[1rem] md:pr-[5rem];
+            @apply pr-[1rem] md:pr-[2rem];
             
         }
         &:nth-child(2) {
-            @apply pl-[1rem] md:pl-[5rem];
-            border-left: 2px solid #fff;
+            @apply pl-[1rem] md:pl-[2rem];
+            // border-left: 2px solid #fff;
         }
     }
     &__slide {

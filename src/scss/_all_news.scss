@@ -84,7 +84,7 @@
             }
             .top {
                 @apply text-[0.8rem] md:text-[1.5rem];
-                @apply z-[3] relative text-justify block;
+                @apply z-[3] relative block;
             }
         }
         img {

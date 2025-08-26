@@ -842,7 +842,8 @@ header .logo img{
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
-    background-color: #02406dde;
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 157 103 / var(--tw-bg-opacity, 1));
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     padding-left: 1rem;
@@ -853,6 +854,7 @@ header .logo img{
 header.active {
   -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3294117647);
           box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3294117647);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 header.active .menu__list{
   gap: 2rem;
@@ -4687,9 +4689,6 @@ video {
 .text-center{
   text-align: center;
 }
-.text-justify{
-  text-align: justify;
-}
 .font-inter{
   font-family: Inter;
 }
@@ -5306,8 +5305,9 @@ video {
   .md\:rounded-\[4rem\]{
     border-radius: 4rem;
   }
-  .md\:bg-\[\#02406dde\]{
-    background-color: #02406dde;
+  .md\:bg-\[\#F79D67\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 157 103 / var(--tw-bg-opacity, 1));
   }
   .md\:bg-\[transparent\]{
     background-color: transparent;
@@ -5343,11 +5343,11 @@ video {
   .md\:pb-\[3\.7rem\]{
     padding-bottom: 3.7rem;
   }
-  .md\:pl-\[5rem\]{
-    padding-left: 5rem;
+  .md\:pl-\[2rem\]{
+    padding-left: 2rem;
   }
-  .md\:pr-\[5rem\]{
-    padding-right: 5rem;
+  .md\:pr-\[2rem\]{
+    padding-right: 2rem;
   }
   .md\:pt-\[10\.3rem\]{
     padding-top: 10.3rem;
