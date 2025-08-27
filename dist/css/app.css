@@ -842,7 +842,6 @@ header .logo img{
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
-    background-color: #f79d6780;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     padding-left: 1rem;
@@ -850,26 +849,8 @@ header .logo img{
     margin-top: 1rem;
   }
 }
-header.active {
-  -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3294117647);
-          box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3294117647);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-}
-header.active .menu__list{
-  gap: 2rem;
-  font-size: 1.3rem;
-}
 header.active .logo{
   max-width: 8rem;
-}
-header.active .logo img{
-  --tw-scale-x: 0.7;
-  --tw-scale-y: 0.7;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-header.active .menu__link {
-  letter-spacing: 0.2rem;
 }
 
 .footer{

@@ -23,21 +23,22 @@ header {
         }
     }
     &.active {
-        @apply md:max-w-max md:bg-[#f79d6780] md:py-[0.2rem] md:px-[1rem];
+        @apply md:max-w-max  md:py-[0.2rem] md:px-[1rem];
+        // @apply md:bg-[#f79d6780];
         @apply md:mt-[1rem] ; 
-        box-shadow: 2px 4px 10px #00000054;
-        border: 1px solid #ffffffcc;
+        // box-shadow: 2px 4px 10px #00000054;
+        // border: 1px solid #ffffffcc;
         .menu__list {
-            @apply text-[1.3rem] gap-[2rem]; 
+            // @apply text-[1.3rem] gap-[2rem]; 
         }
         .logo {
             @apply max-w-[8rem];
-            img{
-                @apply scale-[0.7]
-            }
+            // img{
+            //     @apply scale-[0.7]
+            // }
         }
-        .menu__link {
-            letter-spacing: 0.2rem;
-        }
+        // .menu__link {
+        //     letter-spacing: 0.2rem;
+        // }
     }
 }
