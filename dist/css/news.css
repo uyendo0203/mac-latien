@@ -2231,6 +2231,15 @@ header.active .menu__link {
   margin-bottom: 4rem;
   padding-bottom: 3rem;
   font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .news-hero__conchim{
   position: absolute;
@@ -2977,7 +2986,7 @@ header.active .menu__link {
 }
 .news .thuyen{
   width: 100%;
-  max-width: 30%;
+  max-width: 25%;
 }
 @media (min-width: 768px){
   .news .thuyen{
@@ -4267,6 +4276,9 @@ video {
 }
 .max-w-\[240px\]{
   max-width: 240px;
+}
+.max-w-\[25\%\]{
+  max-width: 25%;
 }
 .max-w-\[25rem\]{
   max-width: 25rem;

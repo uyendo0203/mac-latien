@@ -9,6 +9,7 @@
         @apply left-1/2 translate-x-[-50%];
         @apply text-white text-center;
         @apply pb-[3rem] text-[3rem] mb-[4rem];
+        @apply flex justify-center items-center;
     }
     &__conchim {
         @apply absolute w-full max-w-[34%] top-[4%] left-[-8%];

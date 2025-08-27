@@ -75,7 +75,7 @@ const animateThuyen = () => {
             if (window.innerWidth < 767) {
                 tl.to(".thuyen", {
                     right: "0%",
-                    bottom: "-1%",
+                    bottom: "-4%",
                     duration: timeRun,
                     ease: "power1.out"
                 });
@@ -321,7 +321,9 @@ function gsapNewsSectionAnimation() {
             scrollTrigger: {
                 trigger: section,
                 start: startValue,
-                toggleActions: "play reverse play reverse",
+                // toggleActions: "play reverse play reverse", //loop
+                toggleActions: "play none none none", // chỉ play 1 lần khi đi xuống
+
                 // markers: true
             }
         });
