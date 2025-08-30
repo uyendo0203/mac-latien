@@ -3726,6 +3726,9 @@ video {
 .top-\[25\%\]{
   top: 25%;
 }
+.top-\[28\.3\%\]{
+  top: 28.3%;
+}
 .top-\[29\%\]{
   top: 29%;
 }
@@ -4124,6 +4127,9 @@ video {
 }
 .max-w-\[35\%\]{
   max-width: 35%;
+}
+.max-w-\[40\.4rem\]{
+  max-width: 40.4rem;
 }
 .max-w-\[42rem\]{
   max-width: 42rem;

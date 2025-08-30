@@ -33,7 +33,8 @@ module.exports = {
   entry: {
     app: path.resolve(environment.paths.source, 'scss', 'app.scss'),
     "bg-image": path.resolve(environment.paths.source, 'scss', 'bg-image.scss'),
-    "news": path.resolve(environment.paths.source, 'scss', 'news.scss')
+    "news": path.resolve(environment.paths.source, 'scss', 'news.scss'),
+    "trainghiem": path.resolve(environment.paths.source, 'scss', 'trainghiem.scss')
   },
   output: {
     path: path.resolve(__dirname, 'dist'), // Chỉ giữ dòng này
@@ -166,6 +167,11 @@ module.exports = {
         },
         {
           from: path.resolve(environment.paths.source, 'js/news.js'),
+          to: path.resolve(environment.paths.output, 'js/'),
+          toType: 'dir',
+        },
+        {
+          from: path.resolve(environment.paths.source, 'js/trainghiem.js'),
           to: path.resolve(environment.paths.output, 'js/'),
           toType: 'dir',
         },

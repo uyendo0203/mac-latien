@@ -1,0 +1,14 @@
+@use "./trainghiem/tn-diemhen.scss" as *;
+@use "./trainghiem/tn-dochoa.scss" as *;
+@use "./trainghiem/tn-giauthiennhien.scss" as *;
+@use "./trainghiem/tn-giauvanhoa.scss" as *;
+@use "./trainghiem/tn-kyquan.scss" as *;
+@use "./trainghiem/tn-nethoangda.scss" as *;
+@use "./trainghiem/tn-niemtuhao.scss" as *;
+@use "./trainghiem/tn-tohopganket.scss" as *;
+@use "./trainghiem/tn-vuatanhuong-khoidau.scss" as *;
+
+.trainghiem {
+    @apply overflow-hidden;
+   
+}
