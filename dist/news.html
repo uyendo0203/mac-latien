@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>La Tien Villa</title>
+        <meta name="author" content="La Tien Villa" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="keywords" content="La Tien Villa" />
+        <meta name="description" content="Đất Tiên Vịnh Ngọc" />
+        <meta itemprop="description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            itemprop="image"
+            content="/assets/images/screenshot.jpg"
+        />
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://latienvilla.vn/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="La Tien Villa" />
+        <meta property="og:description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            property="og:image"
+            content="/assets/images/screenshot.jpg"
+        />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            name="twitter:image"
+            content="/assets/images/screenshot.jpg"
+        />
+        <link rel="icon/png" href="/assets/images/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="./libs/slick/slick.css" />
+        <link rel="stylesheet" href="./libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="./libs/aos/aos.css" />
+        <link rel="icon/png" href="./images/favicon.png" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+        />
+    <script defer src="app.js"></script><script defer src="bg-image.js"></script><script defer src="news.js"></script><script defer src="trainghiem.js"></script><link href="css/app.css" rel="stylesheet"><link href="css/bg-image.css" rel="stylesheet"><link href="css/news.css" rel="stylesheet"><link href="css/trainghiem.css" rel="stylesheet"></head>
+
+    <body>
+        <div class="loading show">
+    <div class="spinner"></div>
+</div>
+ 
+        <div id="toast-simple" class="toast" role="alert">
+    <svg
+    class="fly"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 18 20"
+    >
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+        />
+    </svg>
+    <div class="text">Message sent successfully.</div>
+    <div class="icon rotate-[45deg] " data-dismiss-target="#toast-success" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg
+            class="close "
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            ></path>
+        </svg>
+    </div>
+</div> 
+        <div class="popup">
+    <div class="popup-wrap">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button
+                    type="button"
+                    class="popup-close"
+                    data-modal-hide="default-modal"
+                >
+                   <img class=""
+                        src="./images/popup-close.png"
+                        alt="Bất động sản nghệ thuật văn hoá"
+                    />
+                </button>
+            </div>
+            <div class="popup-body">
+                <div class="contact--form">
+    <div class="contact--note">
+        Vui lòng điền thông tin, đội ngũ tư vấn <br> sẽ liên hệ trong thời gian sớm nhất. 
+    </div>
+    <form>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Họ và tên:</label>
+            <input
+                aria-hidden="false"
+                name="fullname"
+                class="fullname"
+                type="text"
+                required
+            />
+        </div>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Email:</label>
+            <input
+                aria-hidden="false"
+                name="email"
+                class="email"
+                type="email"
+                required
+            />
+        </div>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Số điện thoại:</label>
+            <input
+                aria-hidden="false"
+                name="phone"
+                class="phone"
+                type="number"
+                required
+            />
+        </div>
+
+        <div class="form-item">
+            <label for="fullname" class="form-label">Yêu cầu tư vấn:</label>
+            <input
+                aria-hidden="false"
+                name="consultation"
+                class="consultation"
+                type="text"
+            />
+        </div>
+        <button class="submit btn" disabled="disabled" type="submit">
+            Gửi
+        </button>
+    </form>
+</div>
+            </div>
+        </div>
+         
+        <div id="toast-simple" class="toast" role="alert">
+    <svg
+    class="fly"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 18 20"
+    >
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+        />
+    </svg>
+    <div class="text">Message sent successfully.</div>
+    <div class="icon rotate-[45deg] " data-dismiss-target="#toast-success" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg
+            class="close "
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            ></path>
+        </svg>
+    </div>
+</div>    </div>
+</div>
+ 
+        <!-- Popup Modal -->
+<div id="noti" class="noti hidden">
+  <div class="noti-content">
+    <h2 class="noti-title">Success!</h2>
+    <p class="noti-message">Your form has been submitted successfully.</p>
+    <div class="noti-action">
+      <button class="close-noti">Close</button>
+    </div>
+  </div>
+</div>
+ 
+        <div class="social">
+    <!-- Facebook -->
+    
+    <!-- Phone -->
+    
+    <!-- 360 View -->
+    
+    <a class="social-item register">
+        
+        <span class="text">Nhận thông tin</span>
+    </a> 
+</div>
+ 
+        <header>
+    <a href="/" class="logo">
+        <img src="./images/home/logo-white.png" alt="La Tiên Villa Logo" />
+    </a>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span> 
+    </div>
+    <div class="menu">
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a class="active menu__link" data-text="Trang chủ" href="/">Trang chủ</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" data-text="Trải nghiệm" href="/">Trải nghiệm</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" data-text="Tin tức thư viện" href="/">Tin tức thư viện</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" data-text="Sa bàn ảo" href="/">Sa bàn ảo</a>
+            </li>
+             <li class="menu__item">
+                <a class="menu__link" data-text="Brochure" href="/">Brochure</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<main class="news">
+    <section class="section section1">
+        <img class="thuyen" src="./images/home/thuyen.png" alt="thuyen" />
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-1.jpg" alt="bg-1" />
+            <img
+                class="mobile"
+                src="./images/news/bg-1-mobile.jpg"
+                alt="bg-1"
+            />
+        </div>
+        <div class="section-top">
+            <div class="news-hero">
+    <div class="news-hero__heading">
+        <h1 class="heading-hidden">Cùng khám phá</h1>
+        <img
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            src="./images/news/text-cungkhampha.png"
+            alt="Cùng khám phá"
+        />
+    </div>
+    <img
+        class="news-hero__conchim"
+        src="./images/news/conchim.gif"
+        alt="Bất động sản nghệ thuật văn hoá"
+    />
+    <img
+        class="news-hero__cloud news-hero__cloud-1"
+        src="./images/news/cloud-1.png"
+        alt="Bất động sản nghệ thuật văn hoá"
+    />
+    <img
+        class="news-hero__cloud news-hero__cloud-2"
+        src="./images/news/cloud-2.png"
+        alt="Bất động sản nghệ thuật văn hoá"
+    />
+    <img
+        class="news-hero__cloud news-hero__cloud-building"
+        src="./images/news/cloud-build.png"
+        alt="Bất động sản nghệ thuật văn hoá"
+    />
+    <div class="news__title">
+        <h1 class="heading-hidden">Thông tin xoay quanh Đô thị vịnh đáng sống</h1>
+        <img
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            src="./images/news/text-thongtinxoayquanh.png"
+            alt="Cùng khám phá"
+        />
+    </div>
+</div>
+
+        </div>
+    </section>
+    <section class="section section2">
+        <img
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            class="cay-dua-trai-1"
+            src="./images/news/cay-dua-trai.png"
+            alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+        />
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-2.jpg" alt="bg-2" />
+            <img
+                class="mobile"
+                src="./images/news/bg-2-mobile.jpg"
+                alt="bg-2"
+            />
+        </div>
+        <div class="section-top">
+            <div data-ani="news" class="news-hero" data-ani="fade-up" >
+    <div class="news__heading">
+    <img class="heading-image" src="./images/news/image-heading-under.png" alt="">
+    <div class="heading-text ontop">Bản Tin <br />Đất Tiên Vịnh Ngọc</div>
+</div>    
+<div class="container">
+    <div class="news__slider normal"> 
+     <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://imagepasal.com/wp-content/uploads/2024/06/Shey-Phoksundo-Lake-image-pasal-2024-06-27-600x400.jpg"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 
+                1 </span>
+            </h3>
+        </div>
+        <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://demo.latienvilla.vn/assets/temp/c0eda4a05bc58b1dd5f9c6069b374bc0_1755782262.png"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                2 La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 2
+            </span>
+            </h3>
+        </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 0 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 1 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 2 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 3 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+            </div>
+</div></div>
+     <div data-ani="news" class="news-baochi"  data-ani="fade-up">
+    <div class="news__heading">
+    <img class="heading-image" src="./images/news/image-heading-under.png" alt="">
+    <div class="heading-text ontop">Báo chí nói gì về <br>La Tiên Villa?</div>
+</div>    
+<div class="container">
+    <div class="news__slider normal"> 
+     <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://imagepasal.com/wp-content/uploads/2024/06/Shey-Phoksundo-Lake-image-pasal-2024-06-27-600x400.jpg"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 
+                1 </span>
+            </h3>
+        </div>
+        <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://demo.latienvilla.vn/assets/temp/c0eda4a05bc58b1dd5f9c6069b374bc0_1755782262.png"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                2 La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 2
+            </span>
+            </h3>
+        </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 0 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 1 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 2 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 3 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+            </div>
+</div>  
+</div> <div data-ani="news" class="news-tailieu" data-ani="fade-up">
+    <div class="news__heading">
+    <img class="heading-image" src="./images/news/image-heading-under.png" alt="">
+    <div class="heading-text ontop">Tài liệu bán hàng</div>
+</div>    
+<div class="container">
+    <div class="news__slider normal"> 
+     <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://imagepasal.com/wp-content/uploads/2024/06/Shey-Phoksundo-Lake-image-pasal-2024-06-27-600x400.jpg"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 
+                1 </span>
+            </h3>
+        </div>
+        <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://demo.latienvilla.vn/assets/temp/c0eda4a05bc58b1dd5f9c6069b374bc0_1755782262.png"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                2 La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 2
+            </span>
+            </h3>
+        </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 0 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 1 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 2 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 3 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+            </div>
+</div>  
+</div>            <img
+                class="cay-dua-phai"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                src="./images/news/cay-dua-phai.png"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+        </div>
+    </section>
+    <section class="section section3">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-3.jpg" alt="bg-3" />
+            <img
+                class="mobile"
+                src="./images/news/bg-3-mobile.jpg"
+                alt="bg-3"
+            />
+        </div>
+        <div class="section-top">
+            <div data-ani="news" class="news-phaply" data-ani="fade-up">
+    <div class="news__heading">
+    <img class="heading-image" src="./images/news/image-heading-under.png" alt="">
+    <div class="heading-text ontop">Pháp lý/ Chính sách bán hàng</div>
+</div>    
+<div class="container">
+    <div class="news__slider normal"> 
+     <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://imagepasal.com/wp-content/uploads/2024/06/Shey-Phoksundo-Lake-image-pasal-2024-06-27-600x400.jpg"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 
+                1 </span>
+            </h3>
+        </div>
+        <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://demo.latienvilla.vn/assets/temp/c0eda4a05bc58b1dd5f9c6069b374bc0_1755782262.png"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                2 La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 2
+            </span>
+            </h3>
+        </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 0 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 1 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 2 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 3 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+            </div>
+</div>  
+</div> <div data-ani="news" class="news-noibat"  data-ani="fade-up">
+    <div class="news__heading">
+    <img class="heading-image" src="./images/news/image-heading-under.png" alt="">
+    <div class="heading-text ontop">Nội dung nổi bật khác</div>
+</div>    
+<div class="container">
+    <div class="news__slider normal"> 
+     <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://imagepasal.com/wp-content/uploads/2024/06/Shey-Phoksundo-Lake-image-pasal-2024-06-27-600x400.jpg"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 
+                1 </span>
+            </h3>
+        </div>
+        <div class="item">
+            <a class="link" href="/"></a>
+            <img
+                src="https://demo.latienvilla.vn/assets/temp/c0eda4a05bc58b1dd5f9c6069b374bc0_1755782262.png"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+            <h3 class="title">
+            <span class="top"> 
+                2 La Tiên Villa: Biệt thự ven biển <br />
+                sang trọng tại Nha Trang 2
+            </span>
+            </h3>
+        </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 0 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 1 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 2 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+                    <div class="item">
+                <a class="link" href="/"></a>
+                <img src="./images/news/image-item.png" alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                <h3 class="title">
+                <span class="top"> 3 La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang</span>
+                </h3>
+            </div>
+            </div>
+</div>  
+</div>        </div>
+        <img
+            class="cay-dua-trai"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            src="./images/news/cay-dua-trai.png"
+            alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+        />
+    </section>
+    <section class="section section4">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-4.jpg" alt="bg-4" />
+            <img class="desktop-big" src="./images/news/bg-4-big.jpg" alt="bg-4" />
+            <img
+                class="mobile"
+                src="./images/news/bg-4-mobile.jpg"
+                alt="bg-4"
+            />
+        </div>
+        <div class="section-top">
+            <div data-ani="news" class="news-donviphanphoi">
+    <div class="news__heading">
+    <img class="heading-image" src="./images/news/image-heading-under.png" alt="">
+    <div class="heading-text ontop">Đơn vị phân phối</div>
+</div>
+
+    <div class="agency" data-aos="fade-up" data-aos-duration="1000">
+        <div class="news__slider">
+            <div class="slide_wrap">
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp1.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp2.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp3.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp4.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp5.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp6.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp7.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp8.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp9.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+            </div>
+            <div class="slide_wrap">
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-1.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-2.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-3.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-4.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-5.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-6.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-7.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-8.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-9.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+                <div class="slide">
+                    <img src="./images/news/dvpp/pp-slide-2-10.png"
+                        alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="news__slider donviphanphoi">
+        <div class="donviphanphoi__slide">
+            <div class="donviphanphoi__wrap">
+                <div class="donviphanphoi__side">
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-1/lm-minhan.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-1/lm-adong.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-1/lm-minhtam.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-1/lm-s9.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-1/lm-sgstar.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                </div>
+                <div class="donviphanphoi__side">
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-1/lm-tpland.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-1/lm-cas.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-1/lm-rjk.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-1/lm-bam.png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="donviphanphoi__slide">
+            <div class="donviphanphoi__wrap">
+                <div class="donviphanphoi__side">
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-2/lm-2 (1).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-2/lm-2 (2).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-2/lm-2 (3).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-2/lm-2 (4).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                </div>
+                <div class="donviphanphoi__side">
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-2/lm-2 (5).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-2/lm-2 (6).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-2/lm-2 (7).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-2/lm-2 (8).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="donviphanphoi__slide">
+            <div class="donviphanphoi__wrap">
+                <div class="donviphanphoi__side">
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-3/lm-3 (1).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-3/lm-3 (2).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-3/lm-3 (3).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-3/lm-3 (4).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                </div>
+                <div class="donviphanphoi__side">
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-3/lm-3 (5).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-3/lm-3 (6).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-3/lm-3 (7).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-3/lm-3 (8).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="donviphanphoi__slide">
+            <div class="donviphanphoi__wrap">
+                <div class="donviphanphoi__side">
+                    <div class="donviphanphoi__group">
+                        <h4 class="donviphanphoi__title">Liên minh</h4>
+                        <div class="donviphanphoi__images">
+                            <img src="./images/news/lm/lm-4/lm-4 (1).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                            <img src="./images/news/lm/lm-4/lm-4 (2).png"
+                                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <footer class="footer">
+    <div class="footer__wrap">
+    <div class="footer__left">
+        <img src="./images/home/logo-white.png" alt="logo-white.png" />
+    </div>
+    <div class="footer__right">
+        <div class="footer__top">
+            <div class="footer__item">
+                <figure class="image">
+                  <img src="./images/home/footer-map.png" alt="Google Map" />
+                </figure>
+                <a class="text" href="/">Google Map</a>
+            </div>
+            <div class="footer__item">
+                <figure class="image">
+                  <img src="./images/home/footer-address.png" alt="VPBH Hà Nội: Số 16A Nguyễn Công Trứ, Phường Hai Bà Trưng, Thành phố Hà Nội" />
+                </figure>
+                <h3 class="text">VPBH Hà Nội: Số 16A Nguyễn Công Trứ, Phường Hai Bà Trưng, Thành phố Hà Nội</h3>
+            </div>
+            <div class="footer__item">
+                <figure class="image">
+                  <img src="./images/home/footer-address.png" alt="VPBH Hồ Chí Minh: Số 8 Trần Quý Kiên, Phường Bình Trưng, Thành phố Hồ Chí Minh" />
+                </figure>
+                <h3 class="text">VPBH Hồ Chí Minh: Số 8 Trần Quý Kiên, Phường Bình Trưng, Thành phố Hồ Chí Minh</h3>
+            </div>
+            <div class="footer__item">
+                <figure class="image">
+                  <img src="./images/home/footer-address.png" alt="VPBH Dự án: Khu vực Bãi Tiên, Khóm Đường Đệ, Phường Bắc Nha Trang, Tỉnh Khánh Hòa" />
+                </figure>
+                <h3 class="text">VPBH Dự án: Khu vực Bãi Tiên, Khóm Đường Đệ, Phường Bắc Nha Trang, Tỉnh Khánh Hòa</h3>
+            </div>
+        </div>
+        <div class="footer__bottom">
+          <p>*Mọi thông tin trong tài liệu này đúng tại thời điểm phát hành và có thể được điều chỉnh mà không cần thông báo trước. Thông số bản vẽ là tương đối. Thông số chính thức của từng căn sẽ được quy định tại văn bản ký kết giữa Chủ đầu tư và Khách hàng.</p>
+          <p>*Tài liệu/bản vẽ mang tính chất tham khảo và sẽ được Chủ đầu tư cập nhật, điều chỉnh tại mỗi thời điểm cho từng khu vực để đảm bảo tối ưu các tiện ích sử dụng và phù hợp với thiết kế tổng thể dự án.</p>
+        </div>
+        </div>
+    </div>
+</footer>
+        </div>
+    </section>
+</main>
+    </body>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+    <script src="./libs/aos/aos.js"></script>
+    <script src="./libs/slick/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.5/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./libs/gsap/gsap.min.js"></script>
+    <script src="./libs/gsap/lenis.min.js"></script>
+    <script src="./libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="./libs/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./libs/gsap/CSSRulePlugin.min.js"></script>
+
+    <script src="js/common.js"></script>
+    <script src="js/news.js"></script>
+</html>

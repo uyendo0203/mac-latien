@@ -1,0 +1,103 @@
+.news-donviphanphoi {
+    @apply pt-[1rem] md:pt-[8.2rem];
+    @apply max-w-full md:max-w-[80%] mx-auto;
+    .news__heading {
+        @apply mb-0 pb-[0.5rem];
+        @apply text-[1.7rem] md:text-[4.4rem] #{!important};
+    }
+    .news__slider {
+        &.slick-slider {
+            @apply max-w-full;
+        }
+        .slick-list {
+            @apply pb-0;
+        }
+        .slick-dots li {
+            @apply mx-[0.3rem] md:mx-[0.4rem];
+            button {
+                @apply w-[0.7rem] md:w-[1.15rem] h-[0.7rem] md:h-[1.15rem];
+            }
+        }
+    }
+
+    .donviphanphoi__title {
+        letter-spacing: 0.4px;
+        @apply font-inter;
+        @apply rounded-[2rem];
+        @apply max-w-[12rem] md:max-w-[28rem] mx-auto w-full;
+        @apply text-white text-center;
+        @apply text-[1rem] md:text-[2.1rem] py-[0.4rem] md:py-[0.67rem] px-[3rem];
+        @apply bg-[url("../images/news/dvpp-bg-title.png")] bg-no-repeat bg-center bg-[length:100%_100%];
+    }
+
+    .donviphanphoi__images {
+        @apply flex items-center justify-center;
+        @apply gap-[1.3rem] md:gap-[5rem];
+        @apply pt-[2rem] md:pt-[3rem] pb-[1.7rem] md:pb-0;
+    }
+
+    .slick-slide img {
+        max-width: 300px;
+        max-height: 150px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        @media (max-width: 767px) {
+            max-width: 6rem;
+            max-height: 4rem;
+        }
+    }
+}
+.donviphanphoi {
+    @apply mt-[6rem] md:mt-[3rem];
+    @apply mx-auto w-full;
+
+    &__wrap {
+        @apply flex justify-center;
+    }
+    &__side {
+        @apply w-1/2;
+        &:nth-child(1) {
+            @apply pr-[1rem] md:pr-[2rem];
+            
+        }
+        &:nth-child(2) {
+            @apply pl-[1rem] md:pl-[2rem];
+            // border-left: 2px solid #fff;
+        }
+    }
+    &__slide {
+        @apply flex flex-col font-inter;
+    }
+     &__group {
+        @apply flex flex-col items-center;
+        &:first-child {
+            @apply mb-[1rem] md:mb-[7rem];
+        }
+        &:nth-child(2) {
+            // @apply mb-[2rem];
+            .donviphanphoi__images{
+                @apply mb-0;
+            }
+        }
+    }
+    .slick-dots {
+        @apply bottom-[-2rem] md:bottom-[-6rem] #{!important};
+    }
+}
+
+.agency {
+   @apply max-w-[90%] md:max-w-[60%] mx-auto w-full;
+    .news__slider {
+        @apply mt-0;
+
+        .slick-slide {
+            @apply text-center;
+            // @apply gap-[2rem] md:gap-[4rem];
+        }
+        .slick-list {
+            @apply pb-[3rem];
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.news-hero {
+    @apply md:pt-[9rem];
+    .news__heading {
+    }
+    &__heading {
+        @apply absolute w-full;
+        @apply max-w-[53%] md:max-w-[36.3%];
+        @apply top-[12%] md:top-[18.3%];
+        @apply left-1/2 translate-x-[-50%];
+        @apply text-white text-center;
+        @apply pb-[3rem] text-[3rem] mb-[4rem];
+        @apply flex justify-center items-center;
+    }
+    &__conchim {
+        @apply absolute w-full max-w-[34%] top-[4%] left-[-8%];
+    }
+    &__cloud {
+        @apply top-[3%];
+    }
+    &__cloud-building{
+        @apply absolute max-w-[35%] right-[-10%] top-[14%];
+    }
+    &__cloud-1 {
+        @apply absolute w-full max-w-[75%] z-[2];
+        @apply opacity-[0] translate-x-[-20%] transform-none;
+    }
+    &__cloud-2 {
+        @apply absolute w-full max-w-[75%] z-[2];
+        @apply opacity-[0] translate-x-[20%] transform-none;
+    }
+}

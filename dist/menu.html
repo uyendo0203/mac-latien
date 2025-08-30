@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>La Tien Villa</title>
+        <meta name="author" content="La Tien Villa" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="keywords" content="La Tien Villa" />
+        <meta name="description" content="Đất Tiên Vịnh Ngọc" />
+        <meta itemprop="description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            itemprop="image"
+            content="/assets/images/screenshot.jpg"
+        />
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://latienvilla.vn/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="La Tien Villa" />
+        <meta property="og:description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            property="og:image"
+            content="/assets/images/screenshot.jpg"
+        />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Đất Tiên Vịnh Ngọc" />
+        <meta
+            name="twitter:image"
+            content="/assets/images/screenshot.jpg"
+        />
+        <link rel="icon/png" href="/assets/images/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="./libs/slick/slick.css" />
+        <link rel="stylesheet" href="./libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="./libs/aos/aos.css" />
+        <link rel="icon/png" href="./images/favicon.png" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+        />
+    <script defer src="app.js"></script><script defer src="bg-image.js"></script><script defer src="news.js"></script><script defer src="trainghiem.js"></script><link href="css/app.css" rel="stylesheet"><link href="css/bg-image.css" rel="stylesheet"><link href="css/news.css" rel="stylesheet"><link href="css/trainghiem.css" rel="stylesheet"></head>
+
+    <body>
+        <div class="loading show">
+    <div class="spinner"></div>
+</div>
+ 
+        <div id="toast-simple" class="toast" role="alert">
+    <svg
+    class="fly"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 18 20"
+    >
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+        />
+    </svg>
+    <div class="text">Message sent successfully.</div>
+    <div class="icon rotate-[45deg] " data-dismiss-target="#toast-success" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg
+            class="close "
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            ></path>
+        </svg>
+    </div>
+</div> 
+        <div class="popup">
+    <div class="popup-wrap">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button
+                    type="button"
+                    class="popup-close"
+                    data-modal-hide="default-modal"
+                >
+                   <img class=""
+                        src="./images/popup-close.png"
+                        alt="Bất động sản nghệ thuật văn hoá"
+                    />
+                </button>
+            </div>
+            <div class="popup-body">
+                <div class="contact--form">
+    <div class="contact--note">
+        Vui lòng điền thông tin, đội ngũ tư vấn <br> sẽ liên hệ trong thời gian sớm nhất. 
+    </div>
+    <form>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Họ và tên:</label>
+            <input
+                aria-hidden="false"
+                name="fullname"
+                class="fullname"
+                type="text"
+                required
+            />
+        </div>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Email:</label>
+            <input
+                aria-hidden="false"
+                name="email"
+                class="email"
+                type="email"
+                required
+            />
+        </div>
+        <div class="form-item">
+            <label for="fullname" class="form-label">Số điện thoại:</label>
+            <input
+                aria-hidden="false"
+                name="phone"
+                class="phone"
+                type="number"
+                required
+            />
+        </div>
+
+        <div class="form-item">
+            <label for="fullname" class="form-label">Yêu cầu tư vấn:</label>
+            <input
+                aria-hidden="false"
+                name="consultation"
+                class="consultation"
+                type="text"
+            />
+        </div>
+        <button class="submit btn" disabled="disabled" type="submit">
+            Gửi
+        </button>
+    </form>
+</div>
+            </div>
+        </div>
+         
+        <div id="toast-simple" class="toast" role="alert">
+    <svg
+    class="fly"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 18 20"
+    >
+        <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+        />
+    </svg>
+    <div class="text">Message sent successfully.</div>
+    <div class="icon rotate-[45deg] " data-dismiss-target="#toast-success" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg
+            class="close "
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            ></path>
+        </svg>
+    </div>
+</div>    </div>
+</div>
+ 
+        <!-- Popup Modal -->
+<div id="noti" class="noti hidden">
+  <div class="noti-content">
+    <h2 class="noti-title">Success!</h2>
+    <p class="noti-message">Your form has been submitted successfully.</p>
+    <div class="noti-action">
+      <button class="close-noti">Close</button>
+    </div>
+  </div>
+</div>
+ 
+        <div class="social">
+    <!-- Facebook -->
+    
+    <!-- Phone -->
+    
+    <!-- 360 View -->
+    
+    <a class="social-item register">
+        
+        <span class="text">Nhận thông tin</span>
+    </a> 
+</div>
+ 
+        <main class="relative">
+    <div class="bg absolute h-full w-full z-[1]">
+        <img class="h-full w-full" src="./images/menu.png" alt="bg-1" />
+    </div>
+    <div class="menu_page container">
+        <div class="menu_page__wrapper">
+            <div class="menu_page__content">
+                <div class="text-center">
+                    <a
+                        href="/"
+                        class="logo max-w-[100px] md:max-w-[150px] mx-auto mb-[3rem] inline-block"
+                    >
+                        <img
+                            class="w-full"
+                            src="./images/logo.png"
+                        />
+                    </a>
+                </div>
+                <ul class="menu_page__list">
+                    <li class="menu_page__item">
+                        <a
+                            href="/home.html"
+                            class="menu_page__link"
+                            target="_blank"
+                        >
+                            <div class="flex items-center gap-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 6v6l4 2"
+                                    />
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 12a8 8 0 11-16 0 8 8 0 0116 0z"
+                                    />
+                                </svg>
+                                Homepage
+                            </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu_page__item">
+                        <a
+                            href="/overview.html"
+                            class="menu_page__link"
+                            target="_blank"
+                        >
+                            <div class="flex items-center gap-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 6v6l4 2"
+                                    />
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 12a8 8 0 11-16 0 8 8 0 0116 0z"
+                                    />
+                                </svg>
+                                Tổng quan
+                            </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu_page__item">
+                        <a
+                            href="/news.html"
+                            class="menu_page__link"
+                            target="_blank"
+                        >
+                            <div class="flex items-center gap-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 6v6l4 2"
+                                    />
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 12a8 8 0 11-16 0 8 8 0 0116 0z"
+                                    />
+                                </svg>
+                                Tin tức
+                            </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu_page__item">
+                        <a
+                            href="/thuvien.html"
+                            class="menu_page__link"
+                            target="_blank"
+                        >
+                            <div class="flex items-center gap-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 6v6l4 2"
+                                    />
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 12a8 8 0 11-16 0 8 8 0 0116 0z"
+                                    />
+                                </svg>
+                                Thư viện
+                            </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+    </body>
+    <script src="./libs/jquery-3.7.1.min.js"></script>
+    <script src="./libs/aos/aos.js"></script>
+    <script src="./libs/slick/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.5/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./libs/gsap/gsap.min.js"></script>
+    <script src="./libs/gsap/lenis.min.js"></script>
+    <script src="./libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="./libs/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./libs/gsap/CSSRulePlugin.min.js"></script>
+
+    <script src="js/common.js"></script>
+    </html>

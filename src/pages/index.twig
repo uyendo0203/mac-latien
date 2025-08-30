@@ -1,0 +1,63 @@
+{% set page_title = 'Home' %}
+{% extends "../components/base.twig" %}
+
+{% block content %}
+{% set show_logo_white = false %}
+{% set page = 'home' %}
+
+{% include "../components/header.twig" %}
+<main class="homepage">
+    <section class="section">
+        <div class="bg">
+            <img class="desktop" src="./images/home/bg-1.jpg" alt="bg-1">
+            <img class="mobile" src="./images/home/bg-1-mobile.jpg" alt="bg-1">
+        </div>
+        <div class="section-top">
+            {% include "../components/homes/home-hero.twig" %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="bg">
+            <img class="desktop" src="./images/home/bg-2.jpg" alt="bg-1">
+            <img class="mobile" src="./images/home/bg-2-mobile.jpg" alt="bg-1">
+        </div>
+        <div class="section-23">
+            {% include "../components/homes/home-video-tvc.twig" %}
+            {% include "../components/homes/home-ngoinhabiettho.twig" %}
+        </div>
+    </section>
+    <section class="section section-duthuyen">
+        <img class="cloud-1" src="./images/home/sunsetcloud0.png" alt="sunsetcloud0.png">
+        <div class="bg">
+            <img class="desktop" src="./images/home/bg-3.jpg" alt="bg-1">
+            <img class="mobile" src="./images/home/bg-3-mobile.jpg" alt="bg-1">
+        </div>
+        <div class="section-top">
+            <img class="cloud-2" src="./images/home/sunsetcloud1.png" alt="sunsetcloud0.png">
+            <img class="thuyen" src="./images/home/thuyen.png" alt="thuyen">
+            {# <video autoplay loop muted playsinline class="thuyen" onloadeddata="console.log('Left video loaded')">
+                <source src="./images/home/thuyen.webm" type="video/webm">
+            </video> #}
+            {% include "../components/homes/home-benduthuyen.twig" %}
+            {% include "../components/homes/home-vanhoanghethuat.twig" %}
+        </div>
+    </section>
+        <section class="section">
+        <div class="bg">
+            <img class="desktop" src="./images/home/bg-4.jpg" alt="bg-1">
+            <img class="mobile" src="./images/home/bg-4-mobile.jpg" alt="bg-1">
+        </div>
+        <div class="section-top">
+            <img class="cloud-3" src="./images/home/sunsetcloud2.png" alt="sunsetcloud0.png">
+            {% include "../components/homes/home-dothiquocte.twig" %}
+            {% include "../components/footer.twig" %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}
+
+{% block jsPage %}
+    <script src="js/home.js"></script>
+{% endblock %}
+

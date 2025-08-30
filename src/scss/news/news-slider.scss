@@ -1,0 +1,23 @@
+// news-slider styles
+.news__slider {
+    &.normal {
+        .slick-track {
+            display: flex !important;
+        }
+
+        .slick-slide {
+            height: inherit !important;
+        }
+        .item {
+            @apply min-h-[170px] aspect-[47/40];
+            @apply relative overflow-hidden rounded-[2rem] md:rounded-[4rem];
+            img{
+                width: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+    
+    }
+}

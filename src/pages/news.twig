@@ -1,0 +1,88 @@
+{% set page_title = 'News' %} {% extends "../components/base.twig" %} {% block
+content %}
+{% include "../components/header.twig" %}
+<main class="news">
+    <section class="section section1">
+        <img class="thuyen" src="./images/home/thuyen.png" alt="thuyen" />
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-1.jpg" alt="bg-1" />
+            <img
+                class="mobile"
+                src="./images/news/bg-1-mobile.jpg"
+                alt="bg-1"
+            />
+        </div>
+        <div class="section-top">
+            {% include "../components/news/news-hero.twig" %}
+        </div>
+    </section>
+    <section class="section section2">
+        <img
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            class="cay-dua-trai-1"
+            src="./images/news/cay-dua-trai.png"
+            alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+        />
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-2.jpg" alt="bg-2" />
+            <img
+                class="mobile"
+                src="./images/news/bg-2-mobile.jpg"
+                alt="bg-2"
+            />
+        </div>
+        <div class="section-top">
+            {% include "../components/news/news-bantin.twig" %} {% include
+            "../components/news/news-baochi.twig" %} {% include
+            "../components/news/news-tailieu.twig" %}
+            <img
+                class="cay-dua-phai"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                src="./images/news/cay-dua-phai.png"
+                alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+            />
+        </div>
+    </section>
+    <section class="section section3">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-3.jpg" alt="bg-3" />
+            <img
+                class="mobile"
+                src="./images/news/bg-3-mobile.jpg"
+                alt="bg-3"
+            />
+        </div>
+        <div class="section-top">
+            {% include "../components/news/news-phaply.twig" %} {% include
+            "../components/news/news-noibat.twig" %}
+        </div>
+        <img
+            class="cay-dua-trai"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            src="./images/news/cay-dua-trai.png"
+            alt="La Tiên Villa: Biệt thự ven biển sang trọng tại Nha Trang"
+        />
+    </section>
+    <section class="section section4">
+        <div class="bg">
+            <img class="desktop" src="./images/news/bg-4.jpg" alt="bg-4" />
+            <img class="desktop-big" src="./images/news/bg-4-big.jpg" alt="bg-4" />
+            <img
+                class="mobile"
+                src="./images/news/bg-4-mobile.jpg"
+                alt="bg-4"
+            />
+        </div>
+        <div class="section-top">
+            {% include "../components/news/news-donviphanphoi.twig" %} {%
+            include "../components/footer.twig" %}
+        </div>
+    </section>
+</main>
+{% endblock %} {% block jsPage %}
+<script src="js/news.js"></script>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% set page_title = 'Trải nghiệm' %}
+{% extends "../components/base.twig" %}
+
+{% block content %}
+{% include "../components/header.twig" %}
+<main class="trainghiem">
+   <section class="section section1">
+        {# <img class="thuyen" src="./images/home/thuyen.png" alt="thuyen" /> #}
+        <div class="bg">
+            <img class="desktop" src="./images/trainghiem/bg/bg-1.jpg" alt="bg-1" />
+            <img
+                class="mobile"
+                src="./images/trainghiem/bg/bg-1.jpg"
+                alt="bg-1"
+            />
+        </div>
+        <div class="section-top">
+            {% include "../components/trainghiem/tn-giauvanhoa.twig" %}
+        </div>
+    </section>
+</main>
+{% endblock %}

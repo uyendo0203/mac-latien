@@ -1,0 +1,18 @@
+.benduthuyen {
+    @apply absolute top-[29%] md:top-[26.2%] left-[5.5%] w-full flex flex-col items-start;
+    @media (max-width: 767px) {
+        @apply max-w-[60%];
+    }
+    .home-heading {
+        @apply max-w-[20rem] md:max-w-[44rem] mb-[0.5rem] md:mb-[1.7rem];
+    }
+    .home-sub-heading {
+        @apply max-w-[75%] md:max-w-[55rem] m-0 md:ml-[0.55rem];
+    }
+}
+
+
+.section-duthuyen{
+    @apply relative z-[2];
+    @apply overflow-visible #{!important};
+}

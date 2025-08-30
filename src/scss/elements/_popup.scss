@@ -1,0 +1,55 @@
+.popup {
+    @apply overflow-y-auto overflow-x-hidden;
+    @apply fixed top-0 right-0 left-0 z-50;
+    @apply w-full md:inset-0 h-screen max-h-full;
+    @apply mx-auto flex items-center justify-center;
+    @apply bg-[transparent];
+    @apply z-[-1] opacity-[0];
+    transition: all 0.5s ease;
+
+    &.active {
+        @apply z-[999] opacity-[1];
+        @apply bg-[#00000075];
+    }
+
+    &-wrap {
+        @apply relative w-full;
+        @apply max-w-[95%] md:max-w-[38rem] max-h-full;
+    }
+    &-content {
+        @apply relative;
+        @apply py-[2rem] px-[3rem];
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+
+        @apply bg-[url('../images/popup-bg.png')] bg-no-repeat;
+        
+        background-size: 100% 100%;
+
+        @media (min-width: 2560px) {
+            transform: scale(0.8);
+        }
+    }
+    &-header {
+        @apply flex items-center justify-between;
+        img {
+            @apply w-full;
+        }
+    }
+    &-close {
+        @apply text-[2rem] ms-auto;
+        @apply absolute;
+        @apply right-[2rem] top-[-2rem] md:top-[-1rem];
+        @apply text-white flex flex-row;
+        @apply w-[4.5rem] md:w-[3.3rem] xl:w-[w-[2.5rem]];
+
+    }
+
+    .contact--form {
+        @apply m-0 max-w-full;
+        form {
+            @apply max-w-full m-0;
+        }
+    }
+}
