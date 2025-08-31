@@ -6,7 +6,8 @@
 @use "./trainghiem/tn-nethoangda.scss" as *;
 @use "./trainghiem/tn-niemtuhao.scss" as *;
 @use "./trainghiem/tn-tohopganket.scss" as *;
-@use "./trainghiem/tn-vuatanhuong-khoidau.scss" as *;
+@use "./trainghiem/tn-vuatanhuong.scss" as *;
+@use "./trainghiem/tn-khoidauhanhtrinh.scss" as *;
 
 .text-grown-tn {
     @apply text-[#86470B];
@@ -42,8 +43,16 @@
 }
 .tn-may{
     @apply absolute;
-    .may-phai-1{
+    &.may-phai-1{
         @apply right-0 top-0;
+    }
+    &.may-phai-2{
+        @apply right-[-26%] top-[21%];
+        @apply max-w-[48%];
+    }
+    &.may-trai-1{
+        @apply left-[-16%] top-[38%];
+        @apply max-w-[30%];
     }
 }
 

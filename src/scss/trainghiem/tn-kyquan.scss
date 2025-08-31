@@ -1,1 +1,16 @@
-.tn-kyquan{}
+.tn-kyquan{
+    .tn-heading-child{
+        @apply text-white;
+        @apply max-w-[70%] md:max-w-[56%];
+        @apply top-[1.3%];
+        @apply left-[-1rem] md:left-[0.3%];
+        &__center{
+            @apply mt-0;
+            @apply mx-auto max-w-[68%];
+        }
+        &__des{
+            @apply mx-auto max-w-[54%] md:max-w-[70%];
+            @apply md:mt-[0.6rem]
+        }
+    }
+}

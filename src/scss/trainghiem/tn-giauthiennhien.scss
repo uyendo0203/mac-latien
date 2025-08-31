@@ -1,1 +1,9 @@
-.tn-giauthiennhien{}
+.tn-giauthiennhien{
+    .tn-heading{
+        @apply max-w-[65%] md:max-w-[49rem];
+        @apply top-[15.45%]
+    }
+    &__flower {
+        @apply absolute top-[-15%] left-0;
+    }
+}

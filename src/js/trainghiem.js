@@ -29,8 +29,6 @@ const animateThuyen = () => {
 
 };
 
-
-
 const animateDieu = () => {
     if (typeof gsap === 'undefined') {
         console.error('GSAP not available for dieu animation');
@@ -109,6 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initSliders() {
     $('#slider-niemtuhao').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        infinite: false,
+    });
+
+    $('#slider-khoidauhanhtrinh').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,

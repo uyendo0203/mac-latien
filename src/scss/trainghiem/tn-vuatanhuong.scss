@@ -1,0 +1,20 @@
+.tn-vuatanhuong{
+    .tn-heading-child{
+        @apply text-white;
+        @apply max-w-[70%] md:max-w-[60%];
+        @apply top-[14%] md:top-[27.5%];
+        @apply left-[-1rem] md:left-[0.3%];
+        &__top{
+            @apply max-w-[65%] md:max-w-full
+        }
+        &__center{
+            @apply mt-[0.3rem];
+            @apply mx-auto md:ml-[8rem] max-w-[84%];
+        }
+        &__des{
+            @apply mx-auto max-w-[70%] md:max-w-[52%];
+            @apply md:mt-[-0.8rem]
+        }
+    }
+   
+}

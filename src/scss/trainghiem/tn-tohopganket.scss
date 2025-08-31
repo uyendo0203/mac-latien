@@ -1,7 +1,8 @@
 .tn-tohopganket{
     .tn-heading-child{
-        @apply max-w-[55%] md:max-w-[43%];
-        @apply top-[-6%] md:top-[12%] right-[9%] md:right-[12%];
+        @apply max-w-[64%] md:max-w-[43%];
+        @apply top-[-11%] md:top-[12%];
+        @apply right-[4%] md:right-[12%];
         &__center{
             @apply ml-[3.5rem] md:ml-[6rem];
             @apply mt-[0.2rem] md:mt-[-2rem];

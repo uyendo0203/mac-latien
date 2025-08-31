@@ -1,1 +1,21 @@
-.tn-dochoa{}
+.tn-dochoa{
+    .tn-heading-child{
+        @apply text-white;
+        @apply z-[2];
+        @apply max-w-[70%] md:max-w-[81%];
+        @apply top-[20%] md:top-[27.1%];
+        @apply right-[2%] md:right-[-13%];
+        &__top{
+            @apply max-w-full
+        }
+        &__center{
+            @apply mt-[0.5rem] md:mt-[-1rem];
+            @apply mx-auto md:ml-[18rem];
+            @apply max-w-[80%] md:max-w-[58%];
+        }
+        &__des{
+            @apply mx-auto max-w-[66%] md:max-w-[53%];
+            @apply md:mt-[1rem]
+        }
+    }
+}

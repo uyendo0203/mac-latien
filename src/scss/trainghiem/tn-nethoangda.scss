@@ -1,1 +1,39 @@
-.tn-nethoangda{}
+.tn-nethoangda{
+    .tn-heading-child{
+        @apply text-white;
+        @apply z-[2];
+        @apply max-w-[70%] md:max-w-[81%];
+        @apply top-[30%] md:top-[40.85%];
+        @apply left-[45%] md:left-[9.5%];
+        @apply -translate-x-1/2 md:translate-x-0;
+        &__top{
+            @apply max-w-full
+        }
+        &__center{
+            @apply mt-[0.5rem] md:mt-[1rem];
+            @apply mx-auto md:ml-[18rem];
+            @apply max-w-[80%] md:max-w-[58%];
+        }
+        &__des{
+            @apply mx-auto max-w-[66%] md:max-w-[61%];
+            @apply md:mt-[0.4rem]
+        }
+    }
+    .footer{
+        @apply bg-none;
+        @apply bottom-0 md:bottom-[19%]
+    }
+    .footer__wrap{
+        @apply md:p-0 md:scale-[1];
+        @apply md:max-w-[87%] mx-auto
+    }
+    .footer__left{
+        @apply md:max-w-[40rem];
+        img{
+            @apply md:w-[80%]
+        }
+    }
+    .footer__right{
+        @apply flex-auto
+    }
+}

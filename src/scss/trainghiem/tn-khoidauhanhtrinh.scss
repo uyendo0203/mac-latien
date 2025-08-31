@@ -1,0 +1,60 @@
+.tn-khoidauhanhtrinh{
+    .tn-heading-child{
+        @apply text-white;
+        @apply z-[2];
+        @apply max-w-[70%] md:max-w-[81%];
+        @apply top-[69%] md:top-[78.2%];
+        @apply left-1/2 md:left-[10.4%];
+        @apply -translate-x-1/2 md:-translate-x-0;
+        &__top{
+            @apply max-w-full
+        }
+        &__center{
+            @apply mt-[0.5rem] md:mt-[-1rem];
+            @apply mx-auto max-w-[80%] md:max-w-[58%];
+        }
+        &__des{
+            @apply mx-auto max-w-[85%] md:max-w-[52%];
+            @apply md:mt-[-0.9rem]
+        }
+    }
+    &__slider {
+        @apply max-w-[70%] md:max-w-[60.2%] w-full;
+        @apply absolute top-[43%] md:top-[30%] md:top-[52.4%] left-1/2 md:left-[20%];
+        @apply translate-x-[-50%] md:translate-x-0;
+    }
+    &__slider-wrap{
+        transform: skew(0deg,-4.2deg);
+        @media(max-width: 767px){
+            transform: skew(0deg,-7deg);
+        }
+        @apply bg-[#E1AE8D] p-[0.67rem];
+        .slick-next, .slick-prev{
+            @apply w-[2.5rem] md:w-[5.5rem] h-[2.5rem] md:h-[5.5rem] top-[68%];
+            @apply absolute top-[42%] md:top-[51%];
+            @apply max-w-[4rem];
+            &:before{
+                @apply hidden
+            }
+        }
+        .slick-prev {
+            @apply left-[1rem] md:left-[-2.5rem];
+            @apply bg-[url('../images/trainghiem/arrow-left.png')] bg-center;
+            @apply rotate-[1deg];
+            background-size: 100% 100%;
+        }
+        .slick-next {
+            @apply right-[1rem] md:right-[-2.5rem];
+            @apply bg-[url('../images/trainghiem/arrow-right.png')] bg-center;
+            background-size: 100% 100%;
+        }
+    }
+    &__khunggo{
+        @apply absolute bottom-0 left-0 right-0;
+    }
+    &__denlong{
+        @apply absolute z-[1] top-[22%] md:top-[32.1%];
+        @apply right-[6%] md:right-[9%];
+        @apply w-full max-w-[26%] md:max-w-[27rem]
+    }
+}
