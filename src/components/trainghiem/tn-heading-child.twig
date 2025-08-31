@@ -1,8 +1,29 @@
 <div class="tn-heading-child">
-    <h2 class="tn-heading-child__top">{{ headingchild_top|raw }}</h2>
-    <h3 class="tn-heading-child__center">
-        <span class="hiding">{{ headingchild_top|raw }}</span>
-        <img src="{{ headingchild_img|raw }}" alt="{{ headingchild_top|raw }}">
+    <h2
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="tn-heading-child__top"
+    >
+        {{ headingchild_top | raw }}
+    </h2>
+    <h3
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-delay="500"
+        class="tn-heading-child__center"
+    >
+        <span class="hiding">{{ headingchild_top | raw }}</span>
+        <img
+            src="{{ headingchild_img | raw }}"
+            alt="{{ headingchild_top | raw }}"
+        />
     </h3>
-    <p class="tn-heading-child__des">{{ headingchild_des|raw }}</p>
+    <p
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-delay="1000"
+        class="tn-heading-child__des"
+    >
+        {{ headingchild_des | raw }}
+    </p>
 </div>

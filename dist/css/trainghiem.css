@@ -2466,9 +2466,11 @@ header.active .logo{
     max-width: 61%;
     margin-top: 0.4rem;
   }
+  .tn-nethoangda .footer{
+    background-image: none;
+  }
 }
 .tn-nethoangda .footer{
-  background-image: none;
   bottom: 0px;
 }
 @media (min-width: 768px){
@@ -2912,9 +2914,6 @@ header.active .logo{
   .tn-khoidauhanhtrinh__slider-wrap .slick-next, .tn-khoidauhanhtrinh__slider-wrap .slick-prev{
     top: 51%;
   }
-}
-.tn-khoidauhanhtrinh__slider-wrap .slick-next, .tn-khoidauhanhtrinh__slider-wrap .slick-prev{
-  max-width: 4rem;
 }
 .tn-khoidauhanhtrinh__slider-wrap .slick-next:before, .tn-khoidauhanhtrinh__slider-wrap .slick-prev:before{
   display: none;
