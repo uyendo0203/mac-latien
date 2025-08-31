@@ -3,97 +3,17 @@ const animateThuyen = () => {
         console.error('GSAP not available for thuyen animation');
         return;
     }
-
-    if (window.innerWidth < 767) {
-        gsap.set(".thuyen", {
-            right: "-11%",
-            bottom: "6%",
-            scaleX: 1,
-            position: "absolute"
-        });
-    } else {
-        gsap.set(".thuyen", {
-            right: "-5%",
-            bottom: "18%",
-            scaleX: 1,
-            position: "absolute"
-        });
-    }
-
-    const timeRun = 4;
-    let animationActive = false;
-
-    ScrollTrigger.create({
-        trigger: ".thuyen",
-        start: "top 50%",
-        onEnter: () => {
-            if (animationActive) return;
-
-            const tl = gsap.timeline({
-                onComplete: () => {
-                    animationActive = true;
-                    randomCycle();
-                }
-            });
-
-            if (window.innerWidth < 767) {
-                tl.to(".thuyen", {
-                    right: "0%",
-                    bottom: "-4%",
-                    duration: timeRun,
-                    ease: "power1.out"
-                });
-            } else {
-                tl.to(".thuyen", {
-                    bottom: "11%",
-                    right: "6%",
-                    duration: timeRun,
-                    ease: "power1.out"
-                });
-            }
-        },
-
-        onLeaveBack: () => {
-            animationActive = false;
-            gsap.killTweensOf(".thuyen");
-
-            if (window.innerWidth < 767) {
-                gsap.to(".thuyen", {
-                    right: "-11%",
-                    bottom: "6%",
-                    scaleX: 1,
-                    rotation: 0,
-                    y: 0,
-                    x: 0,
-                    duration: timeRun - 1,
-                    ease: "power1.out"
-                });
-            } else {
-                gsap.to(".thuyen", {
-                    right: "-5%",
-                    bottom: "18%",
-                    scaleX: 1,
-                    rotation: 0,
-                    y: 0,
-                    x: 0,
-                    duration: timeRun - 1,
-                    ease: "power1.out"
-                });
-            }
-        }
-    });
-
     // Random cycle function
     const randomCycle = () => {
-        if (!animationActive) return;
-
+        console.log(111);
+        
         const randomY = gsap.utils.random(-15, 10);
         const randomX = gsap.utils.random(-8, 8);
         const randomRotation = gsap.utils.random(-3, 3);
         const randomDuration = gsap.utils.random(2, 4);
         const randomDelay = gsap.utils.random(0.5, 2);
 
-        gsap.to(".thuyen", {
+        gsap.to(".trainghiem .conthuyen", {
             y: randomY,
             x: randomX,
             rotation: randomRotation,
@@ -105,7 +25,37 @@ const animateThuyen = () => {
             }
         });
     };
+    randomCycle()
+
 };
+
+
+
+const animateDieu = () => {
+    if (typeof gsap === 'undefined') {
+        console.error('GSAP not available for dieu animation');
+        return;
+    }
+
+    const duration = 3.5;
+    gsap.to('.trainghiem .condieu', {
+        rotation: 10,
+        x: 20,
+        duration: duration,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: -1
+    });
+    gsap.to('.trainghiem .condieu', {
+        rotation: -10,
+        x: -20,
+        duration: duration,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: -1,
+        delay: 2
+    });
+}
 
 const initGSAP = () => {
     if (typeof gsap === 'undefined') {
@@ -140,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 setTimeout(() => {
                     animateThuyen();
+                    animateDieu(); // Thêm dòng này để khởi động animation con diều
                     ScrollTrigger.refresh();
                     console.log('✅ All animations initialized');
                 }, 500);
@@ -156,10 +107,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function initSliders() {
+    $('#slider-niemtuhao').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        infinite: false,
+    });
+}
+
+
 $(document).ready(() => {
+    initSliders()
 });
 
 
 $(window).on('resize', function(){
 });
 
+
+//

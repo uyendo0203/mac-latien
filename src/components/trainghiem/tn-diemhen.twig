@@ -1,1 +1,20 @@
-<div class="tn-diemhen"></div>
+<div class="tn-diemhen">
+    <div class="tn-heading">
+        <h1 class="heading-hidden">Giàu trải nghiệm tận hưởng</h1>
+        <img
+            src="./images/trainghiem/text-giautrainghiem.png"
+            alt="Giàu trải nghiệm tận hưởng"
+        />
+    </div>
+    {% include './tn-heading-child.twig' with {
+        headingchild_top: 'Bãi biển riêng - Bến du thuyền',
+        headingchild_img: './images/trainghiem/text-diemhen.png',
+        headingchild_des: 'Tự do giong buồm, khám phá đại dương.<br/> Tự do sải bước trên 3 bãi biển của riêng mình.'
+    } %}
+    <div class="conthuyen">
+        <img
+            src="./images/trainghiem/conthuyen.png"
+            alt="Giàu trải nghiệm tận hưởng"
+        />
+    </div>
+</div>

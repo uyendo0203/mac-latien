@@ -1,1 +1,20 @@
-<div class="tn-niemtuhao"></div>
+<div class="tn-niemtuhao">
+    {% include './tn-heading-child.twig' with {
+        headingchild_top: 'Nhà hát Đó <br/> Show diễn Rối Mơ  <br/> & Chum Show',
+        headingchild_img: './images/trainghiem/text-niemtuhao.png',
+        headingchild_des: 'của người Nha Trang, tác phẩm nghệ thuật văn hóa bản địa phải xem khi tới Việt Nam. Nếu Rối Mơ dùng nghệ thuật rối nước cổ truyền khắc họa nhịp sống người Việt, thì Chum Show là vở giao hòa bản sắc giữa người Chăm, các dân tộc Tây Nguyên và dân tộc Kinh.'
+    } %}
+    <div class="tn-niemtuhao__slider">
+        <div class="slider-wrap" id="slider-niemtuhao">
+            {% for i in 1..5 %}
+            <img class="tn-niemtuhao__img" src="https://dummyimage.com/1300x980/000/fff" alt="bg-3"/>
+            {% endfor %}
+        </div>
+       {# <div class="slider-arrow prev" aria-label="Previous">
+            <img src="./images/trainghiem/arrow-left.png" alt="">
+        </div>
+        <div class="slider-arrow next" aria-label="Next">
+            <img src="./images/trainghiem/arrow-right.png" alt="">
+        </div> #}
+    </div>
+</div>

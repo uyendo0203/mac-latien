@@ -8,7 +8,56 @@
 @use "./trainghiem/tn-tohopganket.scss" as *;
 @use "./trainghiem/tn-vuatanhuong-khoidau.scss" as *;
 
+.text-grown-tn {
+    @apply text-[#86470B];
+}
+.tn-heading{
+    @apply absolute w-full;
+    @apply left-1/2 translate-x-[-50%];
+ }
+.tn-heading-child {
+    @apply text-grown-tn absolute;
+    @apply w-full max-w-[43%];
+    @apply mx-auto flex flex-col justify-center;
+    &__top {
+        @apply text-center mx-auto max-w-[75%];
+        @apply text-[2rem] md:text-[3.4rem];
+        @apply leading-[1.33];
+        @apply font-medium font-playfairDisplay;
+    }
+    &__center {
+        @apply max-w-[81%] ml-[6rem];
+        @apply mt-[-2rem] md:mt-[-3rem];
+    }
+    &__des {
+        @apply text-center;
+        @apply text-[0.76rem] md:text-[1.6rem];
+        @apply md:mt-[-0.5rem];
+        letter-spacing: 0.06rem;
+        @apply leading-[1.4] font-inter font-light;
+    }
+    .hiding {
+        @apply overflow-hidden opacity-0 invisible block h-0;
+    }
+}
+.tn-may{
+    @apply absolute;
+    .may-phai-1{
+        @apply right-0 top-0;
+    }
+}
+
 .trainghiem {
     @apply overflow-hidden;
-   
+    .section {
+        @apply relative;
+    }
+    .may-phai-1{
+        @apply right-[-50%] md:right-[-29%] top-[28%] md:top-[42%];
+    }
+    .condieu{
+        @apply absolute w-full;
+        @apply max-w-[26%];
+        @apply left-[5.8%] top-[18%] md:top-[9.6%];
+    }
 }

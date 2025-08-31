@@ -1,1 +1,50 @@
-.tn-niemtuhao{}
+.tn-niemtuhao {
+    .tn-heading-child {
+        @apply max-w-[58%] md:max-w-[36%];
+        @apply top-[38%] md:top-[58%];
+        @apply translate-x-[-50%] md:translate-x-0 left-1/2 md:left-auto right-0 md:right-[4%];
+        &__center {
+            @apply max-w-[70%];
+            @apply mt-[0] md:mt-[1rem];
+            @apply mx-auto md:ml-[6rem];
+        }
+        &__des {
+            @apply mt-[1rem];
+            @apply mx-auto md:mr-0 md:ml-0
+        }
+    }
+    &__slider {
+        @apply max-w-[56%];
+        @apply absolute top-[3%] md:top-[4%] left-[20%] md:left-[21%];
+        @apply rotate-[-4deg];
+        .slider-wrap {
+            @apply bg-[url('../images/trainghiem/khunghinh.png')] bg-center;
+            background-size: 100% 100%;
+            @apply p-[0.3rem] md:p-[0.7rem] pt-[9.6rem] md:pt-[29.2rem];
+
+            img{
+                @apply aspect-[65/45];
+            }
+        }
+        .slider-arrow {
+            @apply absolute top-[46%];
+            @apply max-w-[4rem];
+        }
+        .slick-next, .slick-prev{
+            @apply w-[2.5rem] md:w-[4rem] h-[2.5rem] md:h-[4rem] top-[68%];
+            &:before{
+                @apply hidden
+            }
+        }
+        .slick-prev {
+            @apply left-[1rem] md:left-[2rem];
+            @apply bg-[url('../images/trainghiem/arrow-left.png')] bg-center;
+            background-size: 100% 100%;
+        }
+        .slick-next {
+            @apply right-[1rem] md:right-[2rem];
+            @apply bg-[url('../images/trainghiem/arrow-right.png')] bg-center;
+            background-size: 100% 100%;
+        }
+    }
+}

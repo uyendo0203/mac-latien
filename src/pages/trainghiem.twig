@@ -5,18 +5,45 @@
 {% include "../components/header.twig" %}
 <main class="trainghiem">
    <section class="section section1">
-        {# <img class="thuyen" src="./images/home/thuyen.png" alt="thuyen" /> #}
         <div class="bg">
             <img class="desktop" src="./images/trainghiem/bg/bg-1.jpg" alt="bg-1" />
-            <img
-                class="mobile"
-                src="./images/trainghiem/bg/bg-1.jpg"
-                alt="bg-1"
-            />
+            <img class="mobile" src="./images/trainghiem/bg/bg-1-mobile.jpg" alt="bg-1"/>
         </div>
         <div class="section-top">
             {% include "../components/trainghiem/tn-giauvanhoa.twig" %}
         </div>
     </section>
+    <section class="section section2">
+        <div class="bg">
+            <img class="desktop" src="./images/trainghiem/bg/bg-2.jpg" alt="bg-2" />
+            <img class="mobile" src="./images/trainghiem/bg/bg-2.jpg" alt="bg-2"/>
+        </div>
+        <div class="section-top">
+            {% include "../components/trainghiem/tn-tohopganket.twig" %}
+        </div>
+    </section>
+    <section class="section section3">
+        <img class="tn-may may-phai-1" src="./images/trainghiem/may-phai-1.png" alt="bg-3"/>
+        <div class="bg">
+            <img class="desktop" src="./images/trainghiem/bg/bg-3.jpg" alt="bg-3" />
+            <img class="mobile" src="./images/trainghiem/bg/bg-3-mobile.jpg" alt="bg-3"/>
+        </div>
+        <div class="section-top">
+            {% include "../components/trainghiem/tn-niemtuhao.twig" %}
+        </div>
+    </section>
+    <section class="section section4">
+        <img class="condieu" src="./images/trainghiem/condieu.png" alt="bg-3"/>
+        <div class="bg">
+            <img class="desktop" src="./images/trainghiem/bg/bg-4.jpg" alt="bg-3" />
+            <img class="mobile" src="./images/trainghiem/bg/bg-4.jpg" alt="bg-3"/>
+        </div>
+        <div class="section-top">
+            {% include "../components/trainghiem/tn-diemhen.twig" %}
+        </div>
+    </section>
 </main>
+{% endblock %}
+{% block jsPage %}
+<script src="js/trainghiem.js"></script>
 {% endblock %}

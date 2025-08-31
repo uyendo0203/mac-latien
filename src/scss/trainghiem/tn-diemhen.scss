@@ -1,1 +1,33 @@
-.tn-diemhen{}
+.tn-diemhen{
+    .tn-heading{
+        @apply max-w-[65%] md:max-w-[43%];
+        @apply top-[2%] md:top-[5.2%]
+    }
+    .tn-heading-child{
+        @apply text-white;
+        @apply max-w-[56%];
+        @apply bottom-[19%];
+        @apply left-[1%];
+        &__center{
+            @apply mt-0;
+            @apply mx-auto md:ml-[10%] md:mr-0;
+            img{
+                @apply max-w-[88%]
+            }
+        }
+        &__des{
+            @apply mx-auto md:ml-[10rem] md:mr-0;
+        }
+    }
+    .conthuyen{
+        @apply absolute;
+        @apply w-full;
+        @apply max-w-[48%] md:max-w-[50rem];
+        @apply right-0 md:right-[6%];
+        @apply bottom-[4%] md:bottom-[1%];
+        img{
+            @apply w-full;
+        }
+    }
+    
+}
