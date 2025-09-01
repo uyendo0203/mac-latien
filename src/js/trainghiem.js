@@ -130,7 +130,7 @@ const animateKhoiDauHanhTrinhSlider = () => {
                 start: 'top', // Khi bottom khunggo chạm 5% viewport (tức là cách 5% từ dưới)
                 toggleActions: 'play none none none',
                 once: true,
-                markers: true
+                // markers: true
             }
         });
 
