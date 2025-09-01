@@ -115,9 +115,26 @@ const animateKhoiDauHanhTrinhSlider = () => {
             start: 'top 95%', // Khi top khunggo chạm 70% viewport (tức là cách 30% từ trên)
             toggleActions: 'play none none none',
             once: true,
-            markers: true
+            // markers: true
         }
     });
+
+     if (window.innerWidth < 767) {
+        gsap.to(elems, {
+            y: '0%',
+            opacity: 1,
+            duration: 2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.tn-khoidauhanhtrinh__khunggo', // Đổi trigger thành khunggo
+                start: 'top', // Khi bottom khunggo chạm 5% viewport (tức là cách 5% từ dưới)
+                toggleActions: 'play none none none',
+                once: true,
+                markers: true
+            }
+        });
+
+    }
 };
 
 const initGSAP = () => {

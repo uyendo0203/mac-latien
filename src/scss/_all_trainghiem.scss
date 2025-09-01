@@ -12,10 +12,10 @@
 .text-grown-tn {
     @apply text-[#86470B];
 }
-.tn-heading{
+.tn-heading {
     @apply absolute w-full;
     @apply left-1/2 translate-x-[-50%];
- }
+}
 .tn-heading-child {
     @apply text-grown-tn absolute;
     @apply w-full max-w-[43%];
@@ -41,18 +41,48 @@
         @apply overflow-hidden opacity-0 invisible block h-0;
     }
 }
-.tn-may{
+.tn-may {
     @apply absolute;
-    &.may-phai-1{
-        @apply right-0 top-0;
+    @keyframes mayAnimation {
+        0% {
+            transform: translateY(15px);
+        }
+        50% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(15px);
+        }
     }
-    &.may-phai-2{
+    &.may3-phai-1 {
+        @apply right-[-27%] top-[43%];
+        @apply max-w-[75%];
+        transition: all 0.3s ease;
+        animation: mayAnimation 4s linear infinite;
+    }
+    &.may3-trai-2 {
+        @apply left-[-36%] top-[-12%];
+        @apply max-w-[63%];
+        transition: all 0.3s ease;
+        animation: mayAnimation 4s linear infinite;
+    }
+    &.may4-phai-3 {
+        @apply right-[-37%] top-[-6%];
+        @apply max-w-[60%];
+        transition: all 0.3s ease;
+        animation: mayAnimation 5s linear infinite;
+    }
+    &.may6-phai-2 {
         @apply right-[-26%] top-[21%];
         @apply max-w-[48%];
+        transition: all 0.3s ease;
+        animation: mayAnimation 4s linear infinite;
     }
-    &.may-trai-1{
-        @apply left-[-16%] top-[38%];
-        @apply max-w-[30%];
+    &.may6-trai-1 {
+        @apply left-[-34%] top-[35%];
+        @apply max-w-[45%];
+        transition: all 0.3s ease;
+        animation: mayAnimation 8s linear infinite;
     }
 }
 
@@ -61,10 +91,10 @@
     .section {
         @apply relative;
     }
-    .may-phai-1{
+    .may-phai-1 {
         @apply right-[-50%] md:right-[-29%] top-[28%] md:top-[42%];
     }
-    .condieu{
+    .condieu {
         @apply absolute w-full;
         @apply max-w-[26%];
         @apply left-[5.8%] top-[18%] md:top-[9.6%];
