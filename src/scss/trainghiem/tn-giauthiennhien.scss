@@ -4,6 +4,9 @@
         @apply top-[15.45%]
     }
     &__flower {
-        @apply absolute top-[-15%] left-0;
+        @apply w-full absolute top-[-15%] left-0;
+        img{
+            @apply w-full;
+        }
     }
 }

@@ -90,6 +90,11 @@
     @apply overflow-hidden;
     .section {
         @apply relative;
+        &:not(:first-child) {
+            .bg{
+                @apply md:translate-y-[-1px];
+            }
+        }
     }
     .may-phai-1 {
         @apply right-[-50%] md:right-[-29%] top-[28%] md:top-[42%];
@@ -99,4 +104,11 @@
         @apply max-w-[26%];
         @apply left-[5.8%] top-[18%] md:top-[9.6%];
     }
+    .section3{
+        @apply bg-[#a6d2f4];
+    }
+    .section4{
+        @apply bg-[#008ec1];
+    }
+    
 }

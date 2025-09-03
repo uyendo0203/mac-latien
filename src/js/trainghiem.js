@@ -8,8 +8,8 @@ const animateThuyen = () => {
         const randomY = gsap.utils.random(-15, 10);
         const randomX = gsap.utils.random(-8, 8);
         const randomRotation = gsap.utils.random(-3, 3);
-        const randomDuration = gsap.utils.random(2, 4);
-        const randomDelay = gsap.utils.random(0.5, 2);
+        const randomDuration = gsap.utils.random(1.7, 2.3); // Giảm xuống quanh 2s
+        const randomDelay = gsap.utils.random(0.2, 0.5);    // Delay ngắn hơn
 
         gsap.to(".trainghiem .conthuyen", {
             y: randomY,
@@ -23,8 +23,7 @@ const animateThuyen = () => {
             }
         });
     };
-    randomCycle()
-
+    randomCycle();
 };
 
 const animateDieu = () => {

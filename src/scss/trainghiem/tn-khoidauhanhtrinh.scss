@@ -51,6 +51,9 @@
     }
     &__khunggo{
         @apply absolute bottom-0 left-0 right-0;
+        img{
+            @apply w-full;
+        }
     }
     &__denlong{
         @apply absolute z-[1] top-[22%] md:top-[32.1%];

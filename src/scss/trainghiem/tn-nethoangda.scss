@@ -20,20 +20,20 @@
         }
     }
     .footer{
-        @apply md:bg-none;
+        @apply bg-none;
         @apply bottom-0 md:bottom-[19%]
     }
-    .footer__wrap{
-        @apply md:p-0 md:scale-[1];
-        @apply md:max-w-[87%] mx-auto
-    }
-    .footer__left{
-        @apply md:max-w-[40rem];
-        img{
-            @apply md:w-[80%]
-        }
-    }
-    .footer__right{
-        @apply flex-auto
-    }
+    // .footer__wrap{
+    //     @apply md:p-0 md:scale-[1];
+    //     @apply md:max-w-[87%] mx-auto
+    // }
+    // .footer__left{
+    //     @apply md:max-w-[40rem];
+    //     img{
+    //         @apply md:w-[80%]
+    //     }
+    // }
+    // .footer__right{
+    //     @apply flex-auto
+    // }
 }
