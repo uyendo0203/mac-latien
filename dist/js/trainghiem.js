@@ -69,8 +69,8 @@ const animateNiemTuHaoSlider = () => {
 
     // Rơi xuống và nảy
     tl.fromTo('.tn-niemtuhao__slider',
-        { y: -200, opacity: 0, rotation: 0 },
-        { y: 0, opacity: 1, duration: 1.1, ease: 'bounce.out', rotation: 0 }
+        { y: -200, rotation: 0 },
+        { y: 0, duration: 1.1, ease: 'bounce.out', rotation: 0 }
     )
     // Lắc xoay trái phải như khung tranh
     .to('.tn-niemtuhao__slider', {
@@ -168,8 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     animateThuyen();
                     animateDieu();
-                    animateNiemTuHaoSlider(); // Chỉ gọi cho slider NIEMTUHAO
-                    // KHÔNG gọi animateKhoiDauHanhTrinhSlider() ở đây nữa!
+                    // KHÔNG gọi animateNiemTuHaoSlider() ở đây!
                     ScrollTrigger.refresh();
                     console.log('✅ All animations initialized');
                 }, 500);
@@ -196,6 +195,17 @@ function initSliders() {
 
     $('#slider-khoidauhanhtrinh').on('init', function() {
         animateKhoiDauHanhTrinhSlider(); // CHỈ gọi ở đây
+        ScrollTrigger.refresh();
+    }).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        infinite: false,
+    });
+
+    $('#slider-niemtuhao').on('init', function() {
+        animateNiemTuHaoSlider();
         ScrollTrigger.refresh();
     }).slick({
         slidesToShow: 1,

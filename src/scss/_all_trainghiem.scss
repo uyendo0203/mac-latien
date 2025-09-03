@@ -42,7 +42,7 @@
     }
 }
 .tn-may {
-    @apply absolute;
+    @apply absolute z-[2];
     @keyframes mayAnimation {
         0% {
             transform: translateY(15px);
@@ -100,7 +100,7 @@
         @apply right-[-50%] md:right-[-29%] top-[28%] md:top-[42%];
     }
     .condieu {
-        @apply absolute w-full;
+        @apply absolute w-full z-[2];
         @apply max-w-[26%];
         @apply left-[5.8%] top-[18%] md:top-[9.6%];
     }

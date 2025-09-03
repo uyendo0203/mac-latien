@@ -3045,6 +3045,7 @@ header.active .logo{
 
 .tn-may{
   position: absolute;
+  z-index: 2;
 }
 @-webkit-keyframes mayAnimation {
   0% {
@@ -3145,6 +3146,7 @@ header.active .logo{
 }
 .trainghiem .condieu{
   position: absolute;
+  z-index: 2;
   width: 100%;
   max-width: 26%;
   left: 5.8%;
