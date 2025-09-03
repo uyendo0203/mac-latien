@@ -185,16 +185,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initSliders() {
-    $('#slider-niemtuhao').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        infinite: false,
-    });
-
-    $('#slider-khoidauhanhtrinh').on('init', function() {
-        animateKhoiDauHanhTrinhSlider(); // CHỈ gọi ở đây
+    // NIEMTUHAO SLIDER
+    $('#slider-niemtuhao').on('init', function() {
+        animateNiemTuHaoSlider();
         ScrollTrigger.refresh();
     }).slick({
         slidesToShow: 1,
@@ -204,8 +197,9 @@ function initSliders() {
         infinite: false,
     });
 
-    $('#slider-niemtuhao').on('init', function() {
-        animateNiemTuHaoSlider();
+    // KHOIDAUHANHTRINH SLIDER
+    $('#slider-khoidauhanhtrinh').on('init', function() {
+        animateKhoiDauHanhTrinhSlider();
         ScrollTrigger.refresh();
     }).slick({
         slidesToShow: 1,
