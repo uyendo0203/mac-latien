@@ -2548,6 +2548,7 @@ header.active .logo{
   }
 }
 .tn-niemtuhao__slider{
+  width: 100%;
   max-width: 65%;
 }
 @media (min-width: 768px){
@@ -2581,6 +2582,8 @@ header.active .logo{
   background-image: url(../images/noneed/khunghinh.png);
   background-position: center;
   background-size: 100% 100%;
+  visibility: hidden;
+  opacity: 0;
   padding: 0.3rem;
   padding-top: 11.4rem;
 }

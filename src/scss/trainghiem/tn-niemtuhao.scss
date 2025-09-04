@@ -14,13 +14,14 @@
         }
     }
     &__slider {
-        @apply max-w-[65%] md:max-w-[56%];
+        @apply max-w-[65%] md:max-w-[56%] w-full;
         @apply absolute top-0 md:top-[4%];
         @apply left-[17%] md:left-[21%];
         @apply rotate-[-4deg];
         .slider-wrap {
             @apply bg-[url('../images/trainghiem/khunghinh.png')] bg-center;
             background-size: 100% 100%;
+            @apply invisible opacity-0;
             @apply p-[0.3rem] md:p-[0.7rem] pt-[11.4rem] md:pt-[44%];
             img{
                 @apply aspect-[65/45];
