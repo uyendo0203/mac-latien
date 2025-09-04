@@ -26,7 +26,6 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
   hash: false,
   filename: template.output,
   template: path.resolve(environment_pages.paths.pages, template.input),
-  // favicon: path.resolve(environment.paths.source, 'images', 'favicon.png'),
 }));
 
 module.exports = {

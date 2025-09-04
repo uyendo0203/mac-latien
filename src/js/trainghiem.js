@@ -185,34 +185,57 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initSliders() {
-    // NIEMTUHAO SLIDER
-    $('#slider-niemtuhao').on('init', function() {
-        animateNiemTuHaoSlider();
-        ScrollTrigger.refresh();
-    }).slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        infinite: false,
-    });
+    let niemtuhaoInited = false;
+    let khoidauInited = false;
 
-    // KHOIDAUHANHTRINH SLIDER
-    $('#slider-khoidauhanhtrinh').on('init', function() {
+    if ($('#slider-niemtuhao').length) {
+        $('#slider-niemtuhao').on('init', function() {
+            niemtuhaoInited = true;
+            if (niemtuhaoInited && (khoidauInited || !$('#slider-khoidauhanhtrinh').length)) {
+                runAllScrollAnimations();
+            }
+        }).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            infinite: false,
+        });
+    } else {
+        niemtuhaoInited = true;
+    }
+
+    if ($('#slider-khoidauhanhtrinh').length) {
+        $('#slider-khoidauhanhtrinh').on('init', function() {
+            khoidauInited = true;
+            if (khoidauInited && (niemtuhaoInited || !$('#slider-niemtuhao').length)) {
+                runAllScrollAnimations();
+            }
+        }).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            infinite: false,
+        });
+    } else {
+        khoidauInited = true;
+    }
+}
+
+// Gọi tất cả animation scroll ở đây
+function runAllScrollAnimations() {
+    if (document.querySelector('.tn-niemtuhao__slider')) {
+        animateNiemTuHaoSlider();
+    }
+    if (document.querySelector('.tn-khoidauhanhtrinh__slider')) {
         animateKhoiDauHanhTrinhSlider();
-        ScrollTrigger.refresh();
-    }).slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        infinite: false,
-    });
+    }
+    ScrollTrigger.refresh();
 }
 
 $(document).ready(() => {
     initSliders();
-    // animateNiemTuHaoSlider(); // Nếu cần, gọi ở đây hoặc sau khi slider đã init
 });
 
 
