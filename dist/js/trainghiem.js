@@ -124,7 +124,7 @@ const animateKhoiDauHanhTrinhSlider = () => {
     }
 
     const elems = document.querySelectorAll('.tn-khoidauhanhtrinh__slider');
-
+    if (!elems.length) return;
     gsap.set(elems, {
         y: '100%',
         opacity: 0
@@ -305,8 +305,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     animateThuyen();
                     animateDieu();
-                    animateNiemTuHaoSlider(); // 🔥 gọi ở đây (sẽ init #slider-niemtuhao sau khi animation end)
+                    animateNiemTuHaoSlider();
                     animateKhoiDauHanhTrinhSlider();
+                    // animateBg1TrongDong(); // Thêm dòng này
                     ScrollTrigger.refresh();
                     console.log('✅ All animations initialized');
                 }, 500);
@@ -348,3 +349,33 @@ $(window).on('resize', function () {
         $('#slider-khoidauhanhtrinh').slick('setPosition');
     }
 });
+
+
+const animateBg1TrongDong = () => {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        console.error('GSAP or ScrollTrigger not available for bg-1-trongdong animation');
+        return;
+    }
+
+    const el = document.querySelector('.bg-1-trongdong');
+    if (!el) return;
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            toggleActions: 'restart none none none'
+        }
+    })
+    .fromTo(el,
+        { top: '25%', opacity: 0 },   // bắt đầu ở top 25% và mờ
+        { top: '22%', opacity: 1, duration: 1.5, ease: 'power2.out' }
+    )
+    .to(el,
+        { top: '25%', duration: 1.5, ease: 'power2.inOut' } // hạ xuống 25%
+    );
+};
+
+
+
+

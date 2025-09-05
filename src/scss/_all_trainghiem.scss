@@ -91,7 +91,7 @@
     .section {
         @apply relative;
         &:not(:first-child) {
-            .bg{
+            .bg {
                 @apply md:translate-y-[-1px];
             }
         }
@@ -104,11 +104,92 @@
         @apply max-w-[26%];
         @apply left-[5.8%] top-[18%] md:top-[9.6%];
     }
-    .section3{
+    .section3 {
         @apply bg-[#a6d2f4];
     }
-    .section4{
+    .section4 {
         @apply bg-[#008ec1];
     }
-    
+}
+
+.tn-highlight {
+    width: 76rem; /* chiều rộng ellipse */
+    height: 15rem; /* chiều cao ellipse */
+    position: absolute;
+    top: 26%;
+    left: 19%;
+    transform: rotate(5deg); /* xoay nghiêng theo trống */
+    border-radius: 50%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.drum-highlight {
+    position: absolute;
+    top: 26%;
+    left: 19%;
+    width: 76rem;
+    height: 15rem;
+    transform: rotate(5deg);
+    pointer-events: none;
+}
+.sparkline {
+    stroke-dasharray: 20 20;
+    animation:
+        dashmove 6s linear infinite,
+        blink 2s ease-in-out infinite;
+    filter: blur(3px);
+}
+
+@keyframes dashmove {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -400;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+.bg-1-trongdong {
+    position: absolute;
+    top: 25%;
+    width: 63%;
+    left: 19%;
+    opacity: 0;
+    transform: scale(0.95) rotateX(10deg);
+    filter: blur(2px);
+    animation: glow3D 5s ease-in-out infinite;
+}
+
+@keyframes glow3D {
+    0% {
+        opacity: 0;
+        transform: scale(0.95) rotateX(10deg);
+        filter: blur(2px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg);
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.95) rotateX(10deg);
+        filter: blur(2px);
+    }
+}
+.section1-bg-1{
+    @apply absolute;
+    @apply w-[90%] h-[96%] left-[6%] top-[11%] md:top-0;
 }
