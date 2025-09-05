@@ -1062,6 +1062,7 @@ header.active .logo{
   transition: all 0.3s ease;
 }
 .menu__link{
+  text-align: center;
   font-weight: 300;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -5045,6 +5046,9 @@ video {
 }
 .font-bold{
   font-weight: 700;
+}
+.font-light{
+  font-weight: 300;
 }
 .font-medium{
   font-weight: 500;

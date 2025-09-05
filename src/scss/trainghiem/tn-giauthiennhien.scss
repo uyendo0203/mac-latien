@@ -5,8 +5,9 @@
     }
     &__flower {
         @apply w-full absolute top-[-15%] left-0;
-        img{
+        img, video {
             @apply w-full;
         }
+        
     }
 }

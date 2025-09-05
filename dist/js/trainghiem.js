@@ -60,57 +60,61 @@ function isElementInViewport(el) {
 
 
 const animateNiemTuHaoSlider = () => {
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-    console.error('GSAP or ScrollTrigger not available for niemtuhao slider animation');
-    return;
-  }
-
-  const triggerSelector = '.tn-niemtuhao__slider';
-  const triggerEl = document.querySelector(triggerSelector);
-  if (!triggerEl) return;
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: triggerSelector,
-      start: 'top 80%',
-      toggleActions: 'play none none none',
-      once: true,
-      onEnter: () => {
-        if (!$('#slider-niemtuhao').hasClass('slick-initialized')) {
-          initSingleSlider('#slider-niemtuhao');
-        }
-      }
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        console.error('GSAP or ScrollTrigger not available for niemtuhao slider animation');
+        return;
     }
-  });
 
-  tl.fromTo(triggerSelector,
-    { y: -200, rotation: 0 },
-    { y: 0, duration: 1.1, ease: 'bounce.out' }
-  )
-  // lắc trái
-  .to(triggerSelector, {
-    rotation: -8,
-    duration: 0.2,
-    ease: 'sine.inOut'
-  })
-  // lắc phải
-  .to(triggerSelector, {
-    rotation: 6,
-    duration: 0.2,
-    ease: 'sine.inOut'
-  })
-  // lắc nhỏ hơn
-  .to(triggerSelector, {
-    rotation: -4,
-    duration: 0.15,
-    ease: 'sine.inOut'
-  })
-  // cuối cùng về thẳng
-  .to(triggerSelector, {
-    rotation: 0,
-    duration: 0.1,
-    ease: 'sine.inOut'
-  });
+    const triggerSelector = '.tn-niemtuhao__slider';
+    const triggerEl = document.querySelector(triggerSelector);
+    if (!triggerEl) return;
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: triggerSelector,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+            once: true,
+            onEnter: () => {
+                if (!$('#slider-niemtuhao').hasClass('slick-initialized')) {
+                    initSingleSlider('#slider-niemtuhao');
+                }
+            }
+        }
+    });
+
+    tl.fromTo(triggerSelector, {
+            y: -200,
+            rotation: 0
+        }, {
+            y: 0,
+            duration: 1.1,
+            ease: 'bounce.out'
+        })
+        // lắc trái
+        .to(triggerSelector, {
+            rotation: -8,
+            duration: 0.2,
+            ease: 'sine.inOut'
+        })
+        // lắc phải
+        .to(triggerSelector, {
+            rotation: 6,
+            duration: 0.2,
+            ease: 'sine.inOut'
+        })
+        // lắc nhỏ hơn
+        .to(triggerSelector, {
+            rotation: -4,
+            duration: 0.15,
+            ease: 'sine.inOut'
+        })
+        // cuối cùng về thẳng
+        .to(triggerSelector, {
+            rotation: 0,
+            duration: 0.1,
+            ease: 'sine.inOut'
+        });
 };
 
 
@@ -123,41 +127,64 @@ const animateKhoiDauHanhTrinhSlider = () => {
         return;
     }
 
+    const triggerEl = document.querySelector('.tn-khoidauhanhtrinh__khunggo');
     const elems = document.querySelectorAll('.tn-khoidauhanhtrinh__slider');
-    if (!elems.length) return;
-    gsap.set(elems, {
-        y: '100%',
-        opacity: 0
-    });
 
-    gsap.to(elems, {
-        y: '0%',
-        opacity: 1,
-        duration: 2,
-        ease: 'power2.out',
-        scrollTrigger: {
-            trigger: '.tn-khoidauhanhtrinh__khunggo',
-            start: 'top 95%',
-            toggleActions: 'play none none none',
-            once: true,
-        }
-    });
+    if (!triggerEl || !elems.length) {
+        console.warn('❌ Trigger hoặc elements không tồn tại');
+        return;
+    }
 
-    if (window.innerWidth < 767) {
+    // nếu trigger bị ẩn (display:none), ScrollTrigger có thể crash
+    const rect = triggerEl.getBoundingClientRect();
+    if (rect.width === 0 && rect.height === 0) {
+        console.warn('⚠️ Trigger có kích thước = 0, bỏ qua animateKhoiDauHanhTrinhSlider');
+        return;
+    }
+
+    try {
+        // trạng thái ban đầu
+        gsap.set(elems, { y: '100%', opacity: 0 });
+
+        // cho desktop
         gsap.to(elems, {
             y: '0%',
             opacity: 1,
             duration: 2,
             ease: 'power2.out',
             scrollTrigger: {
-                trigger: '.tn-khoidauhanhtrinh__khunggo',
-                start: 'top',
+                trigger: triggerEl, // dùng element thay vì string
+                start: 'top 95%',
                 toggleActions: 'play none none none',
                 once: true,
+                // markers: true, // bật để debug
             }
         });
+
+        // cho mobile
+        if (window.innerWidth < 767) {
+            gsap.to(elems, {
+                y: '0%',
+                opacity: 1,
+                duration: 2,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: triggerEl,
+                    start: 'top top',
+                    toggleActions: 'play none none none',
+                    once: true,
+                }
+            });
+        }
+
+        // refresh để ScrollTrigger cập nhật layout
+        ScrollTrigger.refresh();
+        console.log('✅ animateKhoiDauHanhTrinhSlider initialized');
+    } catch (err) {
+        console.error('❌ animateKhoiDauHanhTrinhSlider error:', err);
     }
 };
+
 
 const initGSAP = () => {
     if (typeof gsap === 'undefined') {
@@ -361,21 +388,27 @@ const animateBg1TrongDong = () => {
     if (!el) return;
 
     gsap.timeline({
-        scrollTrigger: {
-            trigger: el,
-            start: 'top 80%',
-            toggleActions: 'restart none none none'
-        }
-    })
-    .fromTo(el,
-        { top: '25%', opacity: 0 },   // bắt đầu ở top 25% và mờ
-        { top: '22%', opacity: 1, duration: 1.5, ease: 'power2.out' }
-    )
-    .to(el,
-        { top: '25%', duration: 1.5, ease: 'power2.inOut' } // hạ xuống 25%
-    );
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 80%',
+                toggleActions: 'restart none none none'
+            }
+        })
+        .fromTo(el, {
+                top: '25%',
+                opacity: 0
+            }, // bắt đầu ở top 25% và mờ
+            {
+                top: '22%',
+                opacity: 1,
+                duration: 1.5,
+                ease: 'power2.out'
+            }
+        )
+        .to(el, {
+                top: '25%',
+                duration: 1.5,
+                ease: 'power2.inOut'
+            } // hạ xuống 25%
+        );
 };
-
-
-
-
